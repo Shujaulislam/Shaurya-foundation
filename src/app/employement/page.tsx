@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ArrowRight, Play } from "lucide-react";
 import Image from "next/image";
@@ -7,58 +7,53 @@ export default function Employment() {
   return (
     <main className="px-4 sm:px-8 lg:px-24">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[500px] lg:min-h-[600px] bg-[#FF7B8E] rounded-[32px] lg:rounded-[42px] px-6 sm:px-12 lg:px-24 pt-12 lg:pt-16">
-        {/* Content Container */}
-        <div className="relative z-10 max-w-[600px]">
-          {/* Title with Play Button */}
-          <div className="flex items-center gap-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-[4vw] xl:text-6xl uppercase tracking-tight text-[#222223] leading-tight">
-              The <span className="font-extrabold">SFT</span>
+      <section className="bg-[#FF7B8E] rounded-3xl overflow-hidden">
+      <div className="grid grid-cols-12">
+        {/* Text Content */}
+        <div className="col-span-7 pb-10">
+          <div className="pl-16 pt-16">
+            <h1 className="flex items-center gap-2">
+              <span className="text-7xl">THE</span>
+              <span className="text-7xl font-bold">SFT</span>
+              <Play className="ml-2 w-16 h-16" />
             </h1>
-            <button className="bg-[#FFE3E7] p-2 sm:p-3 rounded-full border hover:bg-gray-200 transition">
-              <Play className="text-[#FF7B8E] fill-[#FF7B8E] w-5 h-5 sm:w-6 sm:h-6" />
-            </button>
+            <p className="text-7xl font-bold">ECOSYSTEM</p>
           </div>
 
-          {/* Subtitle */}
-          <h2 className="text-4xl sm:text-5xl lg:text-[4vw] xl:text-6xl uppercase text-[#222223] leading-tight font-extrabold">
-            Ecosystem
-          </h2>
+          <div className="pl-16 mt-8 pr-8">
+            <p className="text-[#222223] text-lg">
+              Shaurya Foundation Trust (SFT) Has Dedicated 11 Years To Empowering Individuals With Intellectual
+              Challenges By Providing Essential Skills And Fostering Independent Living. We've Made Significant
+              Strides In Removing Barriers, And Over The Next Years, We'll Focus On Creating Assisted
+              Employment Models To Ensure All Trainees, Regardless Of The Severity Of Their Challenges, Can
+              Achieve Independent And Productive Lives Through Meaningful Employment.
+            </p>
+          </div>
 
-          {/* Description Text */}
-          <p className="text-[#222223] font-medium text-base sm:text-lg max-w-[90%] sm:max-w-full mt-4">
-            Shaurya Foundation Trust (SFT) has dedicated 11 years to empowering
-            individuals with intellectual challenges by providing essential
-            skills and fostering independent living. We've made significant
-            strides in removing barriers, and over the next five years, we'll
-            focus on creating assisted employment models to ensure all trainees,
-            regardless of the severity of their challenges, can achieve
-            independent and productive lives through meaningful employment.
-          </p>
+          <div className="flex gap-4 pl-16 mt-8">
+            <button className="bg-[#FFE3E7] px-8 py-3 rounded-full text-base hover:bg-opacity-90 transition-all">
+              Support Shaurya
+            </button>
+            <button className="bg-[#FFE3E7] p-3 rounded-full hover:bg-opacity-90 transition-all">
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
-        {/* Hero Image - Positioned Bottom Right */}
-        <div className="absolute bottom-0 right-0 w-[80%] sm:w-[70%] lg:w-[60%] h-[80%] sm:h-[85%] lg:h-[90%]">
-          <Image
+        {/* Image Section */}
+        <div className="col-span-5 h-full">
+          <img
             src="/employement/hero.png"
-            alt="hero-image"
-            fill
-            className="object-contain object-bottom"
+            alt="SFT Team Members"
+            className="h-full w-full object-cover"
           />
         </div>
+      </div>
+    </section>
 
-        {/* CTA Buttons - Bottom Left */}
-        <div className="absolute bottom-6 sm:bottom-8 lg:bottom-10 left-6 sm:left-12 lg:left-24 flex items-center gap-3 sm:gap-4">
-          <button className="flex items-center gap-2 sm:gap-4 bg-[#FFE3E7] px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-base sm:text-lg font-medium border rounded-full hover:bg-gray-200 transition">
-            Support Shaurya
-          </button>
-          <button className="bg-[#FFE3E7] p-2 sm:p-3 lg:p-4 rounded-full border hover:bg-gray-200 transition">
-            <ArrowRight size={16} className="sm:w-5 sm:h-5" />
-          </button>
-        </div>
-      </section>
-
-      <div className="px-0 sm:px-4 lg:px-8"> {/*required padding from both sides*/}
+      <div className="px-0 sm:px-4 lg:px-8">
+        {" "}
+        {/*required padding from both sides*/}
         {/* ARTOPIA */}
         <section className="bg-[#FACAD1] border rounded-[32px] lg:rounded-[42px] overflow-hidden mt-8 sm:mt-12">
           {/* Content Container */}
@@ -106,7 +101,6 @@ export default function Employment() {
             />
           </div>
         </section>
-
         {/* 2 COLUMN SECTION */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12">
           {/* card-1 */}
@@ -145,10 +139,11 @@ export default function Employment() {
               {/* Paragraph */}
               <div className="w-full">
                 <p className="text-sm sm:text-base text-[#041527] leading-[1.6] tracking-wide">
-                  SFT's bakery was our first skilling project, where trainees have
-                  excelled beyond expectations, mastering the intricate skills of
-                  baking cookies, cakes, muffins, and more. This project, tailored
-                  to their unique needs, has transformed them...
+                  SFT's bakery was our first skilling project, where trainees
+                  have excelled beyond expectations, mastering the intricate
+                  skills of baking cookies, cakes, muffins, and more. This
+                  project, tailored to their unique needs, has transformed
+                  them...
                 </p>
               </div>
             </div>
@@ -378,51 +373,51 @@ export default function Employment() {
             </div>
           </div>
         </section>
-        
         {/* THE JOURNEY */}
-        <section className="relative w-full h-full min-h-[70vh] bg-[#FF7715] rounded-[42px] mt-20 overflow-hidden flex justify-center items-center">
-          {/* Title */}
-          <h1 className="absolute top-10 left-1/2 -translate-x-1/2 text-center text-[6vw] lg:text-[6vw] uppercase text-white font-light">
-            The <span className="font-extrabold">Journey</span>
-          </h1>
+        <section className="bg-[#FF6B00] rounded-3xl overflow-hidden relative mt-14">
+      {/* Text Section */}
+      <div className="text-center pt-16 pb-8">
+        <h2 className="text-7xl text-white">
+          THE <span className="font-bold">JOURNEY</span>
+        </h2>
+      </div>
 
-          {/* Images Container */}
-          <div className="absolute inset-0 w-full h-full">
-            {/* Center Image */}
-            <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[40%] h-auto">
-              <Image
-                src="/employement/j-2.png"
-                alt="center-image"
-                width={800}
-                height={600}
-                className="object-contain object-bottom"
-              />
-            </div>
+      {/* Image Container */}
+      <div className="relative flex justify-center items-end h-[400px]">
+        {/* Left Cartoon */}
+        <div className="absolute left-[11%] bottom-0 w-1/4">
+          <Image
+            src="/employement/j-1.png"
+            alt="Left cartoon character"
+            width={300}
+            height={300}
+            className="object-contain"
+          />
+        </div>
 
-            {/* Left Cartoon */}
-            <div className="absolute left-10 bottom-0 w-[20%] h-auto">
-              <Image
-                src="/employement/j-1.png"
-                alt="left-cartoon"
-                width={500}
-                height={400}
-                className="object-contain object-bottom"
-              />
-            </div>
+        {/* Center Image */}
+        <div className="z-10 mx-auto">
+          <Image
+            src="/employement/j-2.png"
+            alt="Team members with food"
+            width={800}
+            height={400}
+            className="object-contain"
+          />
+        </div>
 
-            {/* Right Cartoon */}
-            <div className="absolute right-10 bottom-0 w-[20%] h-auto">
-              <Image
-                src="/employement/j-3.png"
-                alt="right-cartoon"
-                width={500}
-                height={400}
-                className="object-contain object-bottom"
-              />
-            </div>
-          </div>
-        </section>
-
+        {/* Right Cartoon */}
+        <div className="absolute right-[1%] bottom-0 w-1/4">
+          <Image
+            src="/employement/j-3.png"
+            alt="Right cartoon character"
+            width={300}
+            height={300}
+            className="object-contain"
+          />
+        </div>
+      </div>
+    </section>
         {/* SLIDER */}
         <section className="relative w-full bg-[#FFCFD6] rounded-[42px] mt-20 px-8 py-16">
           {/* Cards Container - Horizontal Scroll */}
@@ -511,7 +506,6 @@ export default function Employment() {
                 </p>
               </div>
             </div>
-
           </div>
 
           {/* Custom CSS for hiding scrollbar */}
@@ -525,7 +519,6 @@ export default function Employment() {
             }
           `}</style>
         </section>
-
         {/* AVATARS */}
         <section className="mt-20">
           <div className="w-full">
@@ -540,7 +533,6 @@ export default function Employment() {
             />
           </div>
         </section>
-
         {/* Number cards */}
         <section className="flex gap-6 mt-20 mb-40 px-8">
           {/* Card 1 */}
@@ -569,7 +561,6 @@ export default function Employment() {
             </p>
           </div>
         </section>
-
       </div>
     </main>
   );

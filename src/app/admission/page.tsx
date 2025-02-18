@@ -103,23 +103,23 @@ export default function Admission() {
             <Image
               src="/admissions/img-1.png"
               alt="Reflection time"
-              width={260}
-              height={180}
-              className="absolute left-0 top-[30px] rotate-[-10deg] shadow-lg rounded-lg z-10 transform hover:scale-105 transition-transform"
+              width={300}
+              height={250}
+              className="absolute left-[-60px] top-[30px] rotate-[-10deg] shadow-lg rounded-lg z-10 transform hover:scale-105 transition-transform"
             />
             <Image
               src="/admissions/img-2.png"
               alt="Check-in"
-              width={260}
-              height={180}
-              className="absolute left-[40px] top-[-10px] rotate-[5deg] shadow-lg rounded-lg z-20 transform hover:scale-105 transition-transform"
+              width={300}
+              height={250}
+              className="absolute left-[40px] top-[-73px] rotate-[5deg] shadow-lg rounded-lg z-20 transform hover:scale-105 transition-transform"
             />
             <Image
               src="/admissions/img-3.png"
               alt="Check-out"
-              width={260}
-              height={180}
-              className="absolute left-[60px] top-[60px] rotate-[12deg] shadow-lg rounded-lg z-30 transform hover:scale-105 transition-transform"
+              width={300}
+              height={250}
+              className="absolute right-[-70px] top-[60px] rotate-[12deg] shadow-lg rounded-lg z-30 transform hover:scale-105 transition-transform"
             />
           </div>
         </div>
@@ -193,30 +193,44 @@ export default function Admission() {
           <div className="relative w-1/2 flex justify-center">
             {/* Centered Circular Dotted Background */}
             <div className="absolute w-[500px] h-[500px] bg-[url('/admissions/dotted-circle-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-
+              
             {/* Stacked Images */}
-            <div className="relative w-[350px] h-[280px]">
+            <div className="relative w-[400px] h-[400px] ">
+              {/* Base Chat Image */}
               <Image
-                src="/admissions/img-1.png"
-                alt="Reflection time"
-                width={260}
-                height={180}
-                className="absolute left-0 top-[30px] rotate-[-10deg] shadow-lg rounded-lg z-10 transform hover:scale-105 transition-transform"
+                src="/admissions/chat.png"
+                alt="Chat background"
+                width={500}
+                height={500}
+                className="absolute left-0 top-[30px] z-0 transform hover:scale-105 transition-transform"
               />
+
+              {/* Bean Image - Middle Layer */}
               <Image
-                src="/admissions/img-2.png"
-                alt="Check-in"
-                width={260}
-                height={180}
-                className="absolute left-[40px] top-[-10px] rotate-[5deg] shadow-lg rounded-lg z-20 transform hover:scale-105 transition-transform"
+                src="/admissions/bean.png"
+                alt="Mr Bean"
+                width={120}
+                height={100}
+                className="absolute right-[-30px] bottom-[110px] z-10 transform hover:scale-125 transition-transform"
               />
-              <Image
-                src="/admissions/img-3.png"
-                alt="Check-out"
-                width={260}
-                height={180}
-                className="absolute left-[60px] top-[60px] rotate-[12deg] shadow-lg rounded-lg z-30 transform hover:scale-105 transition-transform"
-              />
+
+              {/* Hands and Music Node Container - Top Layer */}
+              <div className="absolute left-[50px] bottom-[20px] z-20 flex gap-4">
+                <Image
+                  src="/admissions/node.png"
+                  alt="Music node"
+                  width={100}
+                  height={100}
+                  className=" pt-16  transform hover:scale-105 transition-transform"
+                />
+                <Image
+                  src="/admissions/hands.png"
+                  alt="Hands"
+                  width={220}
+                  height={150}
+                  className=" transform hover:scale-105 transition-transform"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -301,10 +315,11 @@ export default function Admission() {
             </div>
           </div>
         </section>
+
       </section>
 
       {/* INCLUSIVE ECOSYTEM */}
-      <section className="relative w-full min-h-[800px] bg-[#FFD8AA] rounded-[90px] mt-20 px-16 py-20 flex items-center justify-between overflow-hidden">
+      <section className="relative w-full min-h-[800px] bg-[#FFD8AA] rounded-[90px] mt-20 mb-20 px-16 py-20 flex items-center justify-between overflow-hidden">
         {/* Left Side - Text Content */}
         <div className="w-1/2 flex flex-col space-y-6 text-left">
           <h2 className="text-[48px] font-extrabold text-[#121212] leading-tight">
@@ -383,16 +398,16 @@ export default function Admission() {
       </section>
 
       {/* LOREM IPSUM */}
-      <section
+      {/* <section
         className="relative w-full min-h-[600px] bg-[#FFD5D5] rounded-[42px] mt-20 px-16 py-20
         flex items-center justify-between overflow-hidden"
       >
-        {/* Left Side - Image Section */}
+        Left Side - Image Section
         <div className="relative w-1/2 flex justify-center">
-          {/* Dotted Swirl Background (Bottom Layer) */}
+          Dotted Swirl Background (Bottom Layer)
           <div className="absolute w-[400px] h-[400px] bg-[url('/admissions/dotted-swirl-bg.png')] bg-contain bg-no-repeat left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
 
-          {/* Whiteboard/Rectangle Background (Middle Layer) */}
+          Whiteboard/Rectangle Background (Middle Layer)
           <div className="relative w-[380px] h-[260px] flex items-center justify-center z-10">
             <Image
               src="/admissions/rectangle-bg.png"
@@ -402,7 +417,7 @@ export default function Admission() {
             />
           </div>
 
-          {/* Circular Avatars (Top Layer) */}
+          Circular Avatars (Top Layer)
           <div className="absolute w-[420px] h-[380px] z-20">
             <Image
               src="/admissions/avatar_purple.webp"
@@ -456,7 +471,7 @@ export default function Admission() {
           </div>
         </div>
 
-        {/* Right Side - Text Content */}
+        Right Side - Text Content
         <div className="w-1/2 flex flex-col space-y-6 text-left">
           <h2 className="text-[48px] font-extrabold text-[#121212] leading-tight">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -469,7 +484,7 @@ export default function Admission() {
             eros ut tellus porttitor, ut aliquam urna lacinia.
           </p>
 
-          {/* Learn More Button - Bottom Right Aligned */}
+          Learn More Button - Bottom Right Aligned
           <div className="flex justify-end">
             <button
               className="px-6 py-3 border-2 border-black border-solid text-black font-semibold rounded-[12px] 
@@ -479,7 +494,7 @@ export default function Admission() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
