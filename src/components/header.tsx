@@ -37,7 +37,7 @@ export default function Example() {
           </button>
         </div>
         <nav className="hidden lg:flex lg:gap-x-12">
-          <Link href="#" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/" className="text-sm/6 font-semibold text-gray-900">
             Home
           </Link>
           <Link href="/admission" className="text-sm/6 font-semibold text-gray-900">

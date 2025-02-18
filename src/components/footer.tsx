@@ -11,13 +11,15 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 rounded-tr-[100px] bg-gradient-to-br from-[#6B8BF5] via-[#9B7BF7] to-[#C4E1FF] opacity-90" />
-
-      {/* Orange decorative shape */}
-      <div className="absolute right-0 top-0 w-96 h-96 rounded-full bg-gradient-to-br from-orange-400/20 to-orange-500/10 blur-3xl" />
-
+    <footer 
+      className="relative overflow-hidden rounded-tr-[100px]"
+      style={{
+        backgroundImage: 'url(/footer-bg.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       {/* Main content */}
       <div className="relative px-8 md:px-16 pt-24 pb-16 mx-auto max-w-7xl">
         {/* Hero section */}
@@ -29,30 +31,30 @@ export default function Footer() {
           </h2>
           <Button
             variant="secondary"
-            className="bg-black text-white hover:bg-black/90 rounded-full px-6 py-2 text-base"
+            className="bg-[#FFCFD6] text-[#2C438A] hover:bg-[#FFCFD6]/90 rounded-full px-8 py-4 text-lg font-semibold"
           >
             Contact Now →
           </Button>
         </div>
 
         {/* Footer links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-12 text-black bg-slate-500">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-x-10 gap-y-12 text-white">
           {/* Newsletter */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <h3 className="font-semibold mb-3 text-sm">Newsletter</h3>
-            <p className="text-sm mb-4 text-black/70">
+            <p className="text-sm mb-4 text-white/80">
               We'd love to share our love for engineering with you in our monthly newsletter.
             </p>
             <form onSubmit={handleSubmit} className="flex gap-2">
               <Input
                 type="email"
                 placeholder="jane@domain.com"
-                className="bg-white/90 border-none placeholder:text-black/50 text-black h-10 text-sm rounded-md"
+                className="bg-white/10 border-none placeholder:text-white/50 text-white h-12 text-sm rounded-lg focus:bg-white/20"
               />
               <Button
                 type="submit"
                 variant="secondary"
-                className="whitespace-nowrap bg-black text-white hover:bg-black/90 h-10 text-sm px-4"
+                className="whitespace-nowrap bg-[#FFCFD6] text-[#2C438A] hover:bg-[#FFCFD6]/90 h-12 text-sm px-6 rounded-lg font-medium"
               >
                 Subscribe
               </Button>
@@ -60,16 +62,16 @@ export default function Footer() {
           </div>
 
           {/* Company */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 pl-4">
             <h3 className="font-semibold mb-3 text-sm">Company</h3>
             <nav className="flex flex-col gap-2.5">
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Blog
               </Link>
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Careers
               </Link>
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Privacy
               </Link>
             </nav>
@@ -79,13 +81,13 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h3 className="font-semibold mb-3 text-sm">Social</h3>
             <nav className="flex flex-col gap-2.5">
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Twitter
               </Link>
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Discord
               </Link>
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 LinkedIn
               </Link>
             </nav>
@@ -95,16 +97,16 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h3 className="font-semibold mb-3 text-sm">Product</h3>
             <nav className="flex flex-col gap-2.5">
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Overview
               </Link>
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Roadmap
               </Link>
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Changelog
               </Link>
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Book a demo
               </Link>
             </nav>
@@ -114,13 +116,13 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h3 className="font-semibold mb-3 text-sm">Resources</h3>
             <nav className="flex flex-col gap-2.5">
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Documentation
               </Link>
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 GitHub
               </Link>
-              <Link href="#" className="text-sm text-black/70 hover:text-black">
+              <Link href="#" className="text-sm text-white/80 hover:text-white">
                 Contact us
               </Link>
             </nav>
