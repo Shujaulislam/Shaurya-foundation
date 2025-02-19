@@ -1,248 +1,549 @@
+"use client"
+
+import { ArrowRight, ArrowUpRight, Play, TvMinimalPlay } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
+const awards = [
+  { src: "/guinness.png", alt: "Guinness World Records", borderColor: "border-t-blue-500" },
+  { src: "/GPTW.png", alt: "Great Place To Work", borderColor: "border-t-blue-500" },
+  { src: "/nabh.png", alt: "NABH Accredited", borderColor: "border-t-red-500" },
+  { src: "/outlook-health.png", alt: "Outlook Health", borderColor: "border-t-blue-500" },
+  { src: "/the-week.png", alt: "The Week", borderColor: "border-t-blue-500" },
+];
 
 export default function Home() {
   return (
-    <main className="px-24">
-  {/* Hero Section with Image Overlay */}
-  <section className="relative w-full mb-16">
-    <div className="relative w-full h-[600px] rounded-[41px] overflow-hidden">
-      <img 
-        src="/placeholder-hero.jpg" 
-        alt="Shaurya team" 
-        className="w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
-        <h1 className="text-white text-[80px] font-bold mb-4">SHAURYA</h1>
-        <p className="text-white text-center text-[28px] max-w-[2499px] mb-10">
-          A non-profit transforming the lives of individuals with special needs through holistic education, life skills, and community integration.
+    <main className="lg:px-16 xl:px-24">
+      {/* Hero Section with Image Overlay */}
+      <section className="relative w-full h-screen xl:mt-8 mb-20 overflow-hidden rounded-2xl">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/hero.png"
+            alt="Shaurya team"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute bg-[url(/hero-bg.png)] inset-0 bg-black/40" />{" "}
+          {/* Overlay */}
+        </div>
+
+        {/* Content Container */}
+        <div className="relative h-full flex flex-col items-center justify-center px-8">
+          {/* Title Container */}
+          <div className="flex flex-col text-center mb-6">
+            <div className="relative">
+              <h1 className="lg:text-[120px] xl:text-[200px] font-black text-[#EEF5FF] tracking-tight">
+                SHAURYA
+              </h1>
+              <span className="absolute bottom-0 right-0 lg:text-[24px] xl:text-[32px] font-bold text-[#EEF5FF]">
+                FOUNDATION
+              </span>
+            </div>
+          </div>
+
+          {/* Description */}
+          <p className="text-white text-center text-2xl max-w-4xl mb-12 leading-relaxed">
+            A Non-Profit Transforming The Lives Of Individuals With Special
+            Needs Through Holistic Education, Life Skills, And Community
+            Integration.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex gap-4 ">
+            <button className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-[#E8F1FF] hover:bg-[#E8F1FF]/90 font-semibold text-lg text-black lg:px-6 lg:py-3 xl:px-8 xl:py-4 rounded-xl">
+              <TvMinimalPlay />
+              Watch Video
+            </button>
+            <button className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-white hover:bg-white/90 font-semibold text-black lg:px-6 lg:py-3 xl:px-8 xl:py-4 rounded-xl ">
+              Support Shaurya
+              <ArrowUpRight />
+            </button>
+          </div>
+
+          {/* Scroll Down */}
+          <button
+            onClick={() =>
+              window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth",
+              })
+            }
+            className="absolute bottom-8 text-white text-sm xl:text-xl font-medium hover:opacity-80 transition-opacity"
+          >
+            Slide DOWN
+          </button>
+        </div>
+      </section>
+
+      {/* Initiatives/Programs Cards */}
+      <section className="mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 xl:gap-8">
+        <div className="bg-[#A3DAC2] p-6 rounded-xl lg:w-[280px] lg:h-[350px] xl:h-[420px] xl:w-[380px] relative">
+          <h3 className="pt-5 font-bold text-2xl mb-2 text-[#252B61]">
+            A Puzzle Without All Its Pieces Is Incomplete. At Shaurya Foundation
+            Trust (SFT), We Strive to Complete the Picture
+          </h3>
+          <div className="absolute right-0 bottom-0 xl:w-[70%] h-auto">
+            <Image
+              src="/card-1.png"
+              alt="Independent Living Program"
+              className="w-auto h-auto object-cover"
+              width={0}
+              height={0}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          {/* Button */}
+          <button className="absolute lg:bottom-8 lg:left-6 xl:bottom-10 xl:left-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 flex items-center justify-center bg-[#252B61] text-white rounded-full z-20">
+            <ArrowRight size={24} />
+          </button>
+        </div>
+
+        <div className="bg-[#F0DA69] p-6 rounded-xl lg:w-[280px] lg:h-[350px] xl:h-[420px] xl:w-[380px] relative">
+          <h3 className="pt-5 font-bold text-2xl mb-2 text-[#252B61]">
+            Independent Living
+            <br />
+            Program
+          </h3>
+          <div className="absolute right-0 bottom-0 xl:w-[70%] h-auto">
+            <Image
+              src="/card-2.png"
+              alt="Independent Living Program"
+              className="w-auto h-auto object-cover"
+              width={0}
+              height={0}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          {/* Button */}
+          <button className="absolute lg:bottom-8 lg:left-6 xl:bottom-10 xl:left-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 flex items-center justify-center bg-[#252B61] text-white rounded-full z-20">
+            <ArrowRight size={24} />
+          </button>
+        </div>
+
+        <div className="bg-[#FFCFD6] p-6 rounded-xl lg:w-[280px] lg:h-[350px] xl:h-[420px] xl:w-[380px] relative">
+          <h3 className="pt-5 font-bold text-2xl mb-2 text-[#252B61]">
+            Assisted Employement
+            <br />
+            Unit
+          </h3>
+          <div className="absolute right-0 bottom-0 xl:w-[70%] h-auto">
+            <Image
+              src="/card-3.png"
+              alt="Independent Living Program"
+              className="w-auto h-auto object-cover"
+              width={0}
+              height={0}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          {/* Button */}
+          <button className="absolute lg:bottom-8 lg:left-6 xl:bottom-10 xl:left-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 flex items-center justify-center bg-[#252B61] text-white rounded-full z-20">
+            <ArrowRight size={24} />
+          </button>
+        </div>
+
+        <div className="bg-[#92BDF6] p-6 rounded-xl lg:w-[280px] lg:h-[350px] xl:h-[420px] xl:w-[380px] relative">
+          <h3 className="pt-5 font-bold text-2xl mb-2 text-[#252B61]">
+            By building an Inclusive Ecosystem, we aim to create a society where
+            everyone is valued and respected.
+          </h3>
+          <div className="absolute right-0 bottom-0 xl:w-[70%] h-auto">
+            <Image
+              src="/card-4.png"
+              alt="Independent Living Program"
+              className="w-auto h-auto object-cover"
+              width={0}
+              height={0}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          {/* Button */}
+          <button className="absolute lg:bottom-8 lg:left-6 xl:bottom-10 xl:left-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 flex items-center justify-center bg-[#252B61] text-white rounded-full z-20">
+            <ArrowRight size={24} />
+          </button>
+        </div>
+      </section>
+
+      {/* Upcoming Events Header */}
+      <section className="mb-10">
+        <div className="sm:mb-8 md:mb-14 lg:mb-16 xl:mb-20 flex items-end justify-between">
+          <h2 className="text-[90px] font-extrabold text-[#252525] leading-none">
+            Upcoming
+            <br />
+            Events
+          </h2>
+          <div className="flex flex-col items-start gap-4">
+            <p className="text-2xl text-gray-700 max-w-xl">
+              Join our upcoming events for contribution...
+            </p>
+            <Link
+              href="/events"
+              className="flex items-center gap-2 bg-[#FDF8F1] px-4 py-2 rounded-xl shadow-sm hover:bg-gray-50 transition-colors"
+            >
+              <span className="text-[#333] font-medium">View</span>
+              <ArrowUpRight strokeWidth={3} size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Events Grid */}
+      <section className="mb-10 md:mb-14 xl:mb-20">
+        <div className="grid grid-cols-12 gap-4 md:gap-6">
+          {/* Large Event Card */}
+          <div className="col-span-12 md:col-span-8 lg:col-span-6 row-span-2 bg-[#F0DA69] rounded-xl p-8 relative">
+            <span className="inline-block px-3 py-1 bg-white rounded-lg text-sm font-medium mb-4">
+              Sft Community Outreach
+            </span>
+            <div className="flex flex-col h-full">
+              <div className="flex gap-4 flex-1">
+                <div className="space-y-4 flex-1">
+                  <h3 className="text-[32px] font-bold leading-tight text-[#252525]">
+                    Inclusivity
+                    <br />
+                    Sensitization
+                  </h3>
+                  <p className="text-[#252525]/80 text-base">
+                    A Sneak Peak Of Training Workshop
+                    <br />
+                    For Anganwadi Workers At SFT Palwal
+                    <br />
+                    Campus. It Was....
+                  </p>
+                </div>
+
+                <div className="flex-1 bg-black">
+                  <Image
+                    src="/event-1.png"
+                    alt="Inclusivity Sensitization"
+                    width={200}
+                    height={200}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute bottom-8 left-8 w-12 h-12 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+              <Play className="w-5 h-5 text-[#252525] ml-0.5" />
+            </div>
+          </div>
+
+          {/* Medium Event Card */}
+          <div className="col-span-12 md:col-span-4 lg:col-span-6 bg-[#4D5899] text-white rounded-xl p-6 relative">
+            <span className="inline-block px-3 py-1 bg-white text-black rounded-lg text-sm font-medium mb-4">
+              Sft Triumph
+            </span>
+            <div className="flex justify-between items-start gap-6">
+              <div>
+                <h3 className="text-xl font-bold mb-3">
+                  Global Autism Project
+                </h3>
+                <p className="text-gray-200 text-sm">
+                  Join us in making a difference
+                </p>
+              </div>
+              <Image
+                src="/event-2.png"
+                alt="Global Autism Project"
+                width={120}
+                height={120}
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Small Event Cards */}
+          <div className="col-span-12 md:col-span-4 lg:col-span-3 bg-[#A3DAC2] rounded-xl p-6 relative">
+            <span className="inline-block px-3 py-1 bg-white rounded-lg text-sm font-medium mb-4">
+              Live Event
+            </span>
+            <div className="flex justify-between items-start gap-4">
+              <div>
+                <h3 className="text-lg font-bold mb-2">Self Advocacy</h3>
+                <p className="text-gray-700 text-sm">Learn to speak up</p>
+              </div>
+              <Image
+                src="/event-3.png"
+                alt="Self Advocacy"
+                width={80}
+                height={80}
+                className="object-cover rounded-lg"
+              />
+            </div>
+          </div>
+
+          <div className="col-span-12 md:col-span-4 lg:col-span-3 bg-[#FFC7D1] rounded-xl p-6 relative">
+            <span className="inline-block px-3 py-1 bg-white rounded-lg text-sm font-medium mb-4">
+              Live Event
+            </span>
+            <div className="flex justify-between items-start gap-4">
+              <div>
+                <h3 className="text-lg font-bold mb-2">Sing And Paint</h3>
+                <p className="text-gray-700 text-sm">Express through art</p>
+              </div>
+              <Image
+                src="/event-4.png"
+                alt="Sing And Paint"
+                width={80}
+                height={80}
+                className="object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Shaurya Section */}
+      <section className="bg-[#C7D0FF] rounded-xl mb-10 md:mb-14 xl:mb-20 p-8 md:p-12 lg:p-16 xl:p-20 min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[700px] flex flex-col md:flex-row items-center gap-6 md:gap-8 lg:gap-12">
+        {/* Left Side Content */}
+        <div className="md:w-1/2 text-center md:text-left space-y-6 md:space-y-8 lg:space-y-10">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900">
+            About Shaurya.
+          </h2>
+          <p className="text-gray-700 font-normal text-lg md:text-xl lg:text-2xl max-w-2xl">
+            Shaurya Foundation Trust (SFT) is a non-profit organization
+            dedicated to transforming the lives of individuals with special
+            needs by providing a holistic approach to education, life skills,
+            and community integration.
+          </p>
+
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mt-4 md:mt-8">
+            <div className="flex items-center gap-3">
+              <div className="bg-[#4D2C5E] rounded-xl p-2 md:p-3 lg:p-2.5 lg:w-12 lg:h-12 shadow-sm flex items-center justify-center">
+                <Image
+                  src="/jigsaw.png"
+                  alt="Fun Learning Experts"
+                  width={32}
+                  height={32}
+                  className="object-contain lg:w-8 lg:h-8"
+                />
+              </div>
+              <span className="text-[#0A3470] text-lg md:text-xl lg:text-lg xl:text-2xl xl:font-semibold whitespace-nowrap">
+                Fun Learning Experts
+              </span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="bg-[#4D2C5E] rounded-xl p-2 md:p-3 lg:p-2.5 lg:w-12 lg:h-12 shadow-sm flex items-center justify-center">
+                <Image
+                  src="/hearts.png"
+                  alt="Easily Accessible"
+                  width={32}
+                  height={32}
+                  className="object-contain lg:w-8 lg:h-8"
+                />
+              </div>
+              <span className="text-[#0A3470] text-lg md:text-xl lg:text-lg xl:text-2xl xl:font-semibold whitespace-nowrap">
+                Easily Accessible
+              </span>
+            </div>
+
+            <Link
+              href="/about"
+              className="flex items-center gap-2 bg-[#FDF8F1] px-4 py-2 md:px-6 md:py-3 lg:px-4 lg:py-2.5 rounded-xl shadow-sm hover:bg-gray-50 transition-colors"
+            >
+              <span className="text-[#333] text-lg md:text-xl lg:text-lg xl:text-2xl xl:font-semibold">
+                Learn
+              </span>
+              <ArrowUpRight
+                strokeWidth={3}
+                size={20}
+                className="md:w-6 md:h-6 lg:w-5 lg:h-5"
+              />
+            </Link>
+          </div>
+        </div>
+
+        {/* Right Side Image */}
+        <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
+          <Image
+            src="/about-us-section.png"
+            alt="Girl Working on Laptop"
+            width={500}
+            height={400}
+            className="w-full h-auto max-w-md lg:max-w-lg xl:max-w-xl object-contain"
+          />
+        </div>
+      </section>
+
+      {/* Leaders of Change Section */}
+      <section className="bg-[#91B4FD] mb-10 md:mb-14 xl:mb-20 p-16">
+        <h2 className="text-[80px] font-bold text-center mb-4">
+          Leaders Of Change
+        </h2>
+        <p className="text-[28px] text-center mb-16">
+          Achieving self-sufficiency through skill-based employment.
         </p>
-        <div className="flex gap-6 mb-12">
-          <button className="bg-white text-[#1F1F1F] text-[20px] font-semibold px-10 py-3 rounded-lg">Know More</button>
-          <button className="bg-transparent border-2 border-white text-white text-[20px] font-semibold px-10 py-3 rounded-lg">Support Us</button>
-        </div>
-        <p className="text-white text-[16px] font-medium mt-20">slide DOWN</p>
-      </div>
-    </div>
-  </section>
 
-  {/* Initiatives/Programs Cards */}
-  <section className="mb-16 grid grid-cols-4 gap-4">
-    <div className="bg-[#F0DA69] p-6 rounded-[20px]">
-      <div className="h-[200px] mb-4">
-        <img src="/placeholder-initiative1.jpg" alt="Community Outreach" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <h3 className="font-semibold text-lg mb-2">Community Outreach</h3>
-      <p className="text-sm opacity-75">Serving communities through education and empowerment initiatives</p>
-    </div>
-    <div className="bg-[#2C438A] p-6 rounded-[20px] text-white">
-      <div className="h-[200px] mb-4">
-        <img src="/placeholder-initiative2.jpg" alt="Healthcare Initiatives" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <h3 className="font-semibold text-lg mb-2">Healthcare Initiatives</h3>
-      <p className="text-sm opacity-75">Providing essential healthcare services to underserved areas</p>
-    </div>
-    <div className="bg-[#A3DAC2] p-6 rounded-[20px]">
-      <div className="h-[200px] mb-4">
-        <img src="/placeholder-initiative3.jpg" alt="Inclusivity Sensitization" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <h3 className="font-semibold text-lg mb-2">Inclusivity Sensitization</h3>
-      <p className="text-sm opacity-75">Creating awareness for inclusive practices in society</p>
-    </div>
-    <div className="bg-[#FFCFD6] p-6 rounded-[20px]">
-      <div className="h-[200px] mb-4">
-        <img src="/placeholder-initiative4.jpg" alt="Education Programs" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <h3 className="font-semibold text-lg mb-2">Education Programs</h3>
-      <p className="text-sm opacity-75">Empowering through knowledge and skill development</p>
-    </div>
-  </section>
+        <div className="grid grid-cols-4 gap-12 mb-16">
+          <div className="flex flex-col items-center">
+            <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
+              <img
+                src="/placeholder-leader1.jpg"
+                alt="Leader"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="font-semibold text-xl mb-1">Anita</h3>
+            <p className="text-sm text-gray-700">Founder</p>
+          </div>
 
-  {/* About Shaurya Section */}
-  <section className="relative bg-[#C7D0FF] rounded-[40px] p-16 mb-16">
-    <div className="max-w-[1566px]">
-      <h2 className="text-[100px] font-bold mb-6">About Shaurya.</h2>
-      <p className="text-[28px] opacity-75 mb-16 max-w-[1566px]">
-        Shaurya Foundation Trust (SFT) is a non-profit organization dedicated to transforming the lives of individuals with special needs by providing a holistic approach to education, life skills, and community integration.
-      </p>
-      
-      <div className="flex gap-12 mb-16">
-        <div className="flex items-center gap-4 bg-white p-4 rounded-lg">
-          <img src="/jigsaw.png" alt="Jigsaw Icon" className="w-[75px] h-[75px]" />
-          <span className="text-[30px] font-semibold text-[#474444]">Expand</span>
-        </div>
-        
-        <div className="flex items-center gap-4 bg-white p-4 rounded-lg">
-          <img src="/hearts.png" alt="Hearts Icon" className="w-[64px] h-[64px]" />
-          <span className="text-[30px] font-semibold text-[#474444]">Support</span>
-        </div>
-        
-        <div className="flex items-center gap-4 bg-[#FDF8F1] p-4 rounded-lg">
-          <span className="text-[30px] font-semibold text-[#474444]">Learn More</span>
-          <div className="w-[40px] h-[40px] bg-[#222222]"></div>
-        </div>
-      </div>
-    </div>
-    
-    <div className="absolute right-[140px] top-[160px] w-[1140px] h-[1042px]">
-      <img src="/placeholder-about-image.jpg" alt="About Shaurya" className="w-full h-full object-cover rounded-lg" />
-    </div>
-  </section>
+          <div className="flex flex-col items-center">
+            <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
+              <img
+                src="/placeholder-leader2.jpg"
+                alt="Leader"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="font-semibold text-xl mb-1">Rajesh</h3>
+            <p className="text-sm text-gray-700">Director</p>
+          </div>
 
-  {/* Leaders of Change Section */}
-  <section className="bg-[#91B4FD] rounded-[40px] p-16 mb-16">
-    <h2 className="text-[80px] font-bold text-center mb-4">Leaders Of Change</h2>
-    <p className="text-[28px] text-center mb-16">Achieving self-sufficiency through skill-based employment.</p>
-    
-    <div className="grid grid-cols-4 gap-12 mb-16">
-      <div className="flex flex-col items-center">
-        <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
-          <img src="/placeholder-leader1.jpg" alt="Leader" className="w-full h-full object-cover" />
-        </div>
-        <h3 className="font-semibold text-xl mb-1">Anita</h3>
-        <p className="text-sm text-gray-700">Founder</p>
-      </div>
-      
-      <div className="flex flex-col items-center">
-        <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
-          <img src="/placeholder-leader2.jpg" alt="Leader" className="w-full h-full object-cover" />
-        </div>
-        <h3 className="font-semibold text-xl mb-1">Rajesh</h3>
-        <p className="text-sm text-gray-700">Director</p>
-      </div>
-      
-      <div className="flex flex-col items-center">
-        <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
-          <img src="/placeholder-leader3.jpg" alt="Leader" className="w-full h-full object-cover" />
-        </div>
-        <h3 className="font-semibold text-xl mb-1">Suraj</h3>
-        <p className="text-sm text-gray-700">Program Manager</p>
-      </div>
-      
-      <div className="flex flex-col items-center">
-        <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
-          <img src="/placeholder-leader4.jpg" alt="Leader" className="w-full h-full object-cover" />
-        </div>
-        <h3 className="font-semibold text-xl mb-1">Meera</h3>
-        <p className="text-sm text-gray-700">Communications</p>
-      </div>
-    </div>
-    
-    <div className="flex justify-around items-center bg-white py-8 px-6 rounded-lg">
-      <div className="text-center">
-        <h3 className="text-3xl font-bold">100+</h3>
-        <p className="text-sm">Active Volunteers</p>
-      </div>
-      <div className="text-center">
-        <h3 className="text-3xl font-bold">48</h3>
-        <p className="text-sm">Projects Completed</p>
-      </div>
-      <div className="text-center">
-        <h3 className="text-3xl font-bold">12</h3>
-        <p className="text-sm">Years of Impact</p>
-      </div>
-      <div className="text-center">
-        <h3 className="text-3xl font-bold">5000+</h3>
-        <p className="text-sm">Lives Impacted</p>
-      </div>
-    </div>
-  </section>
+          <div className="flex flex-col items-center">
+            <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
+              <img
+                src="/placeholder-leader3.jpg"
+                alt="Leader"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="font-semibold text-xl mb-1">Suraj</h3>
+            <p className="text-sm text-gray-700">Program Manager</p>
+          </div>
 
-  {/* Upcoming Events */}
-  <section className="bg-[#FFCFD6] rounded-[40px] p-16 mb-16">
-    <h2 className="text-[80px] font-bold mb-6">Upcoming Events</h2>
-    <p className="text-[28px] mb-12">Join our upcoming events and be part of the change</p>
-    
-    <div className="grid grid-cols-3 gap-8">
-      <div className="bg-white p-6 rounded-lg shadow-sm">
-        <div className="h-[200px] mb-4">
-          <img src="/placeholder-event1.jpg" alt="Inclusivity Sensitization" className="w-full h-full object-cover rounded-lg" />
+          <div className="flex flex-col items-center">
+            <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
+              <img
+                src="/placeholder-leader4.jpg"
+                alt="Leader"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="font-semibold text-xl mb-1">Meera</h3>
+            <p className="text-sm text-gray-700">Communications</p>
+          </div>
         </div>
-        <h3 className="font-semibold text-xl mb-2">Inclusivity Sensitization</h3>
-        <p className="text-sm mb-4">Workshops for schools and organizations</p>
-        <div className="flex justify-between">
-          <span className="text-sm font-medium">24 March, 2025</span>
-          <button className="text-sm font-medium">Learn more →</button>
-        </div>
-      </div>
-      
-      <div className="bg-white p-6 rounded-lg shadow-sm">
-        <div className="h-[200px] mb-4">
-          <img src="/placeholder-event2.jpg" alt="Community Seminar" className="w-full h-full object-cover rounded-lg" />
-        </div>
-        <h3 className="font-semibold text-xl mb-2">Community Seminar</h3>
-        <p className="text-sm mb-4">Fostering dialogue between communities</p>
-        <div className="flex justify-between">
-          <span className="text-sm font-medium">15 April, 2025</span>
-          <button className="text-sm font-medium">Learn more →</button>
-        </div>
-      </div>
-      
-      <div className="bg-white p-6 rounded-lg shadow-sm">
-        <div className="h-[200px] mb-4">
-          <img src="/placeholder-event3.jpg" alt="One Day Camp" className="w-full h-full object-cover rounded-lg" />
-        </div>
-        <h3 className="font-semibold text-xl mb-2">One Day Camp</h3>
-        <p className="text-sm mb-4">Health checkup and consultation</p>
-        <div className="flex justify-between">
-          <span className="text-sm font-medium">2 May, 2025</span>
-          <button className="text-sm font-medium">Learn more →</button>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  {/* Latest News/Updates */}
-  <section className="mb-16">
-    <h2 className="text-[80px] font-bold mb-6">Our Latest News</h2>
-    
-    <div className="grid grid-cols-3 gap-6">
-      <div className="bg-[#F0DA69] rounded-lg overflow-hidden">
-        <div className="h-[240px]">
-          <img src="/placeholder-news1.jpg" alt="Inclusivity Sensitization" className="w-full h-full object-cover" />
+        <div className="flex justify-around items-center bg-white py-8 px-6 rounded-lg">
+          <div className="text-center">
+            <h3 className="text-3xl font-bold">100+</h3>
+            <p className="text-sm">Active Volunteers</p>
+          </div>
+          <div className="text-center">
+            <h3 className="text-3xl font-bold">48</h3>
+            <p className="text-sm">Projects Completed</p>
+          </div>
+          <div className="text-center">
+            <h3 className="text-3xl font-bold">12</h3>
+            <p className="text-sm">Years of Impact</p>
+          </div>
+          <div className="text-center">
+            <h3 className="text-3xl font-bold">5000+</h3>
+            <p className="text-sm">Lives Impacted</p>
+          </div>
         </div>
-        <div className="p-6">
-          <h3 className="font-semibold text-xl mb-2">Inclusivity Sensitization</h3>
-          <p className="text-sm mb-4">New program launched across 15 schools</p>
-          <button className="text-sm font-medium flex items-center">Read more <span className="ml-1">→</span></button>
-        </div>
-      </div>
-      
-      <div className="bg-[#A3DAC2] rounded-lg overflow-hidden">
-        <div className="h-[240px]">
-          <img src="/placeholder-news2.jpg" alt="Global Autism Project" className="w-full h-full object-cover" />
-        </div>
-        <div className="p-6">
-          <h3 className="font-semibold text-xl mb-2">Global Autism Project</h3>
-          <p className="text-sm mb-4">Partnership with international organizations</p>
-          <button className="text-sm font-medium flex items-center">Read more <span className="ml-1">→</span></button>
-        </div>
-      </div>
-      
-      <div className="bg-[#FFCFD6] rounded-lg overflow-hidden">
-        <div className="h-[240px]">
-          <img src="/placeholder-news3.jpg" alt="Drug Free Youth Initiative" className="w-full h-full object-cover" />
-        </div>
-        <div className="p-6">
-          <h3 className="font-semibold text-xl mb-2">Drug Free Youth</h3>
-          <p className="text-sm mb-4">New awareness campaign reaches thousands</p>
-          <button className="text-sm font-medium flex items-center">Read more <span className="ml-1">→</span></button>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  {/* Awards */}
-  <section className="mb-20">
-    <h2 className="text-[60px] font-bold mb-8">Awards</h2>
-    
-    <div className="flex justify-between items-center">
-      <img src="/placeholder-award1.png" alt="Award" className="h-24" />
-      <img src="/placeholder-award2.png" alt="Award" className="h-24" />
-      <img src="/placeholder-award3.png" alt="Award" className="h-24" />
-      <img src="/placeholder-award4.png" alt="Award" className="h-24" />
-      <img src="/placeholder-award5.png" alt="Award" className="h-24" />
-    </div>
-  </section>
-</main>
+      {/* Latest News/Updates */}
+      <section className="rounded-xl mb-10 md:mb-14 xl:mb-20">
+        <h2 className="text-[80px] font-bold mb-6">Our Latest News</h2>
+
+        <div className="grid grid-cols-3 gap-6">
+          <div className="bg-[#F0DA69] rounded-lg overflow-hidden">
+            <div className="h-[240px]">
+              <img
+                src="/placeholder-news1.jpg"
+                alt="Inclusivity Sensitization"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="font-semibold text-xl mb-2">
+                Inclusivity Sensitization
+              </h3>
+              <p className="text-sm mb-4">
+                New program launched across 15 schools
+              </p>
+              <button className="text-sm font-medium flex items-center">
+                Read more <span className="ml-1">→</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="bg-[#A3DAC2] rounded-lg overflow-hidden">
+            <div className="h-[240px]">
+              <img
+                src="/placeholder-news2.jpg"
+                alt="Global Autism Project"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="font-semibold text-xl mb-2">
+                Global Autism Project
+              </h3>
+              <p className="text-sm mb-4">
+                Partnership with international organizations
+              </p>
+              <button className="text-sm font-medium flex items-center">
+                Read more <span className="ml-1">→</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="bg-[#FFCFD6] rounded-lg overflow-hidden">
+            <div className="h-[240px]">
+              <img
+                src="/placeholder-news3.jpg"
+                alt="Drug Free Youth Initiative"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="font-semibold text-xl mb-2">Drug Free Youth</h3>
+              <p className="text-sm mb-4">
+                New awareness campaign reaches thousands
+              </p>
+              <button className="text-sm font-medium flex items-center">
+                Read more <span className="ml-1">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Awards */}
+      <section className="text-center py-12 mb-10">
+        <h2 className="text-6xl font-extrabold">Awards</h2>
+        <p className="text-gray-600 text-xl font-semibold mt-2">
+          There are more than 100 games in our portfolio, 80 of them in active
+          operation.
+        </p>
+
+        <div className="mt-8 flex flex-wrap lg:flex-nowrap justify-center gap-14">
+          {awards.map((award, index) => (
+            <div
+              key={index}
+              className={`relative w-52 h-52 lg:w-44 lg:h-44 xl:w-52 xl:h-52 flex items-center justify-center rounded-3xl bg-white shadow-md border border-gray-200 
+                        before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-1.5 
+                        before:rounded-t-3xl ${award.borderColor}`}
+            >
+              <Image
+                src={award.src}
+                alt={award.alt}
+                width={100}
+                height={100}
+                className="object-contain lg:w-20 lg:h-20 xl:w-24 xl:h-24"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
