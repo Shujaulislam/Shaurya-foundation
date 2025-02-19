@@ -371,80 +371,101 @@ export default function Home() {
       </section>
 
       {/* Leaders of Change Section */}
-      <section className="bg-[#91B4FD] mb-10 md:mb-14 xl:mb-20 p-16">
-        <h2 className="text-[80px] font-bold text-center mb-4">
-          Leaders Of Change
-        </h2>
-        <p className="text-[28px] text-center mb-16">
-          Achieving self-sufficiency through skill-based employment.
-        </p>
-
-        <div className="grid grid-cols-4 gap-12 mb-16">
-          <div className="flex flex-col items-center">
-            <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
-              <img
-                src="/placeholder-leader1.jpg"
-                alt="Leader"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="font-semibold text-xl mb-1">Anita</h3>
-            <p className="text-sm text-gray-700">Founder</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
-              <img
-                src="/placeholder-leader2.jpg"
-                alt="Leader"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="font-semibold text-xl mb-1">Rajesh</h3>
-            <p className="text-sm text-gray-700">Director</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
-              <img
-                src="/placeholder-leader3.jpg"
-                alt="Leader"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="font-semibold text-xl mb-1">Suraj</h3>
-            <p className="text-sm text-gray-700">Program Manager</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <div className="w-[200px] h-[200px] mb-4 overflow-hidden rounded-full">
-              <img
-                src="/placeholder-leader4.jpg"
-                alt="Leader"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="font-semibold text-xl mb-1">Meera</h3>
-            <p className="text-sm text-gray-700">Communications</p>
-          </div>
+      <section className="mb-10 md:mb-14 xl:mb-20">
+        <div className="text-center mb-16">
+          <h2 className="text-[80px] font-extrabold text-[#252525] leading-none mb-6">
+            Leaders Of Change
+          </h2>
+          <p className="text-[32px] text-gray-700">
+            Achieving self-sufficiency through skill-based employment.
+          </p>
         </div>
 
-        <div className="flex justify-around items-center bg-white py-8 px-6 rounded-lg">
-          <div className="text-center">
-            <h3 className="text-3xl font-bold">100+</h3>
-            <p className="text-sm">Active Volunteers</p>
+        <div className="grid grid-cols-12 gap-6 md:gap-8 xl:gap-12">
+          <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
+            <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
+              <Image
+                src="/placeholder1.png"
+                alt="Leader 1"
+                width={180}
+                height={180}
+                className="rounded-full"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-[#252525] mb-1">Name Surname</h3>
+            <p className="text-gray-600">Position</p>
           </div>
-          <div className="text-center">
-            <h3 className="text-3xl font-bold">48</h3>
-            <p className="text-sm">Projects Completed</p>
+
+          <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
+            <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
+              <Image
+                src="/placeholder2.png"
+                alt="Leader 2"
+                width={180}
+                height={180}
+                className="rounded-full"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-[#252525] mb-1">Name Surname</h3>
+            <p className="text-gray-600">Position</p>
           </div>
-          <div className="text-center">
-            <h3 className="text-3xl font-bold">12</h3>
-            <p className="text-sm">Years of Impact</p>
+
+          <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
+            <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
+              <Image
+                src="/placeholder3.png"
+                alt="Leader 3"
+                width={180}
+                height={180}
+                className="rounded-full"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-[#252525] mb-1">Name Surname</h3>
+            <p className="text-gray-600">Position</p>
           </div>
-          <div className="text-center">
-            <h3 className="text-3xl font-bold">5000+</h3>
-            <p className="text-sm">Lives Impacted</p>
+
+          <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
+            <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
+              <Image
+                src="/placeholder4.png"
+                alt="Leader 4"
+                width={180}
+                height={180}
+                className="rounded-full"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-[#252525] mb-1">Name Surname</h3>
+            <p className="text-gray-600">Position</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="mt-8 lg:mt-20 xl:mt-24 mb-8 md:mb-12 lg:mb-16 xl:mb-20 flex justify-center">
+        <div className="flex items-center gap-48">
+          <div className="flex items-start">
+            <div className="w-1 h-20 bg-[#252525] mr-4"></div>
+            <div className="flex items-start gap-4">
+              <div className="flex items-baseline">
+                <span className="text-[90px] font-bold text-[#252525] leading-none">100</span>
+                <span className="text-[90px] font-bold text-[#252525] leading-none">+</span>
+              </div>
+              <div className="mt-8 ml-2">
+                <span className="text-[22px] text-[#252525] font-medium leading-tight block">talented</span>
+                <span className="text-[22px] text-[#252525] font-medium leading-tight block">teammates</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-start">
+            <div className="w-1 h-20 bg-[#252525] mr-4"></div>
+            <div className="flex items-start gap-4">
+              <span className="text-[90px] font-bold text-[#252525] leading-none">48</span>
+              <div className="mt-8 ml-2">
+                <span className="text-[22px] text-[#252525] font-medium leading-tight block">successful</span>
+                <span className="text-[22px] text-[#252525] font-medium leading-tight block">projects</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
