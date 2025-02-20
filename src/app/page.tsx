@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const cards = [
   {
-    title: "A Puzzle Without All Its Pieces Is Incomplete. At Shaurya Foundation Trust (SFT), We Strive to Complete the Picture",
+    title: "A Puzzle Without All Its Pieces Is Incomplete.",
     bgColor: "bg-[#A3DAC2]",
     image:"/card-1.png"
   },
@@ -21,7 +21,7 @@ const cards = [
     image: "/card-3.png"
   },
   {
-    title: "By building an Inclusive Ecosystem, we aim to create a society where everyone is valued and respected.",
+    title: "Building an Inclusive Ecosystem",
     bgColor: "bg-[#92BDF6]",
     image: "/card-4.png"
   }
@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <main className="lg:px-16 xl:px-24">
       {/* Hero Section with Image Overlay */}
-      <section className="relative w-full h-screen xl:mt-8 mb-20 overflow-hidden rounded-2xl">
+      <section className="relative w-full h-screen md:mt-4 lg:mt-6 xl:mt-8 mb-20 overflow-hidden rounded-2xl">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 w-full h-full">
           <Image
@@ -54,33 +54,33 @@ export default function Home() {
         </div>
 
         {/* Content Container */}
-        <div className="relative h-full flex flex-col items-center justify-center px-8">
+        <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8">
           {/* Title Container */}
-          <div className="flex flex-col text-center mb-6">
+          <div className="flex flex-col text-center mb-4 md:mb-5 lg:mb-6">
             <div className="relative">
-              <h1 className="lg:text-[120px] xl:text-[200px] font-black text-[#EEF5FF] tracking-tight">
+              <h1 className="text-[60px] sm:text-[80px] md:text-[100px] lg:text-[120px] xl:text-[200px] font-black text-[#EEF5FF] tracking-tight">
                 SHAURYA
               </h1>
-              <span className="absolute bottom-0 right-0 lg:text-[24px] xl:text-[32px] font-bold text-[#EEF5FF]">
+              <span className="absolute bottom-0 right-0 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[32px] font-bold text-[#EEF5FF]">
                 FOUNDATION
               </span>
             </div>
           </div>
 
           {/* Description */}
-          <p className="text-white text-center text-2xl max-w-4xl mb-12 leading-relaxed">
+          <p className="text-white text-center text-lg sm:text-xl md:text-2xl max-w-4xl mb-8 md:mb-10 lg:mb-12 leading-relaxed px-4">
             A Non-Profit Transforming The Lives Of Individuals With Special
             Needs Through Holistic Education, Life Skills, And Community
             Integration.
           </p>
 
           {/* Buttons */}
-          <div className="flex gap-4 ">
-            <button className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-[#E8F1FF] hover:bg-[#E8F1FF]/90 font-semibold text-lg text-black lg:px-6 lg:py-3 xl:px-8 xl:py-4 rounded-xl">
+          <div className="flex gap-3 md:gap-4">
+            <button className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-[#E8F1FF] hover:bg-[#E8F1FF]/90 font-semibold text-base md:text-lg text-black px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 xl:px-8 xl:py-4 rounded-xl">
               <TvMinimalPlay />
               Watch Video
             </button>
-            <button className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-white hover:bg-white/90 font-semibold text-black lg:px-6 lg:py-3 xl:px-8 xl:py-4 rounded-xl ">
+            <button className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-white hover:bg-white/90 font-semibold text-black px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 xl:px-8 xl:py-4 rounded-xl ">
               Support Shaurya
               <ArrowUpRight />
             </button>
@@ -94,7 +94,7 @@ export default function Home() {
                 behavior: "smooth",
               })
             }
-            className="absolute bottom-8 text-white text-sm xl:text-xl font-medium hover:opacity-80 transition-opacity"
+            className="absolute bottom-4 sm:bottom-6 md:bottom-8 text-white text-sm md:text-base lg:text-lg xl:text-xl font-medium hover:opacity-80 transition-opacity"
           >
             Slide DOWN
           </button>
@@ -102,18 +102,18 @@ export default function Home() {
       </section>
 
       {/* Initiatives/Programs Cards */}
-      <section className=" px-4 py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="px-4 py-6 sm:py-7 md:py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`${card.bgColor} rounded-2xl p-6 relative min-h-[320px] overflow-hidden transition-transform hover:scale-105`}
+              className={`${card.bgColor} rounded-2xl p-4 sm:p-5 md:p-6 relative min-h-[280px] sm:min-h-[300px] md:min-h-[320px] overflow-hidden transition-transform hover:scale-105`}
             >
-              <h3 className="text-[#252B61] font-bold text-xl mb-4 relative z-10 max-w-[80%]">
+              <h3 className="text-[#252B61] font-bold text-base sm:text-lg md:text-xl relative z-10 max-w-[80%] leading-tight">
                 {card.title}
               </h3>
 
-              <div className="absolute bottom-0 right-0 w-[70%] h-auto">
+              <div className="absolute bottom-0 right-0 w-[70%] h-auto md:h-[80%] lg:h-[90%] xl:h-full">
                 <Image
                   src={card.image}
                   alt={card.title}
@@ -123,10 +123,10 @@ export default function Home() {
               </div>
 
               <button
-                className="absolute bottom-6 left-6 w-12 h-12 bg-[#252B61] text-white rounded-full flex items-center justify-center z-20 transition-transform hover:scale-110"
+                className="absolute bottom-4 sm:bottom-5 md:bottom-6 left-4 sm:left-5 md:left-6 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#252B61] text-white rounded-full flex items-center justify-center z-20 transition-transform hover:scale-110"
                 aria-label="Learn more"
               >
-                <ArrowRight className="w-6 h-6" />
+                <ArrowRight className="w-5 h-5 sm:w-5.5 sm:h-5.5 md:w-6 md:h-6" />
               </button>
             </div>
           ))}
@@ -134,7 +134,7 @@ export default function Home() {
       </section>
 
       {/* Upcoming Events Header */}
-      <section className="mb-10">
+      <section className="mt-4 md:mt-8 lg:mt-14 xl:mt-16 mb-4 md:mb-8 lg:mb-14 xl:mb-16">
         <div className="sm:mb-8 md:mb-14 lg:mb-16 xl:mb-20 flex items-end justify-between">
           <h2 className="text-[90px] font-extrabold text-[#252525] leading-none">
             Upcoming
@@ -157,14 +157,15 @@ export default function Home() {
       </section>
 
       {/* Events Grid */}
-      <section className="mb-10 md:mb-14 xl:mb-20">
+      <section className="mt-4 md:mt-8 lg:mt-14 xl:mt-20 mb-4 md:mb-8 lg:mb-14 xl:mb-20">
         <div className="grid grid-cols-12 gap-4 md:gap-6">
           {/* Large Event Card */}
           <div className="col-span-12 md:col-span-8 lg:col-span-6 row-span-2 bg-[#F0DA69] rounded-xl p-8 relative">
             <span className="inline-block px-3 py-1 bg-white rounded-lg text-sm font-medium mb-4">
               Sft Community Outreach
             </span>
-            <div className="flex flex-col h-full">
+
+            <div className="flex flex-col h-full relative">
               <div className="flex gap-4 relative">
                 <div className="space-y-4 flex-1">
                   <h3 className="text-[32px] font-bold leading-tight text-[#252525]">
@@ -181,18 +182,20 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="absolute bottom-0 right-0 bg-black">
+                {/* Fixing the Image Position */}
+                <div className="absolute inset-y-0 right-4 flex items-center">
                   <Image
                     src="/event-1.png"
                     alt="Inclusivity Sensitization"
-                    width={200}
-                    height={200}
-                    className="w-full h-auto object-contain"
+                    width={180}
+                    height={180}
+                    className="w-[180px] h-auto object-contain"
                   />
                 </div>
               </div>
             </div>
 
+            {/* Play Button */}
             <div className="absolute bottom-8 left-8 w-12 h-12 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
               <Play className="w-5 h-5 text-[#252525] ml-0.5" />
             </div>
@@ -312,7 +315,7 @@ export default function Home() {
               href="/about"
               className="flex items-center gap-2 bg-[#FDF8F1] px-4 py-2 md:px-6 md:py-3 lg:px-4 lg:py-2.5 rounded-xl shadow-sm hover:bg-gray-50 transition-colors"
             >
-              <span className="text-[#333] text-lg md:text-xl lg:text-lg xl:text-2xl xl:font-semibold">
+              <span className="text-[#333] text-md md:text-xl lg:text-lg xl:text-2xl xl:font-semibold">
                 Learn
               </span>
               <ArrowUpRight
@@ -359,9 +362,9 @@ export default function Home() {
               />
             </div>
             <h3 className="text-xl font-semibold text-[#252525] mb-1">
-              Name Surname
+              Rubina Mohan
             </h3>
-            <p className="text-gray-600">Position</p>
+            <p className="text-gray-600">Principal</p>
           </div>
 
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
@@ -375,15 +378,15 @@ export default function Home() {
               />
             </div>
             <h3 className="text-xl font-semibold text-[#252525] mb-1">
-              Name Surname
+              Arpit Yadav
             </h3>
-            <p className="text-gray-600">Position</p>
+            <p className="text-gray-600">Director</p>
           </div>
 
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/leader-1.png"
+                src="/leader-3.png"
                 alt="Leader 3"
                 width={180}
                 height={180}
@@ -391,15 +394,15 @@ export default function Home() {
               />
             </div>
             <h3 className="text-xl font-semibold text-[#252525] mb-1">
-              Name Surname
+              Ravi Gupta
             </h3>
-            <p className="text-gray-600">Position</p>
+            <p className="text-gray-600">Founder</p>
           </div>
 
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/leader-2.png"
+                src="/leader-4.png"
                 alt="Leader 4"
                 width={180}
                 height={180}
@@ -407,9 +410,9 @@ export default function Home() {
               />
             </div>
             <h3 className="text-xl font-semibold text-[#252525] mb-1">
-              Name Surname
+              Rani Gupta
             </h3>
-            <p className="text-gray-600">Position</p>
+            <p className="text-gray-600">Director</p>
           </div>
         </div>
       </section>
@@ -456,103 +459,122 @@ export default function Home() {
 
       {/* Latest News/Updates */}
       <section className="bg-[#FFCFD6] rounded-xl p-12 mb-10 md:mb-14 xl:mb-20">
-        <h2 className="text-[80px] font-bold mb-6">Our Latest News</h2>
-        <p className="text-xl mb-8">Achieving self-sufficiency through skill-based employment.</p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h2 className="text-[50px] lg:text-[65px] 2xl:text-[80px] font-bold mb-4 lg:mb-6">
+          Our Latest News
+        </h2>
+        <p className="text-lg lg:text-xl mb-6 lg:mb-8">
+          Achieving self-sufficiency through skill-based employment.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {/* Card 1 */}
-          <div className="bg-[#E1EDFF] rounded-3xl p-8 relative min-h-[500px] 2xl:min-h-[700px] overflow-hidden">
-              <span className="text-[#ffffff] px-3 py-1 bg-[#252B61] rounded-none text-sm font-medium uppercase mb-4 inline-block">#SFT TRIUMPH</span>
-              <div className="absolute top-6 right-6 w-16 h-16">
-              <Image 
-                src="/event-badge.png" 
-                alt="Event" 
+          <div className="bg-[#E1EDFF] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden">
+            <span className="text-[#ffffff] px-3 py-1 bg-[#252B61] rounded-none text-sm font-medium uppercase mb-4 inline-block">
+              #SFT TRIUMPH
+            </span>
+            <div className="absolute top-6 right-6 w-12 lg:w-16 h-12 lg:h-16">
+              <Image
+                src="/event-badge.png"
+                alt="Event"
                 fill
                 className="object-contain"
               />
             </div>
-            <div className="relative z-10 mt-4 2xl:mt-12">
-              <h3 className="text-[#252B61] text-4xl font-semibold mb-6">Inclusivity Sensitization</h3>
-              <p className="text-[#252B61] text-lg">
-                A sneak peak of Training workshop for Anganwadi workers at SFT palwal campus. It was.....
+            <div className="relative z-10 mt-4 lg:mt-8 2xl:mt-12">
+              <h3 className="text-[#252B61] text-2xl lg:text-3xl 2xl:text-4xl font-semibold mb-4 lg:mb-6">
+                Inclusivity Sensitization
+              </h3>
+              <p className="text-[#252B61] text-base lg:text-lg">
+                A sneak peak of Training workshop for Anganwadi workers at SFT
+                palwal campus. It was.....
               </p>
             </div>
-           
-            <div className="absolute bottom-0 right-0 w-[45%] h-[45%] md:w-[40%] md:h-[40%] 2xl:w-[70%] 2xl:h-[70%]">
-              <Image 
-                src="/wing-icon.png" 
-                alt="Wing Icon" 
+
+            <div className="absolute bottom-0 right-0 w-[45%] h-[45%] lg:w-[55%] lg:h-[55%] 2xl:w-[70%] 2xl:h-[70%]">
+              <Image
+                src="/wing-icon.png"
+                alt="Wing Icon"
                 fill
                 className="object-contain"
               />
             </div>
-            <button className="absolute bottom-8 left-8 bg-white text-[#252B61] px-6 py-3 rounded-full font-medium flex items-center gap-2 z-20">
+            <button className="absolute bottom-6 lg:bottom-8 left-6 lg:left-8 bg-white text-[#252B61] px-4 lg:px-6 py-2 lg:py-3 rounded-full font-medium flex items-center gap-2 z-20 text-sm lg:text-base">
               Show Event
-              <span className="text-xl">→</span>
+              <span className="text-lg lg:text-xl">→</span>
             </button>
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#16AB59] rounded-3xl p-8 relative min-h-[500px] 2xl:min-h-[700px] overflow-hidden">
-              <span className="text-black md:text-sm px-3 py-1 bg-gray-100 rounded-none font-medium uppercase mb-4 inline-block">#SFT TRAININGS</span>
-              <div className="absolute top-6 right-6 w-16 h-16">
-              <Image 
-                src="/event-badge.png" 
-                alt="Event" 
+          <div className="bg-[#16AB59] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden">
+            <span className="text-black text-sm px-3 py-1 bg-gray-100 rounded-none font-medium uppercase mb-4 inline-block">
+              #SFT TRAININGS
+            </span>
+            <div className="absolute top-6 right-6 w-12 lg:w-16 h-12 lg:h-16">
+              <Image
+                src="/event-badge.png"
+                alt="Event"
                 fill
                 className="object-contain"
               />
             </div>
-            <div className="relative z-10 mt-4 2xl:mt-12">
-              <h3 className="text-[#FDF8F1] text-4xl font-semibold mb-6">Global Autism Project</h3>
-              <p className="text-[#FDF8F1] text-lg">
-                A sneak peak of Training workshop for Anganwadi workers at SFT palwal campus. It was.....
+            <div className="relative z-10 mt-4 lg:mt-8 2xl:mt-12">
+              <h3 className="text-[#FDF8F1] text-2xl lg:text-3xl 2xl:text-4xl font-semibold mb-4 lg:mb-6">
+                Global Autism Project
+              </h3>
+              <p className="text-[#FDF8F1] text-base lg:text-lg">
+                A sneak peak of Training workshop for Anganwadi workers at SFT
+                palwal campus. It was.....
               </p>
             </div>
 
-            <div className="absolute bottom-0 right-0 w-[45%] h-[45%] md:w-[40%] md:h-[40%] 2xl:w-[70%] 2xl:h-[70%]">
-              <Image 
-                src="/autism-ribbon.png" 
-                alt="Autism Ribbon" 
+            <div className="absolute bottom-0 right-0 w-[45%] h-[45%] lg:w-[55%] lg:h-[55%] 2xl:w-[70%] 2xl:h-[70%]">
+              <Image
+                src="/autism-ribbon.png"
+                alt="Autism Ribbon"
                 fill
                 className="object-contain"
               />
             </div>
-            <button className="absolute bottom-8 left-8 bg-white text-[#000000] px-6 py-3 rounded-full font-medium flex items-center gap-2 z-20">
+            <button className="absolute bottom-6 lg:bottom-8 left-6 lg:left-8 bg-white text-[#000000] px-4 lg:px-6 py-2 lg:py-3 rounded-full font-medium flex items-center gap-2 z-20 text-sm lg:text-base">
               Show Event
-              <span className="text-xl">→</span>
+              <span className="text-lg lg:text-xl">→</span>
             </button>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#FF7715] rounded-3xl p-8 relative min-h-[500px] 2xl:min-h-[700px] overflow-hidden">
-              <span className="text-[#252B61] px-3 py-1 bg-gray-100 rounded-none md:text-sm font-medium uppercase mb-4 inline-block">#SFT TRAININGS</span>
-              <div className="absolute top-6 right-6 w-16 h-16">
-              <Image 
-                src="/event-badge.png" 
-                alt="Event" 
+          <div className="bg-[#FF7715] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden">
+            <span className="text-[#252B61] px-3 py-1 bg-gray-100 rounded-none text-sm font-medium uppercase mb-4 inline-block">
+              #SFT TRAININGS
+            </span>
+            <div className="absolute top-6 right-6 w-12 lg:w-16 h-12 lg:h-16">
+              <Image
+                src="/event-badge.png"
+                alt="Event"
                 fill
                 className="object-contain"
               />
             </div>
-            <div className="relative z-10 mt-4 2xl:mt-12">
-              <h3 className="text-[#252B61] text-4xl font-semibold mb-6">Sing And Paint</h3>
-              <p className="text-[#252B61] text-lg">
-                A sneak peak of Training workshop for Anganwadi workers at SFT palwal campus. It was.....
+            <div className="relative z-10 mt-4 lg:mt-8 2xl:mt-12">
+              <h3 className="text-[#252B61] text-2xl lg:text-3xl 2xl:text-4xl font-semibold mb-4 lg:mb-6">
+                Sing And Paint
+              </h3>
+              <p className="text-[#252B61] text-base lg:text-lg">
+                A sneak peak of Training workshop for Anganwadi workers at SFT
+                palwal campus. It was.....
               </p>
             </div>
-            
-            <div className="absolute bottom-0 right-0 w-[45%] h-[45%] md:w-[40%] md:h-[40%] 2xl:w-[70%] 2xl:h-[70%]">
-              <Image 
-                src="/art-display.png" 
-                alt="Art Display" 
+
+            <div className="absolute bottom-0 right-0 w-[45%] h-[45%] lg:w-[55%] lg:h-[55%] 2xl:w-[70%] 2xl:h-[70%]">
+              <Image
+                src="/art-display.png"
+                alt="Art Display"
                 fill
                 className="object-contain"
               />
             </div>
-            <button className="absolute bottom-8 left-8 bg-white text-[#252B61] px-6 py-3 rounded-full font-medium flex items-center gap-2 z-20">
+            <button className="absolute bottom-6 lg:bottom-8 left-6 lg:left-8 bg-white text-[#252B61] px-4 lg:px-6 py-2 lg:py-3 rounded-full font-medium flex items-center gap-2 z-20 text-sm lg:text-base">
               Show Event
-              <span className="text-xl">→</span>
+              <span className="text-lg lg:text-xl">→</span>
             </button>
           </div>
         </div>

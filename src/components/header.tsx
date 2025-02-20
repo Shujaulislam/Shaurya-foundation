@@ -3,14 +3,13 @@
 import { useState } from 'react'
 import {Menu, X} from 'lucide-react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
+    <header className="bg-gradient-to-b from-gray-100 to-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
@@ -18,12 +17,12 @@ export default function Example() {
               <Image 
                 src="/logo2.png" 
                 alt="Shaurya Logo" 
-                width={24} 
-                height={24}
+                width={50} 
+                height={50}
                 className="brightness-0 invert" 
               />
             </div>
-            <span className="text-[#2C438A] text-xl font-bold">Shaurya</span>
+            <span className="text-[#2C438A] text-xl font-extrabold">Shaurya</span>
           </Link>
         </div>
         <div className="flex lg:hidden">
