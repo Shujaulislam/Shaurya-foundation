@@ -8,31 +8,31 @@ const cards = [
   {
     title: "A Puzzle Without All Its Pieces Is Incomplete.",
     bgColor: "bg-[#A3DAC2]",
-    image:"/card-1.png"
+    image:"/home/card-1.png"
   },
   {
     title: "Independent Living Program",
     bgColor: "bg-[#F0DA69]",
-    image: "/card-2.png"
+    image: "/home/card-2.png"
   },
   {
     title: "Assisted Employment Unit",
     bgColor: "bg-[#FFCFD6]",
-    image: "/card-3.png"
+    image: "/home/card-3.png"
   },
   {
     title: "Building an Inclusive Ecosystem",
     bgColor: "bg-[#92BDF6]",
-    image: "/card-4.png"
+    image: "/home/card-4.png"
   }
 ];
 
 const awards = [
-  { src: "/guinness.png", alt: "Guinness World Records", borderColor: "border-t-blue-500" },
-  { src: "/GPTW.png", alt: "Great Place To Work", borderColor: "border-t-blue-500" },
-  { src: "/nabh.png", alt: "NABH Accredited", borderColor: "border-t-red-500" },
-  { src: "/outlook-health.png", alt: "Outlook Health", borderColor: "border-t-blue-500" },
-  { src: "/the-week.png", alt: "The Week", borderColor: "border-t-blue-500" },
+  { src: "/home/guinness.png", alt: "Guinness World Records", borderColor: "border-t-blue-500" },
+  { src: "/home/GPTW.png", alt: "Great Place To Work", borderColor: "border-t-blue-500" },
+  { src: "/home/nabh.png", alt: "NABH Accredited", borderColor: "border-t-red-500" },
+  { src: "/home/outlook-health.png", alt: "Outlook Health", borderColor: "border-t-blue-500" },
+  { src: "/home/the-week.png", alt: "The Week", borderColor: "border-t-blue-500" },
 ];
 
 export default function Home() {
@@ -43,13 +43,13 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 w-full h-full">
           <Image
-            src="/hero.png"
+            src="/home/hero.png"
             alt="Shaurya team"
             fill
             priority
             className="object-cover"
           />
-          <div className="absolute bg-[url(/hero-bg.png)] inset-0 bg-black/40" />{" "}
+          <div className="absolute bg-[url(/home/hero-bg.png)] inset-0 bg-black/40" />{" "}
           {/* Overlay */}
         </div>
 
@@ -185,7 +185,7 @@ export default function Home() {
                 {/* Fixing the Image Position */}
                 <div className="absolute inset-y-0 right-4 flex items-center">
                   <Image
-                    src="/event-1.png"
+                    src="/home/event-1.png"
                     alt="Inclusivity Sensitization"
                     width={180}
                     height={180}
@@ -216,7 +216,7 @@ export default function Home() {
                 </p>
               </div>
               <Image
-                src="/event-2.png"
+                src="/home/event-2.png"
                 alt="Global Autism Project"
                 width={120}
                 height={120}
@@ -236,7 +236,7 @@ export default function Home() {
                 <p className="text-gray-700 text-sm">Learn to speak up</p>
               </div>
               <Image
-                src="/event-3.png"
+                src="/home/event-3.png"
                 alt="Self Advocacy"
                 width={80}
                 height={80}
@@ -255,7 +255,7 @@ export default function Home() {
                 <p className="text-gray-700 text-sm">Express through art</p>
               </div>
               <Image
-                src="/event-4.png"
+                src="/home/event-4.png"
                 alt="Sing And Paint"
                 width={80}
                 height={80}
@@ -284,7 +284,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <div className="bg-[#4D2C5E] rounded-xl p-2 md:p-3 lg:p-2.5 lg:w-12 lg:h-12 shadow-sm flex items-center justify-center">
                 <Image
-                  src="/jigsaw.png"
+                  src="/home/jigsaw.png"
                   alt="Fun Learning Experts"
                   width={32}
                   height={32}
@@ -299,7 +299,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <div className="bg-[#4D2C5E] rounded-xl p-2 md:p-3 lg:p-2.5 lg:w-12 lg:h-12 shadow-sm flex items-center justify-center">
                 <Image
-                  src="/hearts.png"
+                  src="/home/hearts.png"
                   alt="Easily Accessible"
                   width={32}
                   height={32}
@@ -330,7 +330,7 @@ export default function Home() {
         {/* Right Side Image */}
         <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
           <Image
-            src="/about-us-section.png"
+            src="/home/about-us-section.png"
             alt="Girl Working on Laptop"
             width={500}
             height={400}
@@ -354,7 +354,7 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/leader-1.png"
+                src="/home/leader-1.png"
                 alt="Leader 1"
                 width={180}
                 height={180}
@@ -370,7 +370,7 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/leader-2.png"
+                src="/home/leader-2.png"
                 alt="Leader 2"
                 width={180}
                 height={180}
@@ -386,7 +386,7 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/leader-3.png"
+                src="/home/leader-3.png"
                 alt="Leader 3"
                 width={180}
                 height={180}
@@ -402,7 +402,7 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/leader-4.png"
+                src="/home/leader-4.png"
                 alt="Leader 4"
                 width={180}
                 height={180}
@@ -474,7 +474,7 @@ export default function Home() {
             </span>
             <div className="absolute top-6 right-6 w-12 lg:w-16 h-12 lg:h-16">
               <Image
-                src="/event-badge.png"
+                src="/home/event-badge.png"
                 alt="Event"
                 fill
                 className="object-contain"
@@ -492,7 +492,7 @@ export default function Home() {
 
             <div className="absolute bottom-0 right-0 w-[45%] h-[45%] lg:w-[55%] lg:h-[55%] 2xl:w-[70%] 2xl:h-[70%]">
               <Image
-                src="/wing-icon.png"
+                src="/home/wing-icon.png"
                 alt="Wing Icon"
                 fill
                 className="object-contain"
@@ -511,7 +511,7 @@ export default function Home() {
             </span>
             <div className="absolute top-6 right-6 w-12 lg:w-16 h-12 lg:h-16">
               <Image
-                src="/event-badge.png"
+                src="/home/event-badge.png"
                 alt="Event"
                 fill
                 className="object-contain"
@@ -529,7 +529,7 @@ export default function Home() {
 
             <div className="absolute bottom-0 right-0 w-[45%] h-[45%] lg:w-[55%] lg:h-[55%] 2xl:w-[70%] 2xl:h-[70%]">
               <Image
-                src="/autism-ribbon.png"
+                src="/home/autism-ribbon.png"
                 alt="Autism Ribbon"
                 fill
                 className="object-contain"
@@ -548,7 +548,7 @@ export default function Home() {
             </span>
             <div className="absolute top-6 right-6 w-12 lg:w-16 h-12 lg:h-16">
               <Image
-                src="/event-badge.png"
+                src="/home/event-badge.png"
                 alt="Event"
                 fill
                 className="object-contain"
@@ -566,7 +566,7 @@ export default function Home() {
 
             <div className="absolute bottom-0 right-0 w-[45%] h-[45%] lg:w-[55%] lg:h-[55%] 2xl:w-[70%] 2xl:h-[70%]">
               <Image
-                src="/art-display.png"
+                src="/home/art-display.png"
                 alt="Art Display"
                 fill
                 className="object-contain"
