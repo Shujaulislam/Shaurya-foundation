@@ -4,6 +4,29 @@ import { ArrowRight, ArrowUpRight, Play, TvMinimalPlay } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+const cards = [
+  {
+    title: "A Puzzle Without All Its Pieces Is Incomplete. At Shaurya Foundation Trust (SFT), We Strive to Complete the Picture",
+    bgColor: "bg-[#A3DAC2]",
+    image:"/card-1.png"
+  },
+  {
+    title: "Independent Living Program",
+    bgColor: "bg-[#F0DA69]",
+    image: "/card-2.png"
+  },
+  {
+    title: "Assisted Employment Unit",
+    bgColor: "bg-[#FFCFD6]",
+    image: "/card-3.png"
+  },
+  {
+    title: "By building an Inclusive Ecosystem, we aim to create a society where everyone is valued and respected.",
+    bgColor: "bg-[#92BDF6]",
+    image: "/card-4.png"
+  }
+];
+
 const awards = [
   { src: "/guinness.png", alt: "Guinness World Records", borderColor: "border-t-blue-500" },
   { src: "/GPTW.png", alt: "Great Place To Work", borderColor: "border-t-blue-500" },
@@ -79,91 +102,34 @@ export default function Home() {
       </section>
 
       {/* Initiatives/Programs Cards */}
-      <section className="mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 xl:gap-8">
-        <div className="bg-[#A3DAC2] p-6 rounded-xl lg:w-[280px] lg:h-[350px] xl:h-[420px] xl:w-[380px] relative">
-          <h3 className="pt-5 font-bold text-2xl mb-2 text-[#252B61]">
-            A Puzzle Without All Its Pieces Is Incomplete. At Shaurya Foundation
-            Trust (SFT), We Strive to Complete the Picture
-          </h3>
-          <div className="absolute right-0 bottom-0 xl:w-[70%] h-auto">
-            <Image
-              src="/card-1.png"
-              alt="Independent Living Program"
-              className="w-auto h-auto object-cover"
-              width={0}
-              height={0}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-          {/* Button */}
-          <button className="absolute lg:bottom-8 lg:left-6 xl:bottom-10 xl:left-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 flex items-center justify-center bg-[#252B61] text-white rounded-full z-20">
-            <ArrowRight size={24} />
-          </button>
-        </div>
+      <section className=" px-4 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className={`${card.bgColor} rounded-2xl p-6 relative min-h-[320px] overflow-hidden transition-transform hover:scale-105`}
+            >
+              <h3 className="text-[#252B61] font-bold text-xl mb-4 relative z-10 max-w-[80%]">
+                {card.title}
+              </h3>
 
-        <div className="bg-[#F0DA69] p-6 rounded-xl lg:w-[280px] lg:h-[350px] xl:h-[420px] xl:w-[380px] relative">
-          <h3 className="pt-5 font-bold text-2xl mb-2 text-[#252B61]">
-            Independent Living
-            <br />
-            Program
-          </h3>
-          <div className="absolute right-0 bottom-0 xl:w-[70%] h-auto">
-            <Image
-              src="/card-2.png"
-              alt="Independent Living Program"
-              className="w-auto h-auto object-cover"
-              width={0}
-              height={0}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-          {/* Button */}
-          <button className="absolute lg:bottom-8 lg:left-6 xl:bottom-10 xl:left-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 flex items-center justify-center bg-[#252B61] text-white rounded-full z-20">
-            <ArrowRight size={24} />
-          </button>
-        </div>
+              <div className="absolute bottom-0 right-0 w-[70%] h-auto">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-        <div className="bg-[#FFCFD6] p-6 rounded-xl lg:w-[280px] lg:h-[350px] xl:h-[420px] xl:w-[380px] relative">
-          <h3 className="pt-5 font-bold text-2xl mb-2 text-[#252B61]">
-            Assisted Employement
-            <br />
-            Unit
-          </h3>
-          <div className="absolute right-0 bottom-0 xl:w-[70%] h-auto">
-            <Image
-              src="/card-3.png"
-              alt="Independent Living Program"
-              className="w-auto h-auto object-cover"
-              width={0}
-              height={0}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-          {/* Button */}
-          <button className="absolute lg:bottom-8 lg:left-6 xl:bottom-10 xl:left-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 flex items-center justify-center bg-[#252B61] text-white rounded-full z-20">
-            <ArrowRight size={24} />
-          </button>
-        </div>
-
-        <div className="bg-[#92BDF6] p-6 rounded-xl lg:w-[280px] lg:h-[350px] xl:h-[420px] xl:w-[380px] relative">
-          <h3 className="pt-5 font-bold text-2xl mb-2 text-[#252B61]">
-            By building an Inclusive Ecosystem, we aim to create a society where
-            everyone is valued and respected.
-          </h3>
-          <div className="absolute right-0 bottom-0 xl:w-[70%] h-auto">
-            <Image
-              src="/card-4.png"
-              alt="Independent Living Program"
-              className="w-auto h-auto object-cover"
-              width={0}
-              height={0}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-          {/* Button */}
-          <button className="absolute lg:bottom-8 lg:left-6 xl:bottom-10 xl:left-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 flex items-center justify-center bg-[#252B61] text-white rounded-full z-20">
-            <ArrowRight size={24} />
-          </button>
+              <button
+                className="absolute bottom-6 left-6 w-12 h-12 bg-[#252B61] text-white rounded-full flex items-center justify-center z-20 transition-transform hover:scale-110"
+                aria-label="Learn more"
+              >
+                <ArrowRight className="w-6 h-6" />
+              </button>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -199,7 +165,7 @@ export default function Home() {
               Sft Community Outreach
             </span>
             <div className="flex flex-col h-full">
-              <div className="flex gap-4 flex-1">
+              <div className="flex gap-4 relative">
                 <div className="space-y-4 flex-1">
                   <h3 className="text-[32px] font-bold leading-tight text-[#252525]">
                     Inclusivity
@@ -215,7 +181,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="flex-1 bg-black">
+                <div className="absolute bottom-0 right-0 bg-black">
                   <Image
                     src="/event-1.png"
                     alt="Inclusivity Sensitization"
@@ -385,56 +351,64 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/placeholder1.png"
+                src="/leader-1.png"
                 alt="Leader 1"
                 width={180}
                 height={180}
                 className="rounded-full"
               />
             </div>
-            <h3 className="text-xl font-semibold text-[#252525] mb-1">Name Surname</h3>
+            <h3 className="text-xl font-semibold text-[#252525] mb-1">
+              Name Surname
+            </h3>
             <p className="text-gray-600">Position</p>
           </div>
 
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/placeholder2.png"
+                src="/leader-2.png"
                 alt="Leader 2"
                 width={180}
                 height={180}
                 className="rounded-full"
               />
             </div>
-            <h3 className="text-xl font-semibold text-[#252525] mb-1">Name Surname</h3>
+            <h3 className="text-xl font-semibold text-[#252525] mb-1">
+              Name Surname
+            </h3>
             <p className="text-gray-600">Position</p>
           </div>
 
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/placeholder3.png"
+                src="/leader-1.png"
                 alt="Leader 3"
                 width={180}
                 height={180}
                 className="rounded-full"
               />
             </div>
-            <h3 className="text-xl font-semibold text-[#252525] mb-1">Name Surname</h3>
+            <h3 className="text-xl font-semibold text-[#252525] mb-1">
+              Name Surname
+            </h3>
             <p className="text-gray-600">Position</p>
           </div>
 
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/placeholder4.png"
+                src="/leader-2.png"
                 alt="Leader 4"
                 width={180}
                 height={180}
                 className="rounded-full"
               />
             </div>
-            <h3 className="text-xl font-semibold text-[#252525] mb-1">Name Surname</h3>
+            <h3 className="text-xl font-semibold text-[#252525] mb-1">
+              Name Surname
+            </h3>
             <p className="text-gray-600">Position</p>
           </div>
         </div>
@@ -445,95 +419,141 @@ export default function Home() {
         <div className="flex items-center gap-48">
           <div className="flex items-start">
             <div className="w-1 h-20 bg-[#252525] mr-4"></div>
-            <div className="flex items-start gap-4">
-              <div className="flex items-baseline">
-                <span className="text-[90px] font-bold text-[#252525] leading-none">100</span>
-                <span className="text-[90px] font-bold text-[#252525] leading-none">+</span>
-              </div>
-              <div className="mt-8 ml-2">
-                <span className="text-[22px] text-[#252525] font-medium leading-tight block">talented</span>
-                <span className="text-[22px] text-[#252525] font-medium leading-tight block">teammates</span>
-              </div>
+            <div className="flex items-baseline">
+              <span className="text-[90px] font-bold text-[#252525] leading-none">
+                100
+              </span>
+              <span className="text-[90px] font-bold text-[#252525] leading-none">
+                +
+              </span>
+            </div>
+            <div className="mt-8 ml-2">
+              <span className="text-[22px] text-[#252525] font-medium leading-tight block">
+                talented
+              </span>
+              <span className="text-[22px] text-[#252525] font-medium leading-tight block">
+                teammates
+              </span>
             </div>
           </div>
 
           <div className="flex items-start">
             <div className="w-1 h-20 bg-[#252525] mr-4"></div>
-            <div className="flex items-start gap-4">
-              <span className="text-[90px] font-bold text-[#252525] leading-none">48</span>
-              <div className="mt-8 ml-2">
-                <span className="text-[22px] text-[#252525] font-medium leading-tight block">successful</span>
-                <span className="text-[22px] text-[#252525] font-medium leading-tight block">projects</span>
-              </div>
+            <span className="text-[90px] font-bold text-[#252525] leading-none">
+              48
+            </span>
+            <div className="mt-8 ml-2">
+              <span className="text-[22px] text-[#252525] font-medium leading-tight block">
+                successful
+              </span>
+              <span className="text-[22px] text-[#252525] font-medium leading-tight block">
+                projects
+              </span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Latest News/Updates */}
-      <section className="rounded-xl mb-10 md:mb-14 xl:mb-20">
+      <section className="bg-[#FFCFD6] rounded-xl p-12 mb-10 md:mb-14 xl:mb-20">
         <h2 className="text-[80px] font-bold mb-6">Our Latest News</h2>
-
-        <div className="grid grid-cols-3 gap-6">
-          <div className="bg-[#F0DA69] rounded-lg overflow-hidden">
-            <div className="h-[240px]">
-              <img
-                src="/placeholder-news1.jpg"
-                alt="Inclusivity Sensitization"
-                className="w-full h-full object-cover"
+        <p className="text-xl mb-8">Achieving self-sufficiency through skill-based employment.</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Card 1 */}
+          <div className="bg-[#E1EDFF] rounded-3xl p-8 relative min-h-[500px] 2xl:min-h-[700px] overflow-hidden">
+              <span className="text-[#ffffff] px-3 py-1 bg-[#252B61] rounded-none text-sm font-medium uppercase mb-4 inline-block">#SFT TRIUMPH</span>
+              <div className="absolute top-6 right-6 w-16 h-16">
+              <Image 
+                src="/event-badge.png" 
+                alt="Event" 
+                fill
+                className="object-contain"
               />
             </div>
-            <div className="p-6">
-              <h3 className="font-semibold text-xl mb-2">
-                Inclusivity Sensitization
-              </h3>
-              <p className="text-sm mb-4">
-                New program launched across 15 schools
+            <div className="relative z-10 mt-4 2xl:mt-12">
+              <h3 className="text-[#252B61] text-4xl font-semibold mb-6">Inclusivity Sensitization</h3>
+              <p className="text-[#252B61] text-lg">
+                A sneak peak of Training workshop for Anganwadi workers at SFT palwal campus. It was.....
               </p>
-              <button className="text-sm font-medium flex items-center">
-                Read more <span className="ml-1">→</span>
-              </button>
             </div>
+           
+            <div className="absolute bottom-0 right-0 w-[45%] h-[45%] md:w-[40%] md:h-[40%] 2xl:w-[70%] 2xl:h-[70%]">
+              <Image 
+                src="/wing-icon.png" 
+                alt="Wing Icon" 
+                fill
+                className="object-contain"
+              />
+            </div>
+            <button className="absolute bottom-8 left-8 bg-white text-[#252B61] px-6 py-3 rounded-full font-medium flex items-center gap-2 z-20">
+              Show Event
+              <span className="text-xl">→</span>
+            </button>
           </div>
 
-          <div className="bg-[#A3DAC2] rounded-lg overflow-hidden">
-            <div className="h-[240px]">
-              <img
-                src="/placeholder-news2.jpg"
-                alt="Global Autism Project"
-                className="w-full h-full object-cover"
+          {/* Card 2 */}
+          <div className="bg-[#16AB59] rounded-3xl p-8 relative min-h-[500px] 2xl:min-h-[700px] overflow-hidden">
+              <span className="text-black md:text-sm px-3 py-1 bg-gray-100 rounded-none font-medium uppercase mb-4 inline-block">#SFT TRAININGS</span>
+              <div className="absolute top-6 right-6 w-16 h-16">
+              <Image 
+                src="/event-badge.png" 
+                alt="Event" 
+                fill
+                className="object-contain"
               />
             </div>
-            <div className="p-6">
-              <h3 className="font-semibold text-xl mb-2">
-                Global Autism Project
-              </h3>
-              <p className="text-sm mb-4">
-                Partnership with international organizations
+            <div className="relative z-10 mt-4 2xl:mt-12">
+              <h3 className="text-[#FDF8F1] text-4xl font-semibold mb-6">Global Autism Project</h3>
+              <p className="text-[#FDF8F1] text-lg">
+                A sneak peak of Training workshop for Anganwadi workers at SFT palwal campus. It was.....
               </p>
-              <button className="text-sm font-medium flex items-center">
-                Read more <span className="ml-1">→</span>
-              </button>
             </div>
+
+            <div className="absolute bottom-0 right-0 w-[45%] h-[45%] md:w-[40%] md:h-[40%] 2xl:w-[70%] 2xl:h-[70%]">
+              <Image 
+                src="/autism-ribbon.png" 
+                alt="Autism Ribbon" 
+                fill
+                className="object-contain"
+              />
+            </div>
+            <button className="absolute bottom-8 left-8 bg-white text-[#000000] px-6 py-3 rounded-full font-medium flex items-center gap-2 z-20">
+              Show Event
+              <span className="text-xl">→</span>
+            </button>
           </div>
 
-          <div className="bg-[#FFCFD6] rounded-lg overflow-hidden">
-            <div className="h-[240px]">
-              <img
-                src="/placeholder-news3.jpg"
-                alt="Drug Free Youth Initiative"
-                className="w-full h-full object-cover"
+          {/* Card 3 */}
+          <div className="bg-[#FF7715] rounded-3xl p-8 relative min-h-[500px] 2xl:min-h-[700px] overflow-hidden">
+              <span className="text-[#252B61] px-3 py-1 bg-gray-100 rounded-none md:text-sm font-medium uppercase mb-4 inline-block">#SFT TRAININGS</span>
+              <div className="absolute top-6 right-6 w-16 h-16">
+              <Image 
+                src="/event-badge.png" 
+                alt="Event" 
+                fill
+                className="object-contain"
               />
             </div>
-            <div className="p-6">
-              <h3 className="font-semibold text-xl mb-2">Drug Free Youth</h3>
-              <p className="text-sm mb-4">
-                New awareness campaign reaches thousands
+            <div className="relative z-10 mt-4 2xl:mt-12">
+              <h3 className="text-[#252B61] text-4xl font-semibold mb-6">Sing And Paint</h3>
+              <p className="text-[#252B61] text-lg">
+                A sneak peak of Training workshop for Anganwadi workers at SFT palwal campus. It was.....
               </p>
-              <button className="text-sm font-medium flex items-center">
-                Read more <span className="ml-1">→</span>
-              </button>
             </div>
+            
+            <div className="absolute bottom-0 right-0 w-[45%] h-[45%] md:w-[40%] md:h-[40%] 2xl:w-[70%] 2xl:h-[70%]">
+              <Image 
+                src="/art-display.png" 
+                alt="Art Display" 
+                fill
+                className="object-contain"
+              />
+            </div>
+            <button className="absolute bottom-8 left-8 bg-white text-[#252B61] px-6 py-3 rounded-full font-medium flex items-center gap-2 z-20">
+              Show Event
+              <span className="text-xl">→</span>
+            </button>
           </div>
         </div>
       </section>

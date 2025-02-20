@@ -51,11 +51,12 @@ export default function Example() {
           </Link>
         </nav>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button 
+          <Link
+            href="/contact"
             className="bg-[#2C438A] hover:bg-[#2C438A]/90 text-sm text-white px-5 py-2 rounded-full"
           >
             Contact Now →
-          </Button>
+          </Link>
         </div>
       </div>
       <div className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
@@ -115,11 +116,12 @@ export default function Example() {
 
               {/* contact button */}
               <div className="py-6">
-                <Button 
+                <Link 
+                  href="/contact"
                   className="w-full bg-[#2C438A] hover:bg-[#2C438A]/90 text-sm text-white px-5 py-2 rounded-full"
                 >
                   Contact Now →
-                </Button>
+                </Link>
               </div>
             </div>
           </div>

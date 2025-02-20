@@ -100,7 +100,7 @@ export default function Footer() {
 
           {/* Address 1 */}
           <div>
-            <h3 className="font-semibold mb-3 text-sm text-black">Delhi Office 1</h3>
+            <h3 className="font-semibold mb-3 text-sm text-black">Registered Office</h3>
             <p className="text-sm mb-4">
               B 104/2, Block B,<br />
               Maharani Bagh,<br />
@@ -114,7 +114,7 @@ export default function Footer() {
 
           {/* Address 2 */}
           <div>
-            <h3 className="font-semibold mb-3 text-sm text-black">Delhi Office 2</h3>
+            <h3 className="font-semibold mb-3 text-sm text-black">Delhi Center</h3>
             <p className="text-sm mb-4">
               B-538 Ground floor,<br />
               New Friends Colony,<br />
