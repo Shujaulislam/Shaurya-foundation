@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shaurya Foundation Trust Website
+
+![Shaurya Foundation Trust Logo](public/logo.png)
+
+Welcome to the official website of Shaurya Foundation Trust (SFT), a non-profit organization dedicated to empowering individuals with intellectual challenges through holistic education, life skills, and community integration.
+
+## About Shaurya Foundation Trust
+
+For over 11 years, Shaurya Foundation Trust has been transforming lives through:
+- Holistic Education Programs
+- Independent Living Skills Training
+- Assisted Employment Initiatives
+- Art Therapy (Artopia Program)
+- Vocational Training (including Baker's Den)
+
+![Holistic Education](public/employement/card-4.png)
+
+## Recognitions
+
+Shaurya Foundation Trust has earned several prestigious recognitions including:
+- Guinness World Records
+- Great Place To Work Certification
+- NABH Accreditation
+- Featured in Outlook Health
+- Recognition by The Week
+
+![Awards](public/awards.jpg)
+
+## Website Features
+
+The website offers:
+- Comprehensive information about SFT programs
+- Easy contact and support options
+- Detailed admission processes
+- Employment initiatives
+- Success stories and testimonials
+- Donation options to support our cause
+
+## Contact Information
+
+- **Location:** B 104/2, Western Avenue, Maharani Bagh, New Delhi
+- **Delhi Center:** B-538 Ground floor, New Friends Colony
+- **Phone:** 011 40518320 | +91 9650315800
+
 
 ## Getting Started
 
-First, run the development server:
+To maintain or update the website, follow these simple steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Install Dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Run the Development Server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Open the Website:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Shaurya Foundation Trust and our work, visit our [official website](https://shauryafoundation.org).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thank you for supporting Shaurya Foundation Trust!
