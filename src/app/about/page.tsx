@@ -1,11 +1,100 @@
 "use client"
 
-
 import { ArrowRight, Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import styles from './partners.module.css';
+import { Marquee } from "@/components/magicui/marquee";
+import { cn } from "@/lib/utils";
 
 const images = Array.from({ length: 10 }, (_, i) => `/about/${i + 1}.png`);
+
+const firstRow = [
+  {
+    body: "ISKCON",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  { 
+    body: "DHARAM PAL SATYA PAL GROUP",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  { 
+    body: "MH 1",
+    img: "https://avatar.vercel.sh/john",
+  },
+  { 
+    body: "SAGAR RATNA",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  { 
+    body: "SATA VIKAS",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  { 
+    body: "NIPPON",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  { 
+    body: "SELECT CITY MALL",
+    img: "https://avatar.vercel.sh/james",
+  },
+];
+
+const secondRow = [
+  {
+    body: "MAN TAN MALL",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  { 
+    body: "DELHI HIGH COURT CANTEEN",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  { 
+    body: "NESTLE + Atypical Advantage",
+    img: "https://avatar.vercel.sh/john",
+  },
+  { 
+    body: "NATHU'S",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  { 
+    body: "MODERN SCHOOL",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  { 
+    body: "STEP BY STEP SCHOOL",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  { 
+    body: "SANSKRITI SCHOOL",
+    img: "https://avatar.vercel.sh/james",
+  },
+  { 
+    body: "GENESIS GLOBAL SCHOOL",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  { 
+    body: "AMERICAN EMBASSY SCHOOL",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  { 
+    body: "VIROHAN",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  { 
+    body: "MCX",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  { 
+    body: "WORLD BANK",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  { 
+    body: "INTERTECH",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+];
+
 
 const gridStyles = [
   "col-span-3 row-span-2 col-start-1",
@@ -19,6 +108,31 @@ const gridStyles = [
   "col-span-4 row-span-2 col-start-11 row-start-3",
   "col-span-2 row-span-2 col-start-15 row-start-3",
 ];
+
+const ReviewCard = ({
+  img,
+  body,
+}: {
+  img: string;
+  body: string;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+      )}
+    >
+      {/* <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+      </div> */}
+      <h3 className="mt-2 text-center items-center justify-center font-semibold text-lg">{body}</h3>
+    </figure>
+  );
+};
 
 export default function About() {
   return (
@@ -280,8 +394,8 @@ export default function About() {
 
       {/* programs image */}
       <section className="w-[calc(100%-40px)] mx-auto my-10">
-        <Link 
-          href="/admission" 
+        <Link
+          href="/admission"
           className="relative block group overflow-hidden rounded-[40px] cursor-pointer"
         >
           <Image
@@ -297,13 +411,115 @@ export default function About() {
               Our Programs
             </h3>
             <p className="text-white text-lg max-w-[600px] text-center px-8 transform translate-y-10 transition-transform duration-500 group-hover:translate-y-0">
-              Discover our comprehensive programs designed to empower individuals with special needs through education, life skills, and community integration.
+              Discover our comprehensive programs designed to empower
+              individuals with special needs through education, life skills, and
+              community integration.
             </p>
           </div>
         </Link>
       </section>
 
+      {/* our partners */}
+      <section className="w-[calc(100%-40px)] mx-auto bg-white flex flex-col lg:flex-row items-start justify-between px-10 lg:px-20 py-10 gap-6">
+        {/* Left: Title */}
+        <h2 className="text-[10vw] lg:text-[6vw] xl:text-[5vw] uppercase tracking-tight text-[#222222] leading-[1]">
+          <span className="font-extralight">Our</span> <br />
+          <span className="font-extrabold">Partner-ships</span>
+        </h2>
 
+        {/* Right: Description */}
+        <p className="max-w-[50%] text-[3vw] lg:text-[2vw] xl:text-[1.75vw] text-[#222222] opacity-75 leading-snug tracking-wide">
+          Our inclusive partnerships are making a substantial and positive
+          difference in supporting special needs individuals as they navigate
+          their journey towards greater independence and self-sufficiency.
+        </p>
+      </section>
+
+      {/* Partners Marquee Section */}
+      {/* <section className="w-full py-16 overflow-hidden bg-gray-200">
+        <div className="w-full overflow-hidden relative">
+          <div className={`${styles['animate-marquee']} flex gap-4`}>
+            {[
+              { name: "Dharampal Satyapal Group", bg: "#FF6B6B", color: "#ffffff" },
+              { name: "MH1", bg: "#4ECDC4", color: "#ffffff" },
+              { name: "Sagar Ratna", bg: "#45B7D1", color: "#ffffff" },
+              { name: "Sata Vikas", bg: "#96CEB4", color: "#000000" },
+              { name: "Nippon", bg: "#FFEEAD", color: "#000000" },
+              { name: "Select City Mall", bg: "#D4A5A5", color: "#ffffff" },
+              { name: "Man Tan Mall", bg: "#9B5DE5", color: "#ffffff" },
+              { name: "Delhi High Court Canteen", bg: "#F15BB5", color: "#ffffff" },
+              { name: "Nestle + Atypical Advantage", bg: "#FEE440", color: "#000000" },
+              { name: "Nathu's", bg: "#00BBF9", color: "#ffffff" },
+              { name: "Modern School", bg: "#00F5D4", color: "#000000" },
+              { name: "Step by Step School", bg: "#FF99C8", color: "#000000" },
+              { name: "Sanskriti School", bg: "#FCF6BD", color: "#000000" },
+              { name: "Genesis Global School", bg: "#A0C4FF", color: "#000000" },
+              { name: "American Embassy School", bg: "#BDB2FF", color: "#000000" },
+              { name: "Virohan", bg: "#9BF6FF", color: "#000000" },
+              { name: "MCX", bg: "#CAFFBF", color: "#000000" },
+              { name: "World Bank", bg: "#FDFFB6", color: "#000000" },
+              { name: "Intertech", bg: "#FFD6A5", color: "#000000" },
+              { name: "Isckon", bg: "#FFADAD", color: "#000000" },
+            ].map((partner, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center min-w-[250px] h-[150px] rounded-xl p-6 transition-transform hover:scale-105"
+                style={{ backgroundColor: partner.bg, color: partner.color }}
+              >
+                <h3 className="text-center text-lg font-semibold">{partner.name}</h3>
+              </div>
+            ))}
+          </div>
+          <div className={`${styles['animate-marquee2']} flex gap-4`} aria-hidden="true">
+            {[
+              { name: "Dharampal Satyapal Group", bg: "#FF6B6B", color: "#ffffff" },
+              { name: "MH1", bg: "#4ECDC4", color: "#ffffff" },
+              { name: "Sagar Ratna", bg: "#45B7D1", color: "#ffffff" },
+              { name: "Sata Vikas", bg: "#96CEB4", color: "#000000" },
+              { name: "Nippon", bg: "#FFEEAD", color: "#000000" },
+              { name: "Select City Mall", bg: "#D4A5A5", color: "#ffffff" },
+              { name: "Man Tan Mall", bg: "#9B5DE5", color: "#ffffff" },
+              { name: "Delhi High Court Canteen", bg: "#F15BB5", color: "#ffffff" },
+              { name: "Nestle + Atypical Advantage", bg: "#FEE440", color: "#000000" },
+              { name: "Nathu's", bg: "#00BBF9", color: "#ffffff" },
+              { name: "Modern School", bg: "#00F5D4", color: "#000000" },
+              { name: "Step by Step School", bg: "#FF99C8", color: "#000000" },
+              { name: "Sanskriti School", bg: "#FCF6BD", color: "#000000" },
+              { name: "Genesis Global School", bg: "#A0C4FF", color: "#000000" },
+              { name: "American Embassy School", bg: "#BDB2FF", color: "#000000" },
+              { name: "Virohan", bg: "#9BF6FF", color: "#000000" },
+              { name: "MCX", bg: "#CAFFBF", color: "#000000" },
+              { name: "World Bank", bg: "#FDFFB6", color: "#000000" },
+              { name: "Intertech", bg: "#FFD6A5", color: "#000000" },
+              { name: "Isckon", bg: "#FFADAD", color: "#000000" },
+            ].map((partner, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center min-w-[250px] h-[150px] rounded-xl p-6 transition-transform hover:scale-105"
+                style={{ backgroundColor: partner.bg, color: partner.color }}
+              >
+                <h3 className="text-center text-lg font-semibold">{partner.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+      {/* Marquee-magic UI */}
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden mb-8 lg:mb-16">
+      <Marquee pauseOnHover className="[--duration:20s]">
+        {firstRow.map((review) => (
+          <ReviewCard key={review.body} {...review} />
+        ))}
+      </Marquee>
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {secondRow.map((review) => (
+          <ReviewCard key={review.body} {...review} />
+        ))}
+      </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+    </div>
     </main>
   );
 }

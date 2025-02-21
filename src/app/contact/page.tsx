@@ -1,6 +1,5 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -22,65 +21,65 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Section 1: Banner & Hero */}
-      <section className="relative h-[60vh] w-full bg-[#BFF9EA] rounded-t-none rounded-2xl px-24 pt-16 flex flex-col items-center text-center overflow-hidden">
+      {/* Section 1: Hero */}
+      <section className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] w-full bg-[#BFF9EA] rounded-t-none rounded-2xl px-4 sm:px-8 md:px-16 lg:px-24 pt-8 sm:pt-12 md:pt-16 flex flex-col items-center text-center overflow-hidden">
         {/* Title */}
-        <h1 className="text-[6vw] lg:text-[4vw] font-extrabold uppercase tracking-tight text-[#222223] leading-tight">
+        <h1 className="text-[8vw] sm:text-[7vw] md:text-[6vw] lg:text-[4vw] font-extrabold uppercase tracking-tight text-[#222223] leading-tight">
           Contact <span className="font-normal">US</span>
         </h1>
 
         {/* CTA Button - Positioned Bottom Left */}
-        <div className="w-[95%] mx-auto flex justify-between items-center mt-6 absolute bottom-10 px-16">
+        <div className="w-[95%] mx-auto flex justify-between items-center mt-6 absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-10 px-4 sm:px-8 md:px-12 lg:px-16">
           {/* Left: Support Button */}
-          <div className="flex items-center gap-4">
-            <button className="flex items-center gap-4 bg-white px-8 py-4 text-lg font-medium border border-black rounded-full hover:bg-gray-200 transition">
+          <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+            <button className="flex items-center gap-2 sm:gap-3 md:gap-4 bg-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-medium border border-black rounded-full hover:bg-gray-200 transition">
               Support Shaurya
             </button>
-            <button className="bg-white p-3 rounded-full border border-black hover:bg-gray-200 transition">
-              <ArrowRight size={20} />
+            <button className="bg-white p-2 sm:p-2.5 md:p-3 rounded-full border border-black hover:bg-gray-200 transition">
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             </button>
           </div>
 
           {/* Right: Play Button */}
-          <button className="bg-white p-3 rounded-full border border-black hover:bg-gray-200 transition">
-            <Play size={24} />
+          <button className="bg-white p-2 sm:p-2.5 md:p-3 rounded-full border border-black hover:bg-gray-200 transition">
+            <Play className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </button>
         </div>
 
         {/* Illustration */}
-        <div className="absolute bottom-0 w-full flex justify-center">
+        <div className="absolute -bottom-4 sm:-bottom-2 md:bottom-0 w-full flex justify-center">
           <Image
             src="/contact.png"
             alt="Contact Illustration"
             width={500}
             height={400}
-            className="object-contain"
+            className="w-[280px] sm:w-[350px] md:w-[400px] lg:w-[500px] h-auto object-contain"
             priority
           />
         </div>
       </section>
 
       {/* Section 2: Contact Form */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-16">
+      <section className="container mx-auto px-6 py-12 sm:py-16 md:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
           {/* Left Column */}
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-10 md:space-y-12">
             <div>
-              <h2 className="lg:text-5xl xl:text-6xl font-bold mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 md:mb-4">
                 Have Questions?
                 <br />
                 <span className="text-[#4D194D]">Get in Touch!</span>
               </h2>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-5 md:space-y-6">
               {/* Address */}
-              <div className="flex items-start gap-4">
-                <div className="bg-[#21B573] p-3 rounded-lg">
-                  <MapPin className="w-5 h-5 text-[#344054]" />
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="bg-[#21B573] p-2 sm:p-2.5 md:p-3 rounded-lg">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#344054]" />
                 </div>
                 <div>
-                  <p className="text-[15px] text-[#344054]">
+                  <p className="text-sm sm:text-base md:text-[15px] text-[#344054]">
                     B 104/2, Western Avenue,
                     <br />
                     Maharani Bagh,
@@ -92,35 +91,21 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Email (Commented Out) */}
-              {/* <div className="flex items-center gap-4">
-                <div className="bg-[#EDECE2] p-3 rounded-lg">
-                  <Mail className="w-5 h-5 text-[#344054]" />
-                </div>
-                <Link
-                  href="mailto:kiritgoti007@gmail.com"
-                  className="text-[15px] text-[#344054] hover:underline"
-                >
-                  kiritgoti007@gmail.com
-                </Link>
-              </div> */}
-
               {/* Phone Numbers */}
-              <div className="flex items-start gap-4">
-                <div className="bg-[#21B573] p-3 rounded-lg">
-                  <Phone className="w-5 h-5 text-[#344054]" />
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="bg-[#21B573] p-2 sm:p-2.5 md:p-3 rounded-lg">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#344054]" />
                 </div>
                 <div className="space-y-1">
                   <Link
                     href="tel:01140518320"
-                    className="text-[15px] text-[#344054] hover:underline"
+                    className="text-sm sm:text-base md:text-[15px] text-[#344054] hover:underline block"
                   >
                     011 40518320
                   </Link>
-                  <br />
                   <Link
                     href="tel:+919650315800"
-                    className="text-[15px] text-[#344054] hover:underline"
+                    className="text-sm sm:text-base md:text-[15px] text-[#344054] hover:underline block"
                   >
                     +91 9650315800
                   </Link>
@@ -130,43 +115,43 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column - Form */}
-          <form className="space-y-8">
-            <div className="grid grid-cols-2 gap-8">
+          <form className="space-y-6 sm:space-y-7 md:space-y-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7 md:gap-8">
               <div className="relative">
                 <div className="absolute left-0 top-2.5">
-                  <User className="w-5 h-5 text-gray-400" />
+                  <User className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
                 </div>
                 <Input
                   placeholder="Name"
-                  className="border-0 border-b border-gray-200 rounded-none pl-7 pr-0 py-2 text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D]"
+                  className="border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D]"
                 />
               </div>
               <div className="relative">
                 <div className="absolute left-0 top-2.5">
-                  <Mail className="w-5 h-5 text-gray-400" />
+                  <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
                 </div>
                 <Input
                   placeholder="Email Address"
-                  className="border-0 border-b border-gray-200 rounded-none pl-7 pr-0 py-2 text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D]"
+                  className="border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D]"
                 />
               </div>
             </div>
 
             <div className="relative">
               <div className="absolute left-0 top-2.5">
-                <Phone className="w-5 h-5 text-gray-400" />
+                <Phone className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
               </div>
               <Input
                 placeholder="Phone"
-                className="border-0 border-b border-gray-200 rounded-none pl-7 pr-0 py-2 text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D]"
+                className="border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D]"
               />
             </div>
 
             <div className="relative">
               <div className="absolute left-0 top-2.5">
-                <Edit className="w-5 h-5 text-gray-400" />
+                <Edit className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
               </div>
-              <select className="w-full border-0 border-b border-gray-200 rounded-none pl-7 pr-0 py-2 text-[15px] text-gray-400 focus:ring-0 focus:border-[#4D194D] bg-transparent">
+              <select className="w-full border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] text-gray-400 focus:ring-0 focus:border-[#4D194D] bg-transparent">
                 <option value="">Subject</option>
                 <option value="general">General Inquiry</option>
                 <option value="support">Support</option>
@@ -176,25 +161,25 @@ export default function ContactPage() {
 
             <div className="relative">
               <div className="absolute left-0 top-2.5">
-                <Edit className="w-5 h-5 text-gray-400" />
+                <Edit className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
               </div>
               <Textarea
                 placeholder="Message"
-                className="border-0 border-b border-gray-200 rounded-none pl-7 pr-0 py-2 text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D] min-h-[100px] resize-none"
+                className="border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D] min-h-[80px] sm:min-h-[90px] md:min-h-[100px] resize-none"
               />
             </div>
 
-            <div className="flex items-start gap-3 pt-2">
+            <div className="flex items-start gap-2 sm:gap-3 pt-2">
               <Checkbox
                 id="terms"
-                className="w-4 h-4 mt-1 rounded-sm border-gray-300 text-[#4D194D] focus:ring-[#4D194D]"
+                className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 sm:mt-1 rounded-sm border-gray-300 text-[#4D194D] focus:ring-[#4D194D]"
               />
-              <label htmlFor="terms" className="text-sm text-gray-500">
+              <label htmlFor="terms" className="text-xs sm:text-sm md:text-sm text-gray-500">
                 I agree that my data is collected and stored
               </label>
             </div>
 
-            <button className="bg-[#21B573] text-white px-8 py-3 rounded-lg hover:bg-[#4D194D]/90 transition">
+            <button className="bg-[#21B573] text-white px-6 sm:px-7 md:px-8 py-2.5 sm:py-2.75 md:py-3 text-sm sm:text-base md:text-base rounded-lg hover:bg-[#4D194D]/90 transition">
               Send Message
             </button>
           </form>
