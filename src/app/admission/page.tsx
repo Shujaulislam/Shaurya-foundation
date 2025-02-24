@@ -105,21 +105,21 @@ export default function Admission() {
               alt="Reflection time"
               width={300}
               height={250}
-              className="absolute left-[-60px] top-[30px] rotate-[-10deg] shadow-lg rounded-lg z-10 transform hover:scale-105 transition-transform"
+              className="absolute left-[-60px] top-[30px] rotate-[-10deg] z-10 transform hover:scale-125 transition-transform ease-linear duration-500"
             />
             <Image
               src="/admissions/img-2.png"
               alt="Check-in"
               width={300}
               height={250}
-              className="absolute left-[40px] top-[-73px] rotate-[5deg] shadow-lg rounded-lg z-20 transform hover:scale-105 transition-transform"
+              className="absolute left-[40px] top-[-73px] rotate-[5deg] z-20 transform hover:scale-150 transition-transform ease-linear duration-500"
             />
             <Image
               src="/admissions/img-3.png"
               alt="Check-out"
               width={300}
               height={250}
-              className="absolute right-[-70px] top-[60px] rotate-[12deg] shadow-lg rounded-lg z-30 transform hover:scale-105 transition-transform"
+              className="absolute right-[-70px] top-[60px] rotate-[12deg] z-30 transform hover:scale-110 transition-transform ease-linear duration-500"
             />
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function Admission() {
                 alt="Whiteboard"
                 width={400}
                 height={280}
-                className="absolute left-0 top-0 rotate-[-10deg] shadow-lg rounded-lg z-10"
+                className="absolute left-0 top-0 rotate-[-10deg] z-10"
               />
 
               {/* Floating Icons */}
@@ -261,28 +261,28 @@ export default function Admission() {
                 alt="Miro"
                 width={110}
                 height={110}
-                className="absolute top-[-40px] left-[200px] rotate-[10deg] z-20"
+                className="absolute top-[-40px] left-[200px] rotate-[10deg] z-20 transform hover:scale-125 transition-transform"
               />
               <Image
                 src="/admissions/mural.png"
                 alt="Mural"
                 width={110}
                 height={110}
-                className="absolute top-[80px] left-[50px] rotate-[5deg] z-30"
+                className="absolute top-[80px] left-[50px] rotate-[5deg] z-30 transform hover:scale-125 transition-transform"
               />
               <Image
                 src="/admissions/youtube.png"
                 alt="YouTube"
                 width={110}
                 height={110}
-                className="absolute bottom-[-35px] left-[120px] rotate-[-8deg] z-20"
+                className="absolute bottom-[-35px] left-[120px] rotate-[-8deg] z-20 transform hover:scale-125 transition-transform"
               />
               <Image
                 src="/admissions/drive.png"
                 alt="Google Drive"
                 width={110}
                 height={110}
-                className="absolute bottom-[70px] right-[80px] rotate-[5deg] z-20"
+                className="absolute bottom-[70px] right-[80px] rotate-[5deg] z-20 transform hover:scale-125 transition-transform"
               />
             </div>
           </div>
@@ -365,7 +365,11 @@ export default function Admission() {
             />
 
             {/* Stacked Images on Top of Circle */}
-            <div className="absolute w-full h-full flex items-center justify-center">
+            <motion.div className="absolute w-full h-full flex items-center justify-center"
+              animate={{rotate: 360}}
+              transition={{duration: 10, repeat: Infinity, ease: "linear"}}
+              style={{transformOrigin: "center"}}
+              >
               {/* Message Bubble */}
               <Image
                 src="/admissions/message.png"
@@ -392,7 +396,7 @@ export default function Admission() {
                 height={100}
                 className="absolute bottom-[20px] left-[20px]"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
