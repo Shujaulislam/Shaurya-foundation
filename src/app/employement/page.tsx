@@ -15,7 +15,9 @@ export default function Employment() {
             <h1 className="flex items-center gap-2">
               <span className="text-7xl">THE</span>
               <span className="text-7xl font-bold">SFT</span>
-              <Play className="ml-2 w-16 h-16" />
+              <button className="bg-white sm:px-1 lg:p-3.5 rounded-full lg:ml-6">
+                <Play size={24}/>
+              </button>
             </h1>
             <p className="text-7xl font-bold">ECOSYSTEM</p>
           </div>

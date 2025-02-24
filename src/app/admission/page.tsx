@@ -17,20 +17,18 @@ const image = {
 
 export default function Admission() {
   return (
-    <main className="px-24">
+    <main className="px-4 lg:px-24">
       {/* HERO */}
-      <section className="relative w-full min-h-[600px] bg-[#2C438A] rounded-[90px] px-24 pt-16 overflow-hidden">
+      <section className="relative w-full min-h-[600px] bg-[#2C438A] rounded-[40px] px-6 lg:rounded-[90px] lg:px-24 pt-16 overflow-hidden">
         {/* Content Container */}
-        <div className="relative z-10 max-w-[720px]">
-          {/* Increased max-w for better spacing */}
+        <div className="relative z-10 lg:max-w-[720px]">
           {/* Tags Container */}
           <div className="flex items-center gap-6 mb-10">
-            {/* Reduced gap for better alignment */}
             <div className="flex items-center gap-2">
               <button className="bg-[#E7C2D4] p-2.5 rounded-full">
                 <Activity className="text-[#2C438A]" size={20} />
               </button>
-              <p className="text-[#C6DEFD] text-[18px] font-medium">
+              <p className="text-[#C6DEFD] text-[16px] lg:text-[18px] font-medium">
                 Easy Learning
               </p>
             </div>
@@ -38,14 +36,14 @@ export default function Admission() {
               <button className="bg-[#A3DAC2] p-2.5 rounded-full">
                 <CloudRain className="text-[#2C438A]" size={20} />
               </button>
-              <p className="text-[#C6DEFD] text-[18px] font-medium">
+              <p className="text-[#C6DEFD] text-[16px] lg:text-[18px] font-medium">
                 Fun Learning
               </p>
             </div>
           </div>
           {/* Title with Play Button */}
           <div className="flex items-center gap-5">
-            <h1 className="text-[100px] uppercase text-[#C6DEFD] leading-none tracking-tight font-bold">
+            <h1 className="text-[50px] lg:text-[100px] uppercase text-[#C6DEFD] leading-none tracking-tight font-bold">
               Our
             </h1>
             <button className="bg-white p-3.5 rounded-full">
@@ -53,11 +51,11 @@ export default function Admission() {
             </button>
           </div>
           {/* Subtitle */}
-          <h2 className="text-[120px] -mt-6 uppercase text-[#F0DA69] font-extrabold leading-none tracking-tight mb-8">
+          <h2 className="text-[60px] lg:text-[120px] -mt-6 uppercase text-[#F0DA69] font-extrabold leading-none tracking-tight mb-8">
             Programs
           </h2>
           {/* Description Text */}
-          <p className="text-[#C6DEFD] text-[18px] leading-[1.8] w-full font-semibold">
+          <p className="text-[#C6DEFD] text-[16px] lg:text-[18px] leading-[1.8] w-full font-semibold">
             A Non-Profit Transforming The Lives Of Individuals With Special
             Needs Through Holistic Education, Life Skills, And Community
             Integration.
@@ -65,7 +63,7 @@ export default function Admission() {
         </div>
 
         {/* Hero Image - Positioned Bottom Right */}
-        <div className="absolute bottom-0 right-[-35px] w-[50%] h-[100%]">
+        <div className="absolute bottom-0 right-[-15px] w-[90%] opacity-30 lg:right-[-35px] lg:w-[50%] lg:opacity-100 h-[100%]">
           {/* Increased width & height */}
           <Image
             src="/admissions/hero.png"
@@ -78,7 +76,7 @@ export default function Admission() {
         </div>
 
         {/* CTA Buttons - Bottom Left */}
-        <div className="absolute bottom-12 left-24 flex items-center gap-3">
+        <div className="absolute bottom-12 left-6 lg:left-24 flex items-center gap-3">
           <button className="flex items-center gap-4 bg-[#FFCFD6] px-8 py-4 text-[#2C438A] text-[17px] font-semibold rounded-full hover:bg-opacity-90 transition">
             Support Shaurya
           </button>
@@ -90,11 +88,11 @@ export default function Admission() {
 
       {/* ENABLED LIVING */}
       <section
-        className="relative w-full min-h-[600px] bg-[#C7D0FF] rounded-[90px] mt-20 px-16 py-20
-        flex items-center justify-between overflow-hidden"
+        className="relative w-full min-h-[600px] bg-[#C7D0FF] rounded-[40px] mt-20 px-6 py-20
+        flex flex-col lg:flex-row lg:rounded-[90px] lg:px-16 items-center justify-between overflow-hidden gap-10"
       >
         {/* Left Side - Stacked Images */}
-        <div className="relative w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center relative">
           {/* Centered Dotted Background */}
           <div className="absolute w-[500px] h-[500px] bg-[url('/admissions/dotted-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
@@ -125,11 +123,11 @@ export default function Admission() {
         </div>
 
         {/* Right Side - Text Content */}
-        <div className="w-1/2 flex flex-col space-y-6 text-left">
-          <h2 className="text-[48px] font-extrabold text-[#121212] leading-tight">
+        <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-left">
+          <h2 className="text-[36px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
             Enabled Living
           </h2>
-          <p className="text-[#121212] text-[20px] leading-[1.8] max-w-none">
+          <p className="text-[#121212] text-[16px] lg:text-[20px] leading-[1.8] max-w-none">
             SFT addresses the concerns of parents and neurodiverse young adults
             by offering community living solutions through our Enabled Living
             Program (ELP). This initiative includes service apartments, buddy
@@ -154,18 +152,18 @@ export default function Admission() {
       </section>
 
       {/* BIG SECTION */}
-      <section className="relative w-full h-auto bg-[#BFF9EA] mt-20 px-16 py-20">
+      <section className="relative w-full h-auto bg-[#BFF9EA] mt-20 px-6 lg:px-16 py-20">
         {/* DSW SECTION */}
         <section
-          className="relative rounded-[42px] mt-20 px-16 py-20
-        flex items-center justify-between overflow-hidden"
+          className="relative rounded-[30px] mt-20 px-6 py-20
+          flex flex-col lg:flex-row lg:rounded-[42px] lg:px-16 items-center justify-between overflow-hidden gap-10"
         >
           {/* Left Side - Text Content */}
-          <div className="w-1/2 flex flex-col space-y-6 text-left">
-            <h2 className="text-[48px] font-extrabold text-[#121212] leading-tight">
+          <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-left">
+            <h2 className="text-[36px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
               Disability Support Worker (DSW) Training
             </h2>
-            <p className="text-[#121212] text-[20px] leading-[1.8] max-w-none">
+            <p className="text-[#121212] text-[16px] lg:text-[20px] leading-[1.8] max-w-none">
               Recognizing the growing need for professional caregivers, SFT has
               developed a comprehensive DSW training program. This program
               trains individuals to provide essential support to persons with
@@ -190,10 +188,10 @@ export default function Admission() {
           </div>
 
           {/* Right Side - Stacked Images */}
-          <div className="relative w-1/2 flex justify-center">
+          <div className="w-full lg:w-1/2 flex justify-center relative">
             {/* Centered Circular Dotted Background */}
             <div className="absolute w-[500px] h-[500px] bg-[url('/admissions/dotted-circle-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-              
+
             {/* Stacked Images */}
             <div className="relative w-[400px] h-[400px] ">
               {/* Base Chat Image */}
@@ -237,11 +235,11 @@ export default function Admission() {
 
         {/* ASSISTED EMPLOYEMENT PROJECTS */}
         <section
-          className="relative rounded-[42px] mt-20 px-16 py-20
-        flex items-center justify-between overflow-hidden"
+          className="relative rounded-[30px] mt-20 px-6 py-20
+          flex flex-col-reverse lg:flex-row lg:rounded-[42px] lg:px-16 items-center justify-between overflow-hidden gap-10"
         >
           {/* Left Side - Stacked Images */}
-          <div className="relative w-1/2 flex justify-center">
+          <div className="w-full lg:w-1/2 flex justify-center relative">
             {/* Dotted Background */}
             <div className="absolute w-[500px] h-[500px] bg-[url('/admissions/dotted-flower-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
@@ -288,11 +286,11 @@ export default function Admission() {
           </div>
 
           {/* Right Side - Text Content */}
-          <div className="w-1/2 flex flex-col space-y-6 text-left">
-            <h2 className="text-[48px] font-extrabold text-[#121212] leading-tight">
+          <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-left">
+            <h2 className="text-[36px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
               Assisted Employment Projects
             </h2>
-            <p className="text-[#121212] text-[20px] leading-[1.8] max-w-none">
+            <p className="text-[#121212] text-[16px] lg:text-[20px] leading-[1.8] max-w-none">
               Employment is a key focus area for SFT. We are actively working to
               create more job opportunities for neurodiverse individuals through
               corporate partnerships. Our Assisted Employment Projects span a
@@ -315,17 +313,19 @@ export default function Admission() {
             </div>
           </div>
         </section>
-
       </section>
 
       {/* INCLUSIVE ECOSYTEM */}
-      <section className="relative w-full min-h-[800px] bg-[#FFD8AA] rounded-[90px] mt-20 mb-20 px-16 py-20 flex items-center justify-between overflow-hidden">
+      <section
+        className="relative w-full min-h-[800px] bg-[#FFD8AA] rounded-[40px] mt-20 mb-20 px-6 py-20 
+        flex flex-col lg:flex-row lg:rounded-[90px] lg:px-16 items-center justify-between overflow-hidden gap-10"
+      >
         {/* Left Side - Text Content */}
-        <div className="w-1/2 flex flex-col space-y-6 text-left">
-          <h2 className="text-[48px] font-extrabold text-[#121212] leading-tight">
+        <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-left">
+          <h2 className="text-[36px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
             Inclusive Ecosystem
           </h2>
-          <p className="text-[#121212] text-[20px] leading-[1.8] max-w-none">
+          <p className="text-[#121212] text-[16px] lg:text-[20px] leading-[1.8] max-w-none">
             SFT is committed to fostering an inclusive ecosystem through a
             variety of initiatives. We conduct sensitization workshops and
             events for school children, youth, and corporate employees to
@@ -350,7 +350,7 @@ export default function Admission() {
         </div>
 
         {/* Right Side - Image */}
-        <div className="relative w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center relative">
           {/* Dotted Background Shape */}
           <div className="absolute w-[450px] h-[450px] bg-[url('/admissions/inclusive-dotted-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
@@ -365,11 +365,12 @@ export default function Admission() {
             />
 
             {/* Stacked Images on Top of Circle */}
-            <motion.div className="absolute w-full h-full flex items-center justify-center"
-              animate={{rotate: 360}}
-              transition={{duration: 10, repeat: Infinity, ease: "linear"}}
-              style={{transformOrigin: "center"}}
-              >
+            <motion.div
+              className="absolute w-full h-full flex items-center justify-center"
+              // animate={{rotate: 360}}
+              // transition={{duration: 10, repeat: Infinity, ease: "linear"}}
+              // style={{transformOrigin: "center"}}
+            >
               {/* Message Bubble */}
               <Image
                 src="/admissions/message.png"
