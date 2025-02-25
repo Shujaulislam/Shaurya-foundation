@@ -430,8 +430,8 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/home/leader-1.png"
-                alt="Leader 1"
+                src="/home/rubina.png"
+                alt="rubina mohan"
                 width={180}
                 height={180}
                 className="rounded-full"
@@ -446,15 +446,15 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/home/leader-2.png"
-                alt="Leader 2"
+                src="/home/arpita.png"
+                alt="Arpita Yadav"
                 width={180}
                 height={180}
-                className="rounded-full"
+                className="rounded-full rotate-12"
               />
             </div>
             <h3 className="text-xl font-semibold text-[#252525] mb-1">
-              Arpit Yadav
+              Arpita Yadav
             </h3>
             <p className="text-gray-600">Director</p>
           </div>
@@ -462,8 +462,8 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/home/leader-3.png"
-                alt="Leader 3"
+                src="/home/ravi.png"
+                alt="Ravi Gupta"
                 width={180}
                 height={180}
                 className="rounded-full"
@@ -478,11 +478,11 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col items-center">
             <div className="w-[200px] h-[200px] mb-4 rounded-full bg-[#E8EFFF] flex items-center justify-center">
               <Image
-                src="/home/leader-4.png"
-                alt="Leader 4"
+                src="/home/rani.png"
+                alt="Rani Gupta"
                 width={180}
                 height={180}
-                className="rounded-full"
+                className="rounded-full pl-4"
               />
             </div>
             <h3 className="text-xl font-semibold text-[#252525] mb-1">
