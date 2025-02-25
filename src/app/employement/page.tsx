@@ -8,50 +8,53 @@ export default function Employment() {
     <main className="px-4 sm:px-8 lg:px-24">
       {/* Hero Section */}
       <section className="bg-[#FF7B8E] rounded-3xl overflow-hidden">
-      <div className="grid grid-cols-12">
-        {/* Text Content */}
-        <div className="col-span-7 pb-10">
-          <div className="pl-16 pt-16">
-            <h1 className="flex items-center gap-2">
-              <span className="text-7xl">THE</span>
-              <span className="text-7xl font-bold">SFT</span>
-              <button className="bg-white sm:px-1 lg:p-3.5 rounded-full lg:ml-6">
-                <Play size={24}/>
+        <div className="grid grid-cols-12">
+          {/* Text Content */}
+          <div className="col-span-7 pb-10">
+            <div className="pl-16 pt-16">
+              <h1 className="flex items-center gap-2">
+                <span className="text-7xl">THE</span>
+                <span className="text-7xl font-bold">SFT</span>
+                <button className="bg-white sm:px-1 lg:p-3.5 rounded-full lg:ml-6">
+                  <Play size={24} />
+                </button>
+              </h1>
+              <p className="text-7xl font-bold">ECOSYSTEM</p>
+            </div>
+
+            <div className="pl-16 mt-8 pr-8">
+              <p className="text-[#222223] text-lg">
+                Shaurya Foundation Trust (SFT) Has Dedicated 11 Years To
+                Empowering Individuals With Intellectual Challenges By Providing
+                Essential Skills And Fostering Independent Living. We've Made
+                Significant Strides In Removing Barriers, And Over The Next
+                Years, We'll Focus On Creating Assisted Employment Models To
+                Ensure All Trainees, Regardless Of The Severity Of Their
+                Challenges, Can Achieve Independent And Productive Lives Through
+                Meaningful Employment.
+              </p>
+            </div>
+
+            <div className="flex gap-4 pl-16 mt-8">
+              <button className="bg-[#FFE3E7] px-8 py-3 rounded-full text-base hover:bg-opacity-90 transition-all">
+                Support Shaurya
               </button>
-            </h1>
-            <p className="text-7xl font-bold">ECOSYSTEM</p>
+              <button className="bg-[#FFE3E7] p-3 rounded-full hover:bg-opacity-90 transition-all">
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
-          <div className="pl-16 mt-8 pr-8">
-            <p className="text-[#222223] text-lg">
-              Shaurya Foundation Trust (SFT) Has Dedicated 11 Years To Empowering Individuals With Intellectual
-              Challenges By Providing Essential Skills And Fostering Independent Living. We've Made Significant
-              Strides In Removing Barriers, And Over The Next Years, We'll Focus On Creating Assisted
-              Employment Models To Ensure All Trainees, Regardless Of The Severity Of Their Challenges, Can
-              Achieve Independent And Productive Lives Through Meaningful Employment.
-            </p>
-          </div>
-
-          <div className="flex gap-4 pl-16 mt-8">
-            <button className="bg-[#FFE3E7] px-8 py-3 rounded-full text-base hover:bg-opacity-90 transition-all">
-              Support Shaurya
-            </button>
-            <button className="bg-[#FFE3E7] p-3 rounded-full hover:bg-opacity-90 transition-all">
-              <ArrowRight className="w-5 h-5" />
-            </button>
+          {/* Image Section */}
+          <div className="col-span-5 h-full">
+            <img
+              src="/employement/hero.png"
+              alt="SFT Team Members"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
-
-        {/* Image Section */}
-        <div className="col-span-5 h-full">
-          <img
-            src="/employement/hero.png"
-            alt="SFT Team Members"
-            className="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
 
       <div className="px-0 sm:px-4 lg:px-8">
         {" "}
@@ -377,49 +380,49 @@ export default function Employment() {
         </section>
         {/* THE JOURNEY */}
         <section className="bg-[#FF6B00] rounded-3xl overflow-hidden relative mt-14">
-      {/* Text Section */}
-      <div className="text-center pt-16 pb-8">
-        <h2 className="text-7xl text-white">
-          THE <span className="font-bold">JOURNEY</span>
-        </h2>
-      </div>
+          {/* Text Section */}
+          <div className="text-center pt-16 pb-8">
+            <h2 className="text-7xl text-white">
+              THE <span className="font-bold">JOURNEY</span>
+            </h2>
+          </div>
 
-      {/* Image Container */}
-      <div className="relative flex justify-center items-end h-[400px]">
-        {/* Left Cartoon */}
-        <div className="absolute left-[11%] bottom-0 w-1/4">
-          <Image
-            src="/employement/j-1.png"
-            alt="Left cartoon character"
-            width={300}
-            height={300}
-            className="object-contain"
-          />
-        </div>
+          {/* Image Container */}
+          <div className="relative flex justify-center items-end h-[400px]">
+            {/* Left Cartoon */}
+            <div className="absolute left-[11%] bottom-0 w-1/4">
+              <Image
+                src="/employement/j-1.png"
+                alt="Left cartoon character"
+                width={300}
+                height={300}
+                className="object-contain"
+              />
+            </div>
 
-        {/* Center Image */}
-        <div className="z-10 mx-auto">
-          <Image
-            src="/employement/j-2.png"
-            alt="Team members with food"
-            width={800}
-            height={400}
-            className="object-contain"
-          />
-        </div>
+            {/* Center Image */}
+            <div className="z-10 mx-auto">
+              <Image
+                src="/employement/j-2.png"
+                alt="Team members with food"
+                width={800}
+                height={400}
+                className="object-contain"
+              />
+            </div>
 
-        {/* Right Cartoon */}
-        <div className="absolute right-[1%] bottom-0 w-1/4">
-          <Image
-            src="/employement/j-3.png"
-            alt="Right cartoon character"
-            width={300}
-            height={300}
-            className="object-contain"
-          />
-        </div>
-      </div>
-    </section>
+            {/* Right Cartoon */}
+            <div className="absolute right-[1%] bottom-0 w-1/4">
+              <Image
+                src="/employement/j-3.png"
+                alt="Right cartoon character"
+                width={300}
+                height={300}
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </section>
         {/* SLIDER */}
         <section className="relative w-full bg-[#FFCFD6] rounded-[42px] mt-20 px-8 py-16">
           {/* Cards Container - Horizontal Scroll */}
@@ -521,22 +524,22 @@ export default function Employment() {
             }
           `}</style>
         </section>
+
         {/* AVATARS */}
-        <section className="mt-20">
+        <section className="md:-mt-20 md:-mb-20 lg:-mt-40 lg:-mb-40">
           <div className="w-full">
             <Image
               src="/employement/avatars.png"
               alt="about"
               width={1920}
               height={1080}
-              style={{ mixBlendMode: "darken" }}
-              className="w-full h-auto"
+              className="w-full"
               priority
             />
           </div>
         </section>
         {/* Number cards */}
-        <section className="flex gap-6 mt-20 mb-40 px-8">
+        <section className="flex gap-6 mb-40 px-8">
           {/* Card 1 */}
           <div className="flex-1 px-12 py-10 border rounded-[24px] bg-[#F6F5F4]">
             <h1 className="text-[#9191E1] text-6xl font-extrabold mb-2">
