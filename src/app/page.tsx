@@ -1,10 +1,11 @@
 "use client"
 
-import { Marquee } from "@/components/magicui/marquee";
+import {motion} from "framer-motion"
 import { cn } from "@/lib/utils";
-import { ArrowRight, ArrowUpRight, Play, TvMinimalPlay } from "lucide-react";
+import { Marquee } from "@/components/magicui/marquee";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, ArrowUpRight, Play, TvMinimalPlay } from "lucide-react";
 
 const testimonials = [
   {
@@ -242,7 +243,7 @@ export default function Home() {
             </span>
 
             <div className="flex flex-col h-full relative">
-              <div className="flex gap-4 relative">
+              <div className="flex lg:gap-4 relative">
                 <div className="space-y-4 flex-1">
                   <h3 className="text-[32px] font-bold leading-tight text-[#252525]">
                     Inclusivity
@@ -259,13 +260,13 @@ export default function Home() {
                 </div>
 
                 {/* Fixing the Image Position */}
-                <div className="absolute inset-y-0 right-4 flex items-center">
+                <div className="absolute lg:-top-16 right-4 flex items-center">
                   <Image
                     src="/home/event-1.png"
                     alt="Inclusivity Sensitization"
-                    width={180}
-                    height={180}
-                    className="w-[180px] h-auto object-contain"
+                    width={300}
+                    height={300}
+                    className="w-full h-auto object-contain mix-blend-multiply"
                   />
                 </div>
               </div>
@@ -282,7 +283,7 @@ export default function Home() {
             <span className="inline-block px-3 py-1 bg-white text-black rounded-lg text-sm font-medium mb-4">
               Sft Triumph
             </span>
-            <div className="flex justify-between items-start gap-6">
+            <div className="lg:flex justify-between items-start w-full">
               <div>
                 <h3 className="text-xl font-bold mb-3">
                   Global Autism Project
@@ -294,9 +295,9 @@ export default function Home() {
               <Image
                 src="/home/event-2.png"
                 alt="Global Autism Project"
-                width={120}
-                height={120}
-                className="object-cover"
+                width={150}
+                height={150}
+                className="object-cover mix-blend-multiply"
               />
             </div>
           </div>
@@ -306,7 +307,7 @@ export default function Home() {
             <span className="inline-block px-3 py-1 bg-white rounded-lg text-sm font-medium mb-4">
               Live Event
             </span>
-            <div className="flex justify-between items-start gap-4">
+            <div className="lg:flex justify-between items-start w-full">
               <div>
                 <h3 className="text-lg font-bold mb-2">Self Advocacy</h3>
                 <p className="text-gray-700 text-sm">Learn to speak up</p>
@@ -314,9 +315,9 @@ export default function Home() {
               <Image
                 src="/home/event-3.png"
                 alt="Self Advocacy"
-                width={80}
-                height={80}
-                className="object-cover rounded-lg"
+                width={120}
+                height={120}
+                className="object-cover rounded-lg mix-blend-multiply"
               />
             </div>
           </div>
@@ -325,7 +326,7 @@ export default function Home() {
             <span className="inline-block px-3 py-1 bg-white rounded-lg text-sm font-medium mb-4">
               Live Event
             </span>
-            <div className="flex justify-between items-start gap-4">
+            <div className="lg:flex justify-between items-start w-full">
               <div>
                 <h3 className="text-lg font-bold mb-2">Sing And Paint</h3>
                 <p className="text-gray-700 text-sm">Express through art</p>
@@ -333,9 +334,9 @@ export default function Home() {
               <Image
                 src="/home/event-4.png"
                 alt="Sing And Paint"
-                width={80}
-                height={80}
-                className="object-cover rounded-lg"
+                width={120}
+                height={120}
+                className="object-cover rounded-lg mix-blend-multiply"
               />
             </div>
           </div>
@@ -545,7 +546,10 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {/* Card 1 */}
-          <div className="bg-[#E1EDFF] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden">
+          <motion.div className="bg-[#E1EDFF] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden"
+                                whileHover={{ scale: 1.05, rotate: 3 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.2 }}>
             <span className="text-[#ffffff] px-3 py-1 bg-[#252B61] rounded-none text-sm font-medium uppercase mb-4 inline-block">
               #SFT TRIUMPH
             </span>
@@ -579,10 +583,13 @@ export default function Home() {
               Show Event
               <span className="text-lg lg:text-xl">→</span>
             </button>
-          </div>
+          </motion.div>
 
           {/* Card 2 */}
-          <div className="bg-[#16AB59] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden">
+          <motion.div className="bg-[#16AB59] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden"
+                                whileHover={{ scale: 1.05, rotate: 3 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.2 }}>
             <span className="text-black text-sm px-3 py-1 bg-gray-100 rounded-none font-medium uppercase mb-4 inline-block">
               #SFT TRAININGS
             </span>
@@ -616,10 +623,13 @@ export default function Home() {
               Show Event
               <span className="text-lg lg:text-xl">→</span>
             </button>
-          </div>
+          </motion.div>
 
           {/* Card 3 */}
-          <div className="bg-[#FF7715] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden">
+          <motion.div className="bg-[#FF7715] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden"
+                                whileHover={{ scale: 1.05, rotate: 3 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.2 }}>
             <span className="text-[#252B61] px-3 py-1 bg-gray-100 rounded-none text-sm font-medium uppercase mb-4 inline-block">
               #SFT TRAININGS
             </span>
@@ -653,7 +663,7 @@ export default function Home() {
               Show Event
               <span className="text-lg lg:text-xl">→</span>
             </button>
-          </div>
+          </motion.div>
         </div>
       </section>
 

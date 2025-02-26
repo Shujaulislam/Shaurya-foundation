@@ -12,17 +12,19 @@ export default function Example() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
+          <Link href="/" className=" flex items-center gap-3">
             <div className="w-10 h-10 bg-[#2C438A] rounded-lg flex items-center justify-center">
-              <Image 
-                src="/logo2.png" 
-                alt="Shaurya Logo" 
-                width={50} 
+              <Image
+                src="/logo2.png"
+                alt="Shaurya Logo"
+                width={50}
                 height={50}
-                className="brightness-0 invert" 
+                className="brightness-0 invert mix-blend-difference"
               />
             </div>
-            <span className="text-[#2C438A] text-xl font-extrabold">Shaurya</span>
+            <span className="text-[#2C438A] text-xl font-extrabold">
+              Shaurya
+            </span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -39,10 +41,16 @@ export default function Example() {
           <Link href="/" className="text-sm/6 font-semibold text-gray-900">
             Home
           </Link>
-          <Link href="/admission" className="text-sm/6 font-semibold text-gray-900">
+          <Link
+            href="/admission"
+            className="text-sm/6 font-semibold text-gray-900"
+          >
             Admissions
           </Link>
-          <Link href="/employement" className="text-sm/6 font-semibold text-gray-900">
+          <Link
+            href="/employement"
+            className="text-sm/6 font-semibold text-gray-900"
+          >
             Employement
           </Link>
           <Link href="/about" className="text-sm/6 font-semibold text-gray-900">
@@ -58,18 +66,18 @@ export default function Example() {
           </Link>
         </div>
       </div>
-      <div className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`lg:hidden ${mobileMenuOpen ? "block" : "hidden"}`}>
         <div className="fixed inset-0 z-10" />
         <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
               <div className="w-10 h-10 bg-[#2C438A] rounded-lg flex items-center justify-center">
-                <Image 
-                  src="/logo2.png" 
-                  alt="Shaurya Logo" 
-                  width={24} 
+                <Image
+                  src="/logo2.png"
+                  alt="Shaurya Logo"
+                  width={24}
                   height={24}
-                  className="brightness-0 invert" 
+                  className="brightness-0 invert"
                 />
               </div>
               <span className="text-[#2C438A] text-xl font-bold">Shaurya</span>
@@ -90,9 +98,9 @@ export default function Example() {
                   href="/"
                   className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
-                   Home
+                  Home
                 </Link>
-                
+
                 <Link
                   href="/admission"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
@@ -115,7 +123,7 @@ export default function Example() {
 
               {/* contact button */}
               <div className="py-6">
-                <Link 
+                <Link
                   href="/contact"
                   className="w-full bg-[#2C438A] hover:bg-[#2C438A]/90 text-sm text-white px-5 py-2 rounded-full"
                 >
@@ -127,5 +135,5 @@ export default function Example() {
         </div>
       </div>
     </header>
-  )
+  );
 }
