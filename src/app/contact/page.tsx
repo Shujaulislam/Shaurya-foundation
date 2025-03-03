@@ -13,7 +13,7 @@ export default function ContactPage() {
       {/* Top Banner */}
       <div className="w-full bg-gradient-to-r rounded-b-none rounded-2xl from-[#F8FAFF] via-[#EEF4FF] to-[#FFECEC] py-2.5 lg:py-4">
         <div className="container flex items-center justify-center gap-4 text-[#535353]">
-          <p className="text-sm">
+          <p className="sm:text-sm md:text-base">
             Get Quick response via contact us on WhatsApp
           </p>
           <Image src="/WhatsApp.png" alt="WhatsApp" width={20} height={20} />
@@ -24,7 +24,7 @@ export default function ContactPage() {
       {/* Section 1: Hero */}
       <section className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] w-full bg-[#BFF9EA] rounded-t-none rounded-2xl px-4 sm:px-8 md:px-16 lg:px-24 pt-8 sm:pt-12 md:pt-16 flex flex-col items-center text-center overflow-hidden">
         {/* Title */}
-        <h1 className="text-[8vw] sm:text-[7vw] md:text-[6vw] lg:text-[4vw] font-extrabold uppercase tracking-tight text-[#222223] leading-tight">
+        <h1 className="text-[8vw] sm:text-[4vw] md:text-[6vw] lg:text-[4vw] font-extrabold uppercase tracking-tight text-[#222223] leading-tight">
           Contact <span className="font-normal">US</span>
         </h1>
 
