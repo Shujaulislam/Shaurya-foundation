@@ -114,7 +114,7 @@ const ReviewCard = ({
 
 export default function Home() {
   return (
-    <main className="lg:px-16 xl:px-24">
+    <main className="px-4 sm:px-8 lg:px-24">
       {/* Hero Section with Image Overlay */}
       <section className="relative w-full h-screen md:mt-4 lg:mt-6 xl:mt-8 mb-20 overflow-hidden rounded-2xl">
         {/* Background Image with Overlay */}
@@ -190,12 +190,19 @@ export default function Home() {
                 {card.title}
               </h3>
 
-              <div className="absolute bottom-0 right-0 w-[70%] h-auto md:h-[80%] lg:h-[90%] xl:h-full">
+              <div className="absolute bottom-0 right-0">
                 <Image
                   src={card.image}
                   alt={card.title}
-                  fill
+                  width={150} // Adjust these values
+                  height={120} // Adjust these values
                   className="object-cover"
+                  style={{
+                    width: "auto",
+                    height: "auto",
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                  }}
                 />
               </div>
 
@@ -212,22 +219,30 @@ export default function Home() {
 
       {/* Upcoming Events Header */}
       <section className="mt-4 md:mt-8 lg:mt-14 xl:mt-16 mb-4 md:mb-8 lg:mb-14 xl:mb-16">
-        <div className="sm:mb-8 md:mb-14 lg:mb-16 xl:mb-20 flex items-end justify-between">
-          <h2 className="text-[90px] font-extrabold text-[#252525] leading-none">
+        <div className="mb-6 sm:mb-8 md:mb-14 lg:mb-16 xl:mb-20 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 sm:gap-4">
+          <h2 className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[90px] font-extrabold text-[#252525] leading-none">
             Upcoming
             <br />
             Events
           </h2>
-          <div className="flex flex-col items-start gap-4">
-            <p className="text-2xl text-gray-700 max-w-xl">
+          <div className="flex flex-col items-start gap-3 sm:gap-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-full sm:max-w-xl">
               Join our upcoming events for contribution...
             </p>
             <Link
-              href="/events"
-              className="flex items-center gap-2 bg-[#FDF8F1] px-4 py-2 rounded-xl shadow-sm hover:bg-gray-50 transition-colors"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+              className="flex items-center gap-2 bg-[#FDF8F1] px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl shadow-sm hover:bg-gray-50 transition-colors"
             >
               <span className="text-[#333] font-medium">View</span>
-              <ArrowUpRight strokeWidth={3} size={18} />
+              <ArrowUpRight strokeWidth={3} size={16} className="sm:hidden" />
+              <ArrowUpRight
+                strokeWidth={3}
+                size={18}
+                className="hidden sm:block"
+              />
             </Link>
           </div>
         </div>
@@ -235,22 +250,22 @@ export default function Home() {
 
       {/* Events Grid */}
       <section className="mt-4 md:mt-8 lg:mt-14 xl:mt-20 mb-4 md:mb-8 lg:mb-14 xl:mb-20">
-        <div className="grid grid-cols-12 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-4 md:gap-6">
           {/* Large Event Card */}
-          <div className="col-span-12 md:col-span-8 lg:col-span-6 row-span-2 bg-[#F0DA69] rounded-xl p-8 relative">
+          <div className="col-span-1 sm:col-span-2 md:col-span-8 lg:col-span-6 row-span-2 bg-[#F0DA69] rounded-xl p-8 relative">
             <span className="inline-block px-3 py-1 bg-white rounded-lg text-sm font-medium mb-4">
               Sft Community Outreach
             </span>
 
             <div className="flex flex-col h-full relative">
-              <div className="flex lg:gap-4 relative">
+              <div className="flex flex-col md:flex-row lg:gap-4 relative">
                 <div className="space-y-4 flex-1">
-                  <h3 className="text-[32px] font-bold leading-tight text-[#252525]">
+                  <h3 className="text-2xl sm:text-3xl md:text-[32px] font-bold leading-tight text-[#252525]">
                     Inclusivity
                     <br />
                     Sensitization
                   </h3>
-                  <p className="text-[#252525]/80 text-base">
+                  <p className="text-[#252525]/80 text-sm sm:text-base">
                     A Sneak Peak Of Training Workshop
                     <br />
                     For Anganwadi Workers At SFT Palwal
@@ -259,27 +274,27 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* Fixing the Image Position */}
-                <div className="absolute lg:-top-16 right-4 flex items-center">
+                {/* Image Position Adjustments for Mobile */}
+                <div className="relative w-full sm:w-auto md:absolute lg:-top-16 right-4 flex items-center justify-center mt-4 md:mt-0">
                   <Image
                     src="/home/event-1.png"
                     alt="Inclusivity Sensitization"
                     width={300}
                     height={300}
-                    className="w-full h-auto object-contain mix-blend-multiply"
+                    className="w-[80%] sm:w-[60%] md:w-full h-auto object-contain mix-blend-multiply"
                   />
                 </div>
               </div>
             </div>
 
             {/* Play Button */}
-            <div className="absolute bottom-8 left-8 w-12 h-12 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
-              <Play className="w-5 h-5 text-[#252525] ml-0.5" />
+            <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 w-10 sm:w-12 h-10 sm:h-12 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+              <Play className="w-4 sm:w-5 h-4 sm:h-5 text-[#252525] ml-0.5" />
             </div>
           </div>
 
           {/* Medium Event Card */}
-          <div className="col-span-12 md:col-span-4 lg:col-span-6 bg-[#4D5899] text-white rounded-xl p-6 relative">
+          <div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-6 bg-[#4D5899] text-white rounded-xl p-6 relative">
             <span className="inline-block px-3 py-1 bg-white text-black rounded-lg text-sm font-medium mb-4">
               Sft Triumph
             </span>
@@ -303,7 +318,7 @@ export default function Home() {
           </div>
 
           {/* Small Event Cards */}
-          <div className="col-span-12 md:col-span-4 lg:col-span-3 bg-[#A3DAC2] rounded-xl p-6 relative">
+          <div className="col-span-1 sm:col-span-1 md:col-span-4 lg:col-span-3 bg-[#A3DAC2] rounded-xl p-6 relative">
             <span className="inline-block px-3 py-1 bg-white rounded-lg text-sm font-medium mb-4">
               Live Event
             </span>
@@ -322,7 +337,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="col-span-12 md:col-span-4 lg:col-span-3 bg-[#FFC7D1] rounded-xl p-6 relative">
+          <div className="col-span-1 sm:col-span-1 md:col-span-4 lg:col-span-3 bg-[#FFC7D1] rounded-xl p-6 relative">
             <span className="inline-block px-3 py-1 bg-white rounded-lg text-sm font-medium mb-4">
               Live Event
             </span>
@@ -494,40 +509,41 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Stats Section */}
-      <section className="mt-8 lg:mt-20 xl:mt-24 mb-8 md:mb-12 lg:mb-16 xl:mb-20 flex justify-center">
-        <div className="flex items-center gap-48">
+      <section className="mt-6 sm:mt-8 lg:mt-20 xl:mt-24 mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-20 flex justify-center">
+        <div className="flex flex-col sm:flex-row items-center gap-10 sm:gap-16 md:gap-24 lg:gap-48">
+          {/* First stat item */}
           <div className="flex items-start">
-            <div className="w-1 h-20 bg-[#252525] mr-4"></div>
+            <div className="w-1 h-12 sm:h-16 md:h-20 bg-[#252525] mr-2 sm:mr-3 md:mr-4"></div>
             <div className="flex items-baseline">
-              <span className="text-[90px] font-bold text-[#252525] leading-none">
+              <span className="text-[40px] sm:text-[60px] md:text-[75px] lg:text-[90px] font-bold text-[#252525] leading-none">
                 100
               </span>
-              <span className="text-[90px] font-bold text-[#252525] leading-none">
+              <span className="text-[40px] sm:text-[60px] md:text-[75px] lg:text-[90px] font-bold text-[#252525] leading-none">
                 +
               </span>
             </div>
-            <div className="mt-8 ml-2">
-              <span className="text-[22px] text-[#252525] font-medium leading-tight block">
+            <div className="mt-3 sm:mt-5 md:mt-8 ml-1 sm:ml-2">
+              <span className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-[#252525] font-medium leading-tight block">
                 talented
               </span>
-              <span className="text-[22px] text-[#252525] font-medium leading-tight block">
+              <span className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-[#252525] font-medium leading-tight block">
                 teammates
               </span>
             </div>
           </div>
 
-          <div className="flex items-start">
-            <div className="w-1 h-20 bg-[#252525] mr-4"></div>
-            <span className="text-[90px] font-bold text-[#252525] leading-none">
+          {/* Second stat item */}
+          <div className="flex items-start mt-8 sm:mt-0">
+            <div className="w-1 h-12 sm:h-16 md:h-20 bg-[#252525] mr-2 sm:mr-3 md:mr-4"></div>
+            <span className="text-[40px] sm:text-[60px] md:text-[75px] lg:text-[90px] font-bold text-[#252525] leading-none">
               48
             </span>
-            <div className="mt-8 ml-2">
-              <span className="text-[22px] text-[#252525] font-medium leading-tight block">
+            <div className="mt-3 sm:mt-5 md:mt-8 ml-1 sm:ml-2">
+              <span className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-[#252525] font-medium leading-tight block">
                 successful
               </span>
-              <span className="text-[22px] text-[#252525] font-medium leading-tight block">
+              <span className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-[#252525] font-medium leading-tight block">
                 projects
               </span>
             </div>
@@ -546,10 +562,12 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {/* Card 1 */}
-          <motion.div className="bg-[#E1EDFF] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden"
-                                whileHover={{ scale: 1.05, rotate: 3 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: 0.2 }}>
+          <motion.div
+            className="bg-[#E1EDFF] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden"
+            whileHover={{ scale: 1.05, rotate: 3 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <span className="text-[#ffffff] px-3 py-1 bg-[#252B61] rounded-none text-sm font-medium uppercase mb-4 inline-block">
               #SFT TRIUMPH
             </span>
@@ -586,10 +604,12 @@ export default function Home() {
           </motion.div>
 
           {/* Card 2 */}
-          <motion.div className="bg-[#16AB59] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden"
-                                whileHover={{ scale: 1.05, rotate: 3 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: 0.2 }}>
+          <motion.div
+            className="bg-[#16AB59] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden"
+            whileHover={{ scale: 1.05, rotate: 3 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <span className="text-black text-sm px-3 py-1 bg-gray-100 rounded-none font-medium uppercase mb-4 inline-block">
               #SFT TRAININGS
             </span>
@@ -626,10 +646,12 @@ export default function Home() {
           </motion.div>
 
           {/* Card 3 */}
-          <motion.div className="bg-[#FF7715] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden"
-                                whileHover={{ scale: 1.05, rotate: 3 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: 0.2 }}>
+          <motion.div
+            className="bg-[#FF7715] rounded-3xl p-6 lg:p-8 relative min-h-[400px] lg:min-h-[550px] 2xl:min-h-[700px] overflow-hidden"
+            whileHover={{ scale: 1.05, rotate: 3 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <span className="text-[#252B61] px-3 py-1 bg-gray-100 rounded-none text-sm font-medium uppercase mb-4 inline-block">
               #SFT TRAININGS
             </span>
@@ -669,13 +691,13 @@ export default function Home() {
 
       {/* Testimonials */}
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden mb-8 lg:mb-16">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {testimonials.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {testimonials.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
       </div>
 
       {/* Awards */}
