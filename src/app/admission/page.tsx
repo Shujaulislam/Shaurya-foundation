@@ -17,45 +17,49 @@ const image = {
 
 export default function Admission() {
   return (
-    <main className="px-4 lg:px-24">
-      {/* HERO */}
-      <section className="relative w-full min-h-[600px] bg-[#2C438A] rounded-[40px] px-6 lg:rounded-[90px] lg:px-24 pt-16 overflow-hidden">
+    <main className="px-4 sm:px-8 lg:px-24">
+      
+      {/* Hero Section */}
+      <section className="relative w-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[600px] bg-[#2C438A] rounded-[20px] sm:rounded-[30px] lg:rounded-[90px] px-4 sm:px-6 lg:px-24 pt-8 sm:pt-12 lg:pt-16 overflow-hidden">
         {/* Content Container */}
-        <div className="relative z-10 lg:max-w-[720px]">
+        <div className="relative z-20 lg:max-w-[720px]">
           {/* Tags Container */}
-          <div className="flex items-center gap-6 mb-10">
+          <div className="hidden lg:flex items-center gap-6 mb-4 sm:mb-6 lg:mb-10">
             <div className="flex items-center gap-2">
-              <button className="bg-[#E7C2D4] p-2.5 rounded-full">
-                <Activity className="text-[#2C438A]" size={20} />
+              <button className="bg-[#E7C2D4] p-2 rounded-full sm:p-2.5">
+                <Activity className="text-[#2C438A]" size={16} />
               </button>
-              <p className="text-[#C6DEFD] text-[16px] lg:text-[18px] font-medium">
+              <p className="text-[#C6DEFD] text-[12px] sm:text-[14px] lg:text-[18px] font-medium">
                 Easy Learning
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <button className="bg-[#A3DAC2] p-2.5 rounded-full">
-                <CloudRain className="text-[#2C438A]" size={20} />
+              <button className="bg-[#A3DAC2] p-2 rounded-full sm:p-2.5">
+                <CloudRain className="text-[#2C438A]" size={16} />
               </button>
-              <p className="text-[#C6DEFD] text-[16px] lg:text-[18px] font-medium">
+              <p className="text-[#C6DEFD] text-[12px] sm:text-[14px] lg:text-[18px] font-medium">
                 Fun Learning
               </p>
             </div>
           </div>
+
           {/* Title with Play Button */}
-          <div className="flex items-center gap-5">
-            <h1 className="text-[50px] lg:text-[100px] uppercase text-[#C6DEFD] leading-none tracking-tight font-bold">
+          <div className="flex items-center gap-3 sm:gap-4 lg:gap-5">
+            <h1 className="text-[28px] sm:text-[38px] md:text-[50px] lg:text-[100px] uppercase text-[#C6DEFD] leading-none tracking-tight font-bold">
               Our
             </h1>
-            <button className="bg-white p-3.5 rounded-full">
-              <Play className="text-[#F0DA69] fill-[#F0DA69]" size={24} />
+            <button className="bg-white p-2.5 sm:p-3 md:p-3.5 rounded-full lg:p-4">
+              <Play className="text-[#F0DA69] fill-[#F0DA69]" size={18} />
             </button>
           </div>
+
           {/* Subtitle */}
-          <h2 className="text-[60px] lg:text-[120px] -mt-6 uppercase text-[#F0DA69] font-extrabold leading-none tracking-tight mb-8">
+          <h2 className="text-[34px] sm:text-[44px] md:text-[56px] lg:text-[120px] -mt-2 sm:-mt-3 md:-mt-4 lg:-mt-6 uppercase text-[#F0DA69] font-extrabold leading-none tracking-tight mb-4 sm:mb-6 lg:mb-8">
             Programs
           </h2>
+
           {/* Description Text */}
-          <p className="text-[#C6DEFD] text-[16px] lg:text-[18px] leading-[1.8] w-full font-semibold">
+          <p className="text-[#C6DEFD] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] leading-[1.5] sm:leading-[1.6] lg:leading-[1.8] w-full font-semibold">
             A Non-Profit Transforming The Lives Of Individuals With Special
             Needs Through Holistic Education, Life Skills, And Community
             Integration.
@@ -63,8 +67,7 @@ export default function Admission() {
         </div>
 
         {/* Hero Image - Positioned Bottom Right */}
-        <div className="absolute bottom-0 right-[-15px] w-[90%] opacity-30 lg:right-[-35px] lg:w-[50%] lg:opacity-100 h-[100%]">
-          {/* Increased width & height */}
+        <div className="absolute bottom-0 right-0 w-[80%] sm:w-[60%] md:w-[50%] lg:w-[50%] h-[40%] sm:h-[55%] md:h-[70%] lg:h-[100%] lg:opacity-100">
           <Image
             src="/admissions/hero.png"
             alt="hero-image"
@@ -76,58 +79,55 @@ export default function Admission() {
         </div>
 
         {/* CTA Buttons - Bottom Left */}
-        <div className="absolute bottom-12 left-6 lg:left-24 flex items-center gap-3">
-          <button className="flex items-center gap-4 bg-[#FFCFD6] px-8 py-4 text-[#2C438A] text-[17px] font-semibold rounded-full hover:bg-opacity-90 transition">
+        <div className="absolute bottom-4 sm:bottom-6 lg:bottom-12 left-4 sm:left-6 lg:left-24 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+          <button className="flex items-center gap-2 sm:gap-3 bg-[#FFCFD6] px-4 sm:px-6 py-2 sm:py-3 text-[#2C438A] text-[12px] sm:text-[14px] font-semibold rounded-full hover:bg-opacity-90 transition">
             Support Shaurya
           </button>
-          <button className="bg-[#FFCFD6] p-4 rounded-full hover:bg-opacity-90 transition">
-            <ArrowRight className="text-[#2C438A]" size={20} />
+          <button className="bg-[#FFCFD6] p-2 sm:p-3 rounded-full hover:bg-opacity-90 transition">
+            <ArrowRight className="text-[#2C438A]" size={16} />
           </button>
         </div>
       </section>
 
       {/* ENABLED LIVING */}
-      <section
-        className="relative w-full min-h-[600px] bg-[#C7D0FF] rounded-[40px] mt-20 px-6 py-20
-        flex flex-col lg:flex-row lg:rounded-[90px] lg:px-16 items-center justify-between overflow-hidden gap-10"
-      >
+      <section className="relative w-full min-h-[600px] bg-[#C7D0FF] rounded-[20px] sm:rounded-[30px] lg:rounded-[40px] mt-10 sm:mt-16 lg:mt-20 px-4 sm:px-6 py-10 sm:py-16 lg:py-20 flex flex-col lg:flex-row lg:px-16 items-center justify-between overflow-hidden gap-6 sm:gap-8 lg:gap-10">
         {/* Left Side - Stacked Images */}
         <div className="w-full lg:w-1/2 flex justify-center relative">
           {/* Centered Dotted Background */}
-          <div className="absolute w-[500px] h-[500px] bg-[url('/admissions/dotted-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-[url('/admissions/dotted-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
           {/* Stacked Images */}
-          <div className="relative w-[350px] h-[280px]">
+          <div className="relative w-[250px] h-[200px] sm:w-[300px] sm:h-[240px] lg:w-[350px] lg:h-[280px]">
             <Image
               src="/admissions/img-1.png"
               alt="Reflection time"
               width={300}
               height={250}
-              className="absolute left-[-60px] top-[30px] rotate-[-10deg] z-10 transform hover:scale-125 transition-transform ease-linear duration-500"
+              className="absolute left-[-40px] top-[20px] rotate-[-10deg] z-10 transform hover:scale-125 transition-transform ease-linear duration-500"
             />
             <Image
               src="/admissions/img-2.png"
               alt="Check-in"
               width={300}
               height={250}
-              className="absolute left-[40px] top-[-73px] rotate-[5deg] z-20 transform hover:scale-150 transition-transform ease-linear duration-500"
+              className="absolute left-[20px] top-[-60px] rotate-[5deg] z-20 transform hover:scale-150 transition-transform ease-linear duration-500"
             />
             <Image
               src="/admissions/img-3.png"
               alt="Check-out"
               width={300}
               height={250}
-              className="absolute right-[-70px] top-[60px] rotate-[12deg] z-30 transform hover:scale-110 transition-transform ease-linear duration-500"
+              className="absolute right-[-50px] top-[60px] rotate-[12deg] z-30 transform hover:scale-110 transition-transform ease-linear duration-500"
             />
           </div>
         </div>
 
         {/* Right Side - Text Content */}
-        <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-left">
-          <h2 className="text-[36px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
+        <div className="w-full lg:w-1/2 flex flex-col space-y-4 sm:space-y-5 lg:space-y-6 text-left">
+          <h2 className="text-[24px] sm:text-[30px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
             Enabled Living
           </h2>
-          <p className="text-[#121212] text-[16px] lg:text-[20px] leading-[1.8] max-w-none">
+          <p className="text-[14px] sm:text-[16px] lg:text-[20px] leading-[1.6] sm:leading-[1.7] lg:leading-[1.8] max-w-none">
             SFT addresses the concerns of parents and neurodiverse young adults
             by offering community living solutions through our Enabled Living
             Program (ELP). This initiative includes service apartments, buddy
@@ -141,10 +141,7 @@ export default function Admission() {
 
           {/* Learn More Button - Bottom Right Aligned */}
           <div className="flex justify-end">
-            <button
-              className="px-6 py-3 border-2 border-black border-solid text-black font-semibold rounded-[12px] 
-        hover:bg-black hover:text-white transition"
-            >
+            <button className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-black border-solid text-black font-semibold rounded-[10px] sm:rounded-[12px] hover:bg-black hover:text-white transition">
               Learn More
             </button>
           </div>
@@ -152,35 +149,29 @@ export default function Admission() {
       </section>
 
       {/* BIG SECTION */}
-      <section className="relative w-full h-auto bg-[#BFF9EA] mt-20 px-6 lg:px-16 py-20">
+      <section className="relative w-full h-auto bg-[#BFF9EA] mt-10 sm:mt-16 lg:mt-20 px-4 sm:px-6 lg:px-16 py-14 sm:py-16 lg:py-20">
         {/* DSW SECTION */}
         <section
-          className="relative rounded-[30px] mt-20 px-6 py-20
-          flex flex-col lg:flex-row lg:rounded-[42px] lg:px-16 items-center justify-between overflow-hidden gap-10"
+          className="relative rounded-[20px] sm:rounded-[25px] lg:rounded-[42px] mt-10 sm:mt-16 lg:mt-20 px-4 sm:px-6 lg:px-16 py-14 sm:py-16 lg:py-20
+                    flex flex-col lg:flex-row items-center justify-between overflow-hidden gap-6 sm:gap-8 lg:gap-10"
         >
           {/* Left Side - Text Content */}
-          <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-left">
-            <h2 className="text-[36px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
+          <div className="w-full lg:w-1/2 flex flex-col space-y-4 sm:space-y-6 text-left">
+            <h2 className="text-[28px] sm:text-[32px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
               Disability Support Worker (DSW) Training
             </h2>
-            <p className="text-[#121212] text-[16px] lg:text-[20px] leading-[1.8] max-w-none">
+            <p className="text-[#121212] text-[14px] sm:text-[16px] lg:text-[20px] leading-[1.6] sm:leading-[1.8] max-w-none">
               Recognizing the growing need for professional caregivers, SFT has
               developed a comprehensive DSW training program. This program
               trains individuals to provide essential support to persons with
-              disabilities, helping them with daily activities, personal care,
-              and professional tasks. The DSWs play a crucial role in the
-              Independent Living Program and Long-Term Care Giving Program,
-              bridging the gap between the community and those with high support
-              needs. Through this initiative, we aim to create a workforce of
-              trained professionals who can support not only individuals with
-              disabilities but also the elderly and others in need of care.
+              disabilities...
             </p>
 
-            {/* Learn More Button - Bottom Right Aligned */}
+            {/* Learn More Button */}
             <div className="flex">
               <button
-                className="px-6 py-3 border-2 border-black border-solid text-black font-semibold rounded-[12px] 
-        hover:bg-black hover:text-white transition"
+                className="px-5 sm:px-6 py-2 sm:py-3 border-2 border-black text-black font-semibold rounded-[10px] sm:rounded-[12px] 
+                    hover:bg-black hover:text-white transition"
               >
                 Learn More
               </button>
@@ -190,17 +181,17 @@ export default function Admission() {
           {/* Right Side - Stacked Images */}
           <div className="w-full lg:w-1/2 flex justify-center relative">
             {/* Centered Circular Dotted Background */}
-            <div className="absolute w-[500px] h-[500px] bg-[url('/admissions/dotted-circle-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute w-[280px] sm:w-[400px] lg:w-[500px] h-[280px] sm:h-[400px] lg:h-[500px] bg-[url('/admissions/dotted-circle-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
             {/* Stacked Images */}
-            <div className="relative w-[400px] h-[400px] ">
+            <div className="relative w-[280px] sm:w-[350px] lg:w-[400px] h-[280px] sm:h-[350px] lg:h-[400px]">
               {/* Base Chat Image */}
               <Image
                 src="/admissions/chat.png"
                 alt="Chat background"
                 width={500}
                 height={500}
-                className="absolute left-0 top-[30px] z-0 transform hover:scale-105 transition-transform"
+                className="absolute left-0 top-[20px] sm:top-[30px] lg:top-[30px] z-0 transform hover:scale-105 transition-transform"
               />
 
               {/* Bean Image - Middle Layer */}
@@ -209,103 +200,96 @@ export default function Admission() {
                 alt="Mr Bean"
                 width={120}
                 height={100}
-                className="absolute right-[-30px] bottom-[110px] z-10 transform hover:scale-125 transition-transform"
+                className="absolute right-[-15px] sm:right-[-30px] lg:right-[-30px] bottom-[70px] sm:bottom-[110px] lg:bottom-[110px] z-10 transform hover:scale-125 transition-transform"
               />
 
               {/* Hands and Music Node Container - Top Layer */}
-              <div className="absolute left-[50px] bottom-[20px] z-20 flex gap-4">
+              <div className="absolute left-[30px] sm:left-[50px] bottom-[10px] sm:bottom-[20px] z-20 flex gap-2 sm:gap-4">
                 <Image
                   src="/admissions/node.png"
                   alt="Music node"
                   width={100}
                   height={100}
-                  className=" pt-16  transform hover:scale-105 transition-transform"
+                  className="transform hover:scale-105 transition-transform"
                 />
                 <Image
                   src="/admissions/hands.png"
                   alt="Hands"
-                  width={220}
-                  height={150}
-                  className=" transform hover:scale-105 transition-transform"
+                  width={160}
+                  height={120}
+                  className="transform hover:scale-105 transition-transform"
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* ASSISTED EMPLOYEMENT PROJECTS */}
+        {/* ASSISTED EMPLOYMENT PROJECTS */}
         <section
-          className="relative rounded-[30px] mt-20 px-6 py-20
-          flex flex-col-reverse lg:flex-row lg:rounded-[42px] lg:px-16 items-center justify-between overflow-hidden gap-10"
+          className="relative rounded-[20px] sm:rounded-[25px] lg:rounded-[42px] mt-10 sm:mt-16 lg:mt-20 px-4 sm:px-6 lg:px-16 py-14 sm:py-16 lg:py-20
+                  flex flex-col-reverse lg:flex-row items-center justify-between overflow-hidden gap-6 sm:gap-8 lg:gap-10"
         >
           {/* Left Side - Stacked Images */}
           <div className="w-full lg:w-1/2 flex justify-center relative">
             {/* Dotted Background */}
-            <div className="absolute w-[500px] h-[500px] bg-[url('/admissions/dotted-flower-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute w-[280px] sm:w-[400px] lg:w-[500px] h-[280px] sm:h-[400px] lg:h-[500px] bg-[url('/admissions/dotted-flower-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
             {/* Rectangle Whiteboard-Like Image */}
-            <div className="relative w-[400px] h-[280px]">
+            <div className="relative w-[280px] sm:w-[350px] lg:w-[400px] h-[200px] sm:h-[250px] lg:h-[280px]">
               <Image
                 src="/admissions/rectangle-bg.png"
                 alt="Whiteboard"
-                width={400}
-                height={280}
-                className="absolute left-0 top-0 rotate-[-10deg] z-10"
+                width={350}
+                height={250}
+                className="absolute left-0 top-0 rotate-[-8deg] z-10"
               />
 
               {/* Floating Icons */}
               <Image
                 src="/admissions/miro.png"
                 alt="Miro"
-                width={110}
-                height={110}
-                className="absolute top-[-40px] left-[200px] rotate-[10deg] z-20 transform hover:scale-125 transition-transform"
+                width={80}
+                height={80}
+                className="absolute top-[-30px] left-[160px] sm:left-[200px] rotate-[8deg] z-20 transform hover:scale-125 transition-transform"
               />
               <Image
                 src="/admissions/mural.png"
                 alt="Mural"
-                width={110}
-                height={110}
-                className="absolute top-[80px] left-[50px] rotate-[5deg] z-30 transform hover:scale-125 transition-transform"
+                width={80}
+                height={80}
+                className="absolute top-[50px] left-[40px] sm:left-[50px] rotate-[4deg] z-30 transform hover:scale-125 transition-transform"
               />
               <Image
                 src="/admissions/youtube.png"
                 alt="YouTube"
-                width={110}
-                height={110}
-                className="absolute bottom-[-35px] left-[120px] rotate-[-8deg] z-20 transform hover:scale-125 transition-transform"
+                width={80}
+                height={80}
+                className="absolute bottom-[-30px] lg:bottom-[25px] left-[100px] lg:left-[100px] sm:left-[120px] rotate-[-6deg] z-20 transform hover:scale-125 transition-transform"
               />
               <Image
                 src="/admissions/drive.png"
                 alt="Google Drive"
-                width={110}
-                height={110}
-                className="absolute bottom-[70px] right-[80px] rotate-[5deg] z-20 transform hover:scale-125 transition-transform"
+                width={80}
+                height={80}
+                className="absolute bottom-[50px] right-[60px] sm:right-[80px] rotate-[4deg] z-20 transform hover:scale-125 transition-transform"
               />
             </div>
           </div>
 
           {/* Right Side - Text Content */}
-          <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-left">
-            <h2 className="text-[36px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
+          <div className="w-full lg:w-1/2 flex flex-col space-y-4 sm:space-y-6 text-left">
+            <h2 className="text-[28px] sm:text-[32px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
               Assisted Employment Projects
             </h2>
-            <p className="text-[#121212] text-[16px] lg:text-[20px] leading-[1.8] max-w-none">
+            <p className="text-[#121212] text-[14px] sm:text-[16px] lg:text-[20px] leading-[1.6] sm:leading-[1.8] max-w-none">
               Employment is a key focus area for SFT. We are actively working to
-              create more job opportunities for neurodiverse individuals through
-              corporate partnerships. Our Assisted Employment Projects span a
-              range of industries, including packaging, manufacturing, food
-              services, assembling, corporate gifting, and digital work. These
-              projects provide meaningful employment opportunities that allow
-              individuals with special needs to gain financial independence and
-              contribute to society. Our goal is to increase employment rates
-              among neurodiverse youth by at least %25.
+              create more job opportunities for neurodiverse individuals...
             </p>
 
-            {/* Learn More Button - Bottom Right Aligned */}
+            {/* Learn More Button */}
             <div className="flex justify-end">
               <button
-                className="px-6 py-3 border-2 border-black border-solid text-black font-semibold rounded-[12px] 
+                className="px-5 sm:px-6 py-2 sm:py-3 border-2 border-black text-black font-semibold rounded-[10px] sm:rounded-[12px] 
         hover:bg-black hover:text-white transition"
               >
                 Learn More
@@ -316,16 +300,13 @@ export default function Admission() {
       </section>
 
       {/* INCLUSIVE ECOSYTEM */}
-      <section
-        className="relative w-full min-h-[800px] bg-[#FFD8AA] rounded-[40px] mt-20 mb-20 px-6 py-20 
-        flex flex-col lg:flex-row lg:rounded-[90px] lg:px-16 items-center justify-between overflow-hidden gap-10"
-      >
+      <section className="relative w-full min-h-[600px] sm:min-h-[700px] lg:min-h-[800px] bg-[#FFD8AA] rounded-[20px] sm:rounded-[30px] lg:rounded-[40px] mt-10 sm:mt-16 lg:mt-20 mb-10 sm:mb-16 lg:mb-20 px-4 sm:px-6 py-10 sm:py-16 lg:py-20 flex flex-col lg:flex-row lg:px-16 items-center justify-between overflow-hidden gap-6 sm:gap-8 lg:gap-10">
         {/* Left Side - Text Content */}
-        <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-left">
-          <h2 className="text-[36px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
+        <div className="w-full lg:w-1/2 flex flex-col space-y-4 sm:space-y-5 lg:space-y-6 text-left">
+          <h2 className="text-[24px] sm:text-[30px] lg:text-[48px] font-extrabold text-[#121212] leading-tight">
             Inclusive Ecosystem
           </h2>
-          <p className="text-[#121212] text-[16px] lg:text-[20px] leading-[1.8] max-w-none">
+          <p className="text-[14px] sm:text-[16px] lg:text-[20px] leading-[1.6] sm:leading-[1.7] lg:leading-[1.8] max-w-none">
             SFT is committed to fostering an inclusive ecosystem through a
             variety of initiatives. We conduct sensitization workshops and
             events for school children, youth, and corporate employees to
@@ -340,10 +321,7 @@ export default function Admission() {
 
           {/* Learn More Button - Bottom Right Aligned */}
           <div className="flex">
-            <button
-              className="px-6 py-3 border-2 border-black text-black font-semibold rounded-[12px] 
-                      hover:bg-black hover:text-white transition"
-            >
+            <button className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-black text-black font-semibold rounded-[10px] sm:rounded-[12px] hover:bg-black hover:text-white transition">
               Learn More
             </button>
           </div>
@@ -352,10 +330,10 @@ export default function Admission() {
         {/* Right Side - Image */}
         <div className="w-full lg:w-1/2 flex justify-center relative">
           {/* Dotted Background Shape */}
-          <div className="absolute w-[450px] h-[450px] bg-[url('/admissions/inclusive-dotted-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] bg-[url('/admissions/inclusive-dotted-bg.png')] bg-cover left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
           {/* Center Circle Image */}
-          <div className="relative w-[350px] h-[350px] flex items-center justify-center">
+          <div className="relative w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] lg:w-[350px] lg:h-[350px] flex items-center justify-center">
             <Image
               src="/admissions/circle.png"
               alt="Circle Background"
@@ -366,8 +344,7 @@ export default function Admission() {
 
             {/* Stacked Images on Top of Circle */}
             <motion.div
-              className="absolute w-full h-full flex items-center justify-center"
-              // animate={{rotate: 360}}
+              className="absolute w-full h-full flex items-center justify-center" // animate={{rotate: 360}}
               // transition={{duration: 10, repeat: Infinity, ease: "linear"}}
               // style={{transformOrigin: "center"}}
             >
@@ -375,27 +352,27 @@ export default function Admission() {
               <Image
                 src="/admissions/message.png"
                 alt="Message Icon"
-                width={100}
-                height={100}
-                className="absolute top-[20px] left-[20px]"
+                width={70}
+                height={70}
+                className="absolute top-[10px] left-[10px] sm:top-[20px] sm:left-[20px]"
               />
 
               {/* Pencil */}
               <Image
                 src="/admissions/pencil.png"
                 alt="Pencil Icon"
-                width={100}
-                height={100}
-                className="absolute -right-[30px] top-[100px]"
+                width={70}
+                height={70}
+                className="absolute -right-[20px] top-[60px] sm:-right-[30px] sm:top-[100px]"
               />
 
               {/* Bar Chart */}
               <Image
                 src="/admissions/bar-chart.png"
                 alt="Bar Chart Icon"
-                width={100}
-                height={100}
-                className="absolute bottom-[20px] left-[20px]"
+                width={70}
+                height={70}
+                className="absolute bottom-[10px] left-[10px] sm:bottom-[20px] sm:left-[20px]"
               />
             </motion.div>
           </div>
