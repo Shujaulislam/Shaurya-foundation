@@ -153,14 +153,24 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="flex gap-3 md:gap-4">
-            <button className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-[#E8F1FF] hover:bg-[#E8F1FF]/90 font-semibold text-base md:text-lg text-black px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 xl:px-8 xl:py-4 rounded-xl">
+            <Link
+              href="https://www.youtube.com/channel/UC5KuUxpRKD7J0_v5E91XLiQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-[#E8F1FF] hover:bg-[#E8F1FF]/90 font-semibold text-base md:text-lg text-black px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 xl:px-8 xl:py-4 rounded-xl"
+            >
               <TvMinimalPlay />
               Watch Video
-            </button>
-            <button className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-white hover:bg-white/90 font-semibold text-black px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 xl:px-8 xl:py-4 rounded-xl ">
+            </Link>
+            <Link
+              href="/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex text-center gap-2 hover:scale-105 transform transition-transform bg-white hover:bg-white/90 font-semibold text-black px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 xl:px-8 xl:py-4 rounded-xl "
+            >
               Support Shaurya
               <ArrowUpRight />
-            </button>
+            </Link>
           </div>
 
           {/* Scroll Down */}
