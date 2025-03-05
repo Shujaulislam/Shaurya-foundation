@@ -8,22 +8,27 @@ export default function Employment() {
     <main className="px-4 sm:px-8 lg:px-24">
       {/* Hero Section */}
       <section className="bg-[#FF7B8E] rounded-3xl overflow-hidden">
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-1 sm:grid-cols-12">
           {/* Text Content */}
-          <div className="col-span-7 pb-10">
-            <div className="pl-16 pt-16">
+          <div className="sm:col-span-7 pb-6 sm:pb-10 order-2 sm:order-1">
+            <div className="px-6 sm:pl-16 pt-8 sm:pt-16">
               <h1 className="flex items-center gap-2">
-                <span className="text-7xl">THE</span>
-                <span className="text-7xl font-bold">SFT</span>
-                <button className="bg-white sm:px-1 lg:p-3.5 rounded-full lg:ml-6">
-                  <Play size={24} />
+                <span className="text-4xl sm:text-6xl md:text-7xl">THE</span>
+                <span className="text-4xl sm:text-6xl md:text-7xl font-bold">
+                  SFT
+                </span>
+                <button className="bg-white p-2 sm:p-3.5 rounded-full ml-2 sm:ml-6">
+                  <Play size={16} className="sm:hidden" />
+                  <Play size={24} className="hidden sm:block" />
                 </button>
               </h1>
-              <p className="text-7xl font-bold">ECOSYSTEM</p>
+              <p className="text-4xl sm:text-6xl md:text-7xl font-bold">
+                ECOSYSTEM
+              </p>
             </div>
 
-            <div className="pl-16 mt-8 pr-8">
-              <p className="text-[#222223] text-lg">
+            <div className="px-6 sm:pl-16 mt-4 sm:mt-8 sm:pr-8">
+              <p className="text-[#222223] text-base sm:text-lg">
                 Shaurya Foundation Trust (SFT) Has Dedicated 11 Years To
                 Empowering Individuals With Intellectual Challenges By Providing
                 Essential Skills And Fostering Independent Living. We've Made
@@ -35,30 +40,29 @@ export default function Employment() {
               </p>
             </div>
 
-            <div className="flex gap-4 pl-16 mt-8">
-              <button className="bg-[#FFE3E7] px-8 py-3 rounded-full text-base hover:bg-opacity-90 transition-all">
+            <div className="flex gap-4 px-6 sm:pl-16 mt-6 sm:mt-8">
+              <button className="bg-[#FFE3E7] px-5 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base hover:bg-opacity-90 transition-all">
                 Support Shaurya
               </button>
-              <button className="bg-[#FFE3E7] p-3 rounded-full hover:bg-opacity-90 transition-all">
-                <ArrowRight className="w-5 h-5" />
+              <button className="bg-[#FFE3E7] p-2 sm:p-3 rounded-full hover:bg-opacity-90 transition-all">
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>
 
           {/* Image Section */}
-          <div className="col-span-5 h-full">
+          <div className="sm:col-span-5 h-[300px] sm:h-full order-1 sm:order-2">
             <img
               src="/employement/hero.png"
               alt="SFT Team Members"
-              className="h-full w-full object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
       </section>
 
+      {/*required padding from both sides*/}
       <div className="px-0 sm:px-4 lg:px-8">
-        {" "}
-        {/*required padding from both sides*/}
         {/* ARTOPIA */}
         <section className="bg-[#FACAD1] border rounded-[32px] lg:rounded-[42px] overflow-hidden mt-8 sm:mt-12">
           {/* Content Container */}
@@ -379,69 +383,69 @@ export default function Employment() {
           </div>
         </section>
         {/* THE JOURNEY */}
-        <section className="bg-[#FF6B00] rounded-3xl overflow-hidden relative mt-14">
+        <section className="bg-[#FF6B00] rounded-3xl overflow-hidden relative mt-8 sm:mt-10 md:mt-14">
           {/* Text Section */}
-          <div className="text-center pt-16 pb-8">
-            <h2 className="text-7xl text-white">
+          <div className="text-center pt-8 sm:pt-12 md:pt-16">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl text-white">
               THE <span className="font-bold">JOURNEY</span>
             </h2>
           </div>
 
           {/* Image Container */}
-          <div className="relative flex justify-center items-end h-[400px]">
+          <div className="relative flex justify-center items-end h-[200px] sm:h-[300px] md:h-[400px]">
             {/* Left Cartoon */}
-            <div className="absolute left-[11%] bottom-0 w-1/4">
+            <div className="absolute left-[5%] sm:left-[8%] md:left-[11%] bottom-0 w-[20%] sm:w-1/4">
               <Image
                 src="/employement/j-1.png"
                 alt="Left cartoon character"
                 width={300}
                 height={300}
-                className="object-contain"
+                className="object-contain w-full h-auto"
               />
             </div>
 
             {/* Center Image */}
-            <div className="z-10 mx-auto">
+            <div className="z-10 mx-auto w-[60%] sm:w-auto">
               <Image
                 src="/employement/j-2.png"
                 alt="Team members with food"
                 width={800}
                 height={400}
-                className="object-contain"
+                className="object-contain w-full h-auto"
               />
             </div>
 
             {/* Right Cartoon */}
-            <div className="absolute right-[1%] bottom-0 w-1/4">
+            <div className="absolute right-[5%] sm:right-[1%] bottom-0 w-[20%] sm:w-1/4">
               <Image
                 src="/employement/j-3.png"
                 alt="Right cartoon character"
                 width={300}
                 height={300}
-                className="object-contain"
+                className="object-contain w-full h-auto"
               />
             </div>
           </div>
         </section>
         {/* SLIDER */}
-        <section className="relative w-full bg-[#FFCFD6] rounded-[42px] mt-20 px-8 py-16">
+        <section className="relative w-full bg-[#FFCFD6] rounded-[42px] mt-10 sm:mt-14 md:mt-16 lg:mt-20 px-4 sm:px-6 md:px-8 py-10 sm:py-12 md:py-16">
           {/* Cards Container - Horizontal Scroll */}
-          <div className="flex gap-6 overflow-x-auto pb-4 hide-scrollbar min-h-[600px]">
+          <div className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto pb-4 hide-scrollbar min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]">
             {/* Card 1 */}
-            <div className="w-[430px] h-[550px] bg-[#E1EDFF] rounded-[24px] overflow-hidden flex-shrink-0">
+            <div className="w-[300px] sm:w-[380px] md:w-[430px] h-[450px] sm:h-[500px] md:h-[550px] bg-[#E1EDFF] rounded-[16px] sm:rounded-[20px] md:rounded-[24px] overflow-hidden flex-shrink-0">
               <div className="h-[55%] relative">
                 <Image
                   src="/employement/slider-1.png"
                   alt="slider-image"
                   fill
-                  className="object-contain p-12"
+                  className="object-contain p-8 sm:p-10 md:p-12"
                 />
               </div>
-              <div className="h-[45%] px-8 py-8 text-center flex flex-col justify-center">
-                <h3 className="text-[28px] font-bold mb-5 text-[#384C75] uppercase tracking-wide">
+              <div className="h-[45%] px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 text-center flex flex-col justify-center">
+                <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold mb-3 sm:mb-4 md:mb-5 text-[#384C75] uppercase tracking-wide">
                   Regimen
                 </h3>
-                <p className="text-[15px] text-[#384C75] leading-[1.6]">
+                <p className="text-sm sm:text-base md:text-[15px] text-[#384C75] leading-[1.6]">
                   At Shaurya Foundation Trust (SFT), we recognize the unique
                   needs of intellectually disabled individuals...
                 </p>
@@ -449,20 +453,20 @@ export default function Employment() {
             </div>
 
             {/* Card 2 */}
-            <div className="w-[430px] h-[550px] bg-[#07A2BB] rounded-[24px] overflow-hidden flex-shrink-0">
+            <div className="w-[300px] sm:w-[380px] md:w-[430px] h-[450px] sm:h-[500px] md:h-[550px] bg-[#07A2BB] rounded-[16px] sm:rounded-[20px] md:rounded-[24px] overflow-hidden flex-shrink-0">
               <div className="h-[55%] relative">
                 <Image
                   src="/employement/slider-2.png"
                   alt="slider-image"
                   fill
-                  className="object-contain p-12"
+                  className="object-contain p-8 sm:p-10 md:p-12"
                 />
               </div>
-              <div className="h-[45%] px-8 py-8 text-center flex flex-col justify-center">
-                <h3 className="text-[28px] font-bold mb-5 text-white uppercase tracking-wide">
+              <div className="h-[45%] px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 text-center flex flex-col justify-center">
+                <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold mb-3 sm:mb-4 md:mb-5 text-white uppercase tracking-wide">
                   Rehersal
                 </h3>
-                <p className="text-[15px] text-white leading-[1.6]">
+                <p className="text-sm sm:text-base md:text-[15px] text-white leading-[1.6]">
                   At Shaurya Foundation Trust (SFT), we prepare individuals for
                   the workforce through immersive, hands-on experiences...
                 </p>
@@ -470,20 +474,20 @@ export default function Employment() {
             </div>
 
             {/* Card 3 */}
-            <div className="w-[430px] h-[550px] bg-[#E3CF6B] rounded-[24px] overflow-hidden flex-shrink-0">
+            <div className="w-[300px] sm:w-[380px] md:w-[430px] h-[450px] sm:h-[500px] md:h-[550px] bg-[#E3CF6B] rounded-[16px] sm:rounded-[20px] md:rounded-[24px] overflow-hidden flex-shrink-0">
               <div className="h-[55%] relative">
                 <Image
                   src="/employement/slider-3.png"
                   alt="slider-image"
                   fill
-                  className="object-contain p-12"
+                  className="object-contain p-8 sm:p-10 md:p-12"
                 />
               </div>
-              <div className="h-[45%] px-8 py-8 text-center flex flex-col justify-center">
-                <h3 className="text-[28px] font-bold mb-5 text-[#384C75] uppercase tracking-wide">
+              <div className="h-[45%] px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 text-center flex flex-col justify-center">
+                <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold mb-3 sm:mb-4 md:mb-5 text-[#384C75] uppercase tracking-wide">
                   Rehabilitation
                 </h3>
-                <p className="text-[15px] text-[#384C75] leading-[1.6]">
+                <p className="text-sm sm:text-base md:text-[15px] text-[#384C75] leading-[1.6]">
                   The final step at Shaurya Foundation Trust (SFT) is
                   facilitating the safe integration of individuals into the
                   workforce
@@ -492,20 +496,20 @@ export default function Employment() {
             </div>
 
             {/* Card 4 */}
-            <div className="w-[430px] h-[550px] bg-[#3CB8AA] rounded-[24px] overflow-hidden flex-shrink-0">
+            <div className="w-[300px] sm:w-[380px] md:w-[430px] h-[450px] sm:h-[500px] md:h-[550px] bg-[#3CB8AA] rounded-[16px] sm:rounded-[20px] md:rounded-[24px] overflow-hidden flex-shrink-0">
               <div className="h-[55%] relative">
                 <Image
                   src="/employement/slider-4.png"
                   alt="slider-image"
                   fill
-                  className="object-contain p-12"
+                  className="object-contain p-8 sm:p-10 md:p-12"
                 />
               </div>
-              <div className="h-[45%] px-8 py-8 text-center flex flex-col justify-center bg-[#3DB8AA]">
-                <h3 className="text-[28px] font-bold mb-5 text-white uppercase tracking-wide">
+              <div className="h-[45%] px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 text-center flex flex-col justify-center bg-[#3DB8AA]">
+                <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold mb-3 sm:mb-4 md:mb-5 text-white uppercase tracking-wide">
                   A small bit go a long way
                 </h3>
-                <p className="text-[15px] text-white leading-[1.6]">
+                <p className="text-sm sm:text-base md:text-[15px] text-white leading-[1.6]">
                   At Shaurya Foundation Trust (SFT), we are dedicated to
                   empowering individuals on the neurodivergent spectrum,
                 </p>
@@ -524,44 +528,47 @@ export default function Employment() {
             }
           `}</style>
         </section>
-
         {/* AVATARS */}
-        <section className="md:-mt-20 md:-mb-20 lg:-mt-40 lg:-mb-40">
+        <section className="-mt-4 sm:-mt-12 md:-mt-16 lg:-mt-20 xl:-mt-40 -mb-4 sm:-mb-12 md:-mb-16 lg:-mb-20 xl:-mb-40">
           <div className="w-full">
             <Image
               src="/employement/avatars.png"
-              alt="about"
+              alt="Team Avatars"
               width={1920}
               height={1080}
-              className="w-full"
+              className="w-full h-auto object-cover"
               priority
             />
           </div>
         </section>
         {/* Number cards */}
-        <section className="flex gap-6 mb-40 px-8">
+        <section className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-16 sm:mb-24 md:mb-32 lg:mb-40 px-4 sm:px-8">
           {/* Card 1 */}
-          <div className="flex-1 px-12 py-10 border rounded-[24px] bg-[#F6F5F4]">
-            <h1 className="text-[#9191E1] text-6xl font-extrabold mb-2">
+          <div className="flex-1 px-6 sm:px-8 md:px-12 py-6 sm:py-8 md:py-10 border rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] bg-[#F6F5F4]">
+            <h1 className="text-[#9191E1] text-4xl sm:text-5xl md:text-6xl font-extrabold mb-1 sm:mb-2">
               100+
             </h1>
-            <p className="text-[#39393B] text-xl font-semibold">
+            <p className="text-[#39393B] text-base sm:text-lg md:text-xl font-semibold">
               Talented Teammates
             </p>
           </div>
 
           {/* Card 2 */}
-          <div className="flex-1 px-12 py-10 border rounded-[24px] bg-[#F6F5F4]">
-            <h1 className="text-[#FF7715] text-6xl font-extrabold mb-2">48</h1>
-            <p className="text-[#39393B] text-xl font-semibold">
+          <div className="flex-1 px-6 sm:px-8 md:px-12 py-6 sm:py-8 md:py-10 border rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] bg-[#F6F5F4]">
+            <h1 className="text-[#FF7715] text-4xl sm:text-5xl md:text-6xl font-extrabold mb-1 sm:mb-2">
+              48
+            </h1>
+            <p className="text-[#39393B] text-base sm:text-lg md:text-xl font-semibold">
               Successful Projects
             </p>
           </div>
 
           {/* Card 3 */}
-          <div className="flex-1 px-12 py-10 border rounded-[24px] bg-[#F6F5F4]">
-            <h1 className="text-[#9191E1] text-6xl font-extrabold mb-2">7+</h1>
-            <p className="text-[#39393B] text-xl font-semibold">
+          <div className="flex-1 px-6 sm:px-8 md:px-12 py-6 sm:py-8 md:py-10 border rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] bg-[#F6F5F4]">
+            <h1 className="text-[#9191E1] text-4xl sm:text-5xl md:text-6xl font-extrabold mb-1 sm:mb-2">
+              7+
+            </h1>
+            <p className="text-[#39393B] text-base sm:text-lg md:text-xl font-semibold">
               Successful Collaborations
             </p>
           </div>

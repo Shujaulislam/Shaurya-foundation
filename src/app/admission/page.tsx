@@ -18,13 +18,24 @@ const image = {
 export default function Admission() {
   return (
     <main className="px-4 sm:px-8 lg:px-24">
-      
       {/* Hero Section */}
-      <section className="relative w-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[600px] bg-[#2C438A] rounded-[20px] sm:rounded-[30px] lg:rounded-[90px] px-4 sm:px-6 lg:px-24 pt-8 sm:pt-12 lg:pt-16 overflow-hidden">
-        {/* Content Container */}
-        <div className="relative z-20 lg:max-w-[720px]">
+      <section className="relative w-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[600px] bg-[#2C438A] rounded-[20px] sm:rounded-[30px] lg:rounded-[90px] px-4 sm:px-6 lg:px-24 sm:pt-12 overflow-hidden flex flex-col sm:flex-col md:flex-col lg:flex-row">
+        {/* Hero Image - Moves on top for sm & md */}
+        <div className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%] h-auto md:h-[70%] lg:h-[100%] -mt-8 pb-6 sm:pb-8 flex justify-center items-center lg:absolute lg:bottom-0 lg:right-0">
+          <Image
+            src="/admissions/hero.png"
+            alt="hero-image"
+            width={1900}
+            height={1600}
+            className="w-full h-auto md:h-full object-cover object-bottom"
+            priority
+          />
+        </div>
+
+        {/* Content Container - Moves below image for sm & md */}
+        <div className="relative z-20 lg:max-w-[720px] flex flex-col justify-center">
           {/* Tags Container */}
-          <div className="hidden lg:flex items-center gap-6 mb-4 sm:mb-6 lg:mb-10">
+          <div className="hidden sm:flex lg:flex items-center gap-6 mb-4 sm:mb-6 lg:mb-10">
             <div className="flex items-center gap-2">
               <button className="bg-[#E7C2D4] p-2 rounded-full sm:p-2.5">
                 <Activity className="text-[#2C438A]" size={16} />
@@ -54,38 +65,26 @@ export default function Admission() {
           </div>
 
           {/* Subtitle */}
-          <h2 className="text-[34px] sm:text-[44px] md:text-[56px] lg:text-[120px] -mt-2 sm:-mt-3 md:-mt-4 lg:-mt-6 uppercase text-[#F0DA69] font-extrabold leading-none tracking-tight mb-4 sm:mb-6 lg:mb-8">
+          <h2 className="text-[34px] sm:text-[44px] md:text-[56px] lg:text-[120px] mt-2 sm:-mt-3 md:-mt-4 lg:-mt-6 uppercase text-[#F0DA69] font-extrabold leading-none tracking-tight mb-4 sm:mb-6 lg:mb-8">
             Programs
           </h2>
 
           {/* Description Text */}
-          <p className="text-[#C6DEFD] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] leading-[1.5] sm:leading-[1.6] lg:leading-[1.8] w-full font-semibold">
+          <p className="text-[#C6DEFD] text-[14px] sm:text-[14px] md:text-[16px] lg:text-[18px] leading-[1.5] sm:leading-[1.6] lg:leading-[1.8] w-full font-semibold">
             A Non-Profit Transforming The Lives Of Individuals With Special
             Needs Through Holistic Education, Life Skills, And Community
             Integration.
           </p>
-        </div>
 
-        {/* Hero Image - Positioned Bottom Right */}
-        <div className="absolute bottom-0 right-0 w-[80%] sm:w-[60%] md:w-[50%] lg:w-[50%] h-[40%] sm:h-[55%] md:h-[70%] lg:h-[100%] lg:opacity-100">
-          <Image
-            src="/admissions/hero.png"
-            alt="hero-image"
-            width={1900}
-            height={1600}
-            className="w-full h-full object-cover object-bottom"
-            priority
-          />
-        </div>
-
-        {/* CTA Buttons - Bottom Left */}
-        <div className="absolute bottom-4 sm:bottom-6 lg:bottom-12 left-4 sm:left-6 lg:left-24 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
-          <button className="flex items-center gap-2 sm:gap-3 bg-[#FFCFD6] px-4 sm:px-6 py-2 sm:py-3 text-[#2C438A] text-[12px] sm:text-[14px] font-semibold rounded-full hover:bg-opacity-90 transition">
-            Support Shaurya
-          </button>
-          <button className="bg-[#FFCFD6] p-2 sm:p-3 rounded-full hover:bg-opacity-90 transition">
-            <ArrowRight className="text-[#2C438A]" size={16} />
-          </button>
+          {/* CTA Buttons */}
+          <div className="mt-6 sm:mt-8 lg:mt-12 flex items-center mb-4 sm:mb-6 lg:mb-8 gap-3">
+            <button className="flex items-center gap-2 sm:gap-3 bg-[#FFCFD6] px-4 sm:px-6 py-2 sm:py-3 text-[#2C438A] text-[12px] sm:text-[14px] font-semibold rounded-full hover:bg-opacity-90 transition">
+              Support Shaurya
+            </button>
+            <button className="bg-[#FFCFD6] p-2 sm:p-3 rounded-full hover:bg-opacity-90 transition">
+              <ArrowRight className="text-[#2C438A]" size={16} />
+            </button>
+          </div>
         </div>
       </section>
 
