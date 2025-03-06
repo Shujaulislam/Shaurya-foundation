@@ -520,10 +520,10 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="mt-6 sm:mt-8 lg:mt-20 xl:mt-24 mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-20 flex justify-center">
-        <div className="flex flex-col sm:flex-row items-center gap-10 sm:gap-16 md:gap-24 lg:gap-48">
+      <section className="mt-12 sm:mt-8 lg:mt-20 xl:mt-24 mb-12 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-20 flex justify-center">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-16 md:gap-24 lg:gap-48">
           {/* First stat item */}
-          <div className="flex items-start">
+          <div className="flex items-center">
             <div className="w-1 h-12 sm:h-16 md:h-20 bg-[#252525] mr-2 sm:mr-3 md:mr-4"></div>
             <div className="flex items-baseline">
               <span className="text-[40px] sm:text-[60px] md:text-[75px] lg:text-[90px] font-bold text-[#252525] leading-none">
@@ -533,7 +533,7 @@ export default function Home() {
                 +
               </span>
             </div>
-            <div className="mt-3 sm:mt-5 md:mt-8 ml-1 sm:ml-2">
+            <div className="mt-2 sm:mt-5 md:mt-8 ml-1 sm:ml-2">
               <span className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-[#252525] font-medium leading-tight block">
                 talented
               </span>
@@ -737,6 +737,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+
     </main>
   );
 }
