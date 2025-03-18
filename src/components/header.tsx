@@ -28,7 +28,8 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/admission", label: "Admissions" },
     { href: "/employment", label: "Employment" },
-    { href: "/about", label: "About Us" }
+    { href: "/about", label: "About Us" },
+    { href: "/products", label: "Products" }
   ]
 
   return (
