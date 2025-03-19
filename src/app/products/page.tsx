@@ -9,43 +9,43 @@ const products = {
       name: "Coconut Cookie",
       price: "140",
       weight: "200",
-      image: "/placeholder-cookie.jpg"
+      image: "/products/coconut-cookies.png"
     },
     {
       name: "Butter Cookie",
       price: "140",
       weight: "200",
-      image: "/placeholder-cookie.jpg"
+      image: "/products/butter-cookies.png"
     },
     {
       name: "Oats Aata Cookie",
       price: "140",
       weight: "200",
-      image: "/placeholder-cookie.jpg"
+      image: "/products/oats-aata-cookies.jpg"
     },
     {
       name: "Cranberry Oats Cookie",
       price: "240",
       weight: "200",
-      image: "/placeholder-cookie.jpg"
+      image: "/products/cranberry-oats-cookies.png"
     },
     {
       name: "Mocha Cookie",
       price: "180",
       weight: "200",
-      image: "/placeholder-cookie.jpg"
+      image: "/products/mocha-cookies.jpg"
     },
     {
       name: "Peanut Butter Cookie",
       price: "190",
       weight: "200",
-      image: "/placeholder-cookie.jpg"
+      image: "/products/peanut-butter-cookies.png"
     },
     {
       name: "Choco Chip Cookie",
       price: "150",
       weight: "200",
-      image: "/placeholder-cookie.jpg"
+      image: "/products/choco-chip-cookies.png"
     }
   ],
   muffins: [
@@ -54,21 +54,21 @@ const products = {
       price: "30",
       bulk_price: "180",
       bulk_quantity: "6",
-      image: "/placeholder-muffin.jpg"
+      image: "/products/chocolate-muffin.png"
     },
     {
       name: "Tutti Frutti Muffin",
       price: "30",
       bulk_price: "180",
       bulk_quantity: "6",
-      image: "/placeholder-muffin.jpg"
+      image: "/products/tutti-frutti-muffin.png"
     },
     {
       name: "Vanilla Muffin",
       price: "20",
       bulk_price: "120",
       bulk_quantity: "6",
-      image: "/placeholder-muffin.jpg"
+      image: "/products/vanilla-muffin.png"
     }
   ],
   munchies: [
@@ -76,19 +76,19 @@ const products = {
       name: "Methi Munchie",
       price: "110",
       weight: "200",
-      image: "/placeholder-munchie.jpg"
+      image: "/products/methi-munchie.png"
     },
     {
       name: "Ajwain Munchie",
       price: "110",
       weight: "200",
-      image: "/placeholder-munchie.jpg"
+      image: "/products/ajwain-munchie.png"
     },
     {
       name: "Masala Munchie",
       price: "110",
       weight: "200",
-      image: "/placeholder-munchie.jpg"
+      image: "/products/masala-munchie.png"
     }
   ]
 };
