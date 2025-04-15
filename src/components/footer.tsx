@@ -129,12 +129,12 @@ export default function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="tel:+919650315800"
+                  href="tel:+919650316800"
                   className="text-sm hover:text-black"
                 >
                   <span className="inline-flex items-center">
                     <Phone className="w-4 h-4 mr-2" />
-                    +91 9650315800
+                    +91 9650316800
                   </span>
                 </Link>
               </div>
