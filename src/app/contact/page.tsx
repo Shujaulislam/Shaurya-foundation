@@ -6,8 +6,47 @@ import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Mail, Phone, User, Edit, Play, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useRef, useState, useEffect } from "react"
+import emailjs from '@emailjs/browser'
 
 export default function ContactPage() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('9FAprjy_JjSTKjEMi'); // Replace with your EmailJS public key
+  }, []);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitSuccess(false);
+    setSubmitError(false);
+
+    if (!formRef.current) return;
+
+    emailjs.sendForm(
+      'service_2sqon2m', // Replace with your EmailJS service ID
+      'template_8u5qf4q', // Replace with your EmailJS template ID
+      formRef.current,
+      '9FAprjy_JjSTKjEMi' // Replace with your EmailJS public key
+    )
+    .then((result) => {
+      console.log(result.text);
+      setSubmitSuccess(true);
+      formRef.current?.reset();
+    }, (error) => {
+      console.log(error.text);
+      setSubmitError(true);
+    })
+    .finally(() => {
+      setIsSubmitting(false);
+    });
+  };
+
   return (
     <main className="min-h-screen flex flex-col bg-white px-4 sm:px-8 lg:px-24">
       {/* Top Banner */}
@@ -115,14 +154,20 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column - Form */}
-          <form className="space-y-6 sm:space-y-7 md:space-y-8">
+          <form 
+            ref={formRef}
+            onSubmit={sendEmail}
+            className="space-y-6 sm:space-y-7 md:space-y-8"
+          >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7 md:gap-8">
               <div className="relative">
                 <div className="absolute left-0 top-2.5">
                   <User className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
                 </div>
                 <Input
+                  name="user_name"
                   placeholder="Name"
+                  required
                   className="border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D]"
                 />
               </div>
@@ -131,7 +176,10 @@ export default function ContactPage() {
                   <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
                 </div>
                 <Input
+                  name="user_email"
+                  type="email"
                   placeholder="Email Address"
+                  required
                   className="border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D]"
                 />
               </div>
@@ -142,6 +190,7 @@ export default function ContactPage() {
                 <Phone className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
               </div>
               <Input
+                name="user_phone"
                 placeholder="Phone"
                 className="border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D]"
               />
@@ -151,11 +200,14 @@ export default function ContactPage() {
               <div className="absolute left-0 top-2.5">
                 <Edit className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
               </div>
-              <select className="w-full border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] text-gray-400 focus:ring-0 focus:border-[#4D194D] bg-transparent">
+              <select 
+                name="subject"
+                className="w-full border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] text-gray-400 focus:ring-0 focus:border-[#4D194D] bg-transparent"
+              >
                 <option value="">Subject</option>
-                <option value="general">General Inquiry</option>
-                <option value="support">Support</option>
-                <option value="other">Other</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Support">Support</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
@@ -164,7 +216,9 @@ export default function ContactPage() {
                 <Edit className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-gray-400" />
               </div>
               <Textarea
+                name="message"
                 placeholder="Message"
+                required
                 className="border-0 border-b border-gray-200 rounded-none pl-6 sm:pl-7 pr-0 py-2 text-sm sm:text-base md:text-[15px] placeholder:text-gray-400 focus:ring-0 focus:border-[#4D194D] min-h-[80px] sm:min-h-[90px] md:min-h-[100px] resize-none"
               />
             </div>
@@ -172,6 +226,7 @@ export default function ContactPage() {
             <div className="flex items-start gap-2 sm:gap-3 pt-2">
               <Checkbox
                 id="terms"
+                required
                 className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 sm:mt-1 rounded-sm border-gray-300 text-[#4D194D] focus:ring-[#4D194D]"
               />
               <label htmlFor="terms" className="text-xs sm:text-sm md:text-sm text-gray-500">
@@ -179,9 +234,25 @@ export default function ContactPage() {
               </label>
             </div>
 
-            <button className="bg-[#21B573] text-white px-6 sm:px-7 md:px-8 py-2.5 sm:py-2.75 md:py-3 text-sm sm:text-base md:text-base rounded-lg hover:bg-[#4D194D]/90 transition">
-              Send Message
+            <button 
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-[#21B573] text-white px-6 sm:px-7 md:px-8 py-2.5 sm:py-2.75 md:py-3 text-sm sm:text-base md:text-base rounded-lg hover:bg-[#4D194D]/90 transition disabled:opacity-70 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
+
+            {submitSuccess && (
+              <div className="text-green-600 text-sm sm:text-base">
+                Message sent successfully! We'll get back to you soon.
+              </div>
+            )}
+
+            {submitError && (
+              <div className="text-red-600 text-sm sm:text-base">
+                Failed to send message. Please try again later.
+              </div>
+            )}
           </form>
         </div>
       </section>

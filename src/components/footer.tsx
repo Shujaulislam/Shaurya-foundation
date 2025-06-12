@@ -56,31 +56,7 @@ export default function Footer() {
         {/* Addresses and Links Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 text-black/80">
           {/* Newsletter - Takes full width on smaller screens */}
-          <div className="lg:col-span-4 sm:col-span-2">
-            <h3 className="font-semibold mb-3 text-sm text-black">
-              Newsletter
-            </h3>
-            <p className="text-sm mb-4 text-black/80">
-              We'd love to share our monthly newsletter with you.
-            </p>
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3"
-            >
-              <Input
-                type="email"
-                placeholder="jane@domain.com"
-                className="bg-white/10 border-none placeholder:text-black/50 text-black h-12 text-sm rounded-lg focus:bg-white/20 flex-1"
-              />
-              <Button
-                type="submit"
-                variant="secondary"
-                className="whitespace-nowrap bg-white/10 hover:bg-gray-300/20 text-black h-12 text-sm px-6 rounded-lg font-medium border border-white/10"
-              >
-                Subscribe
-              </Button>
-            </form>
-          </div>
+
 
           {/* Addresses */}
           <div className="lg:col-span-4 sm:col-span-2 grid sm:grid-cols-2 gap-8">
